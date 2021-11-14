@@ -198,6 +198,9 @@
     <Compile Include="Peripheral\CortexM0\CortexM0.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Peripheral\CortexM0\PendSVHandler.s">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Peripheral\GCLK\GCLK.cpp">
       <SubType>compile</SubType>
     </Compile>

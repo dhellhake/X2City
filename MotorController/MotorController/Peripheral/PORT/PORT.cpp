@@ -13,6 +13,7 @@ void InitPORT()
 	PORT->Group[0].OUTCLR.reg = PORT_PA28;
 		
 	PORT->Group[0].DIRSET.reg = PORT_PA13;
+	PORT->Group[0].DIRSET.reg = PORT_PA12;
 }
 
 void SetPinPeripheralFunction(uint32_t pinmux)
