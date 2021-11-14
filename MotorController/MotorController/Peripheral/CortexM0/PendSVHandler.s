@@ -61,12 +61,12 @@ PendSV_Handler:
 	subs	r0, #16
 
 	/* Save current task's SP: */
-	ldr	r2, =os_curr_task
+	ldr	r2, =os_curr_sp
 	ldr	r1, [r2]
 	str	r0, [r1]
 
 	/* Load next task's SP: */
-	ldr	r2, =os_next_task
+	ldr	r2, =os_next_sp
 	ldr	r1, [r2]
 	ldr	r0, [r1]
 
