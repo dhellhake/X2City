@@ -20,7 +20,7 @@ enum class RUN_RESULT
 class Executable
 {
 	public:	
-		virtual RUN_RESULT Run(void) { return RUN_RESULT::NOT_IMPLEMENTED; };
+		virtual RUN_RESULT Run(uint32_t timeStamp) { return RUN_RESULT::NOT_IMPLEMENTED; };
 			
 }; //Executable
 

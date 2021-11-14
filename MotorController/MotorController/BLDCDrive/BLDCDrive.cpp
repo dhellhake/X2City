@@ -12,7 +12,7 @@ BLDCDrive DRV;
 /************************************************************************/
 /* Executable Interface implementation                                  */
 /************************************************************************/
-RUN_RESULT BLDCDrive::Run(void)
+RUN_RESULT BLDCDrive::Run(uint32_t timeStamp)
 {	
 	PORT->Group[0].OUTTGL.reg = PORT_PA13;
 	

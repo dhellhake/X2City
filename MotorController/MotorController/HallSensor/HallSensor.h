@@ -15,7 +15,7 @@ class HallSensor : public Executable
 	/* Task Interface implementation										*/
 	/************************************************************************/
 	public:
-		virtual RUN_RESULT Run(void);
+		virtual RUN_RESULT Run(uint32_t timeStamp);
 	
 }; //HallSensor
 
