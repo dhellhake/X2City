@@ -14,7 +14,5 @@ HallSensor Hall;
 /************************************************************************/
 RUN_RESULT HallSensor::Run(uint32_t timeStamp)
 {
-	PORT->Group[0].OUTTGL.reg = PORT_PA12;
-	
 	return RUN_RESULT::SUCCESS;
 }

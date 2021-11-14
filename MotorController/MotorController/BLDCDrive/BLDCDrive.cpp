@@ -14,7 +14,5 @@ BLDCDrive DRV;
 /************************************************************************/
 RUN_RESULT BLDCDrive::Run(uint32_t timeStamp)
 {	
-	PORT->Group[0].OUTTGL.reg = PORT_PA13;
-	
 	return RUN_RESULT::SUCCESS;
 }

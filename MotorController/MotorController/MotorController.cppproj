@@ -193,6 +193,12 @@
     <Compile Include="BLDCDrive\BLDCDrive.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="ComPort\ComPort.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ComPort\ComPort.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HallSensor\HallSensor.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -220,6 +226,12 @@
     <Compile Include="Peripheral\CortexM0\PendSVHandler.s">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Peripheral\DMAC\DMAClib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripheral\DMAC\DMAClib.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Peripheral\GCLK\GCLK.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -232,6 +244,12 @@
     <Compile Include="Peripheral\PORT\PORT.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Peripheral\SERCOM\SERCOMlib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripheral\SERCOM\SERCOMlib.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Peripheral\startup_samc21.c">
       <SubType>compile</SubType>
     </Compile>
@@ -239,10 +257,13 @@
   <ItemGroup>
     <Folder Include="BLDCDrive" />
     <Folder Include="HallSensor" />
+    <Folder Include="ComPort" />
     <Folder Include="OS" />
     <Folder Include="Peripheral" />
     <Folder Include="Peripheral\GCLK" />
     <Folder Include="Peripheral\CortexM0" />
+    <Folder Include="Peripheral\DMAC" />
+    <Folder Include="Peripheral\SERCOM" />
     <Folder Include="Peripheral\PORT" />
   </ItemGroup>
   <ItemGroup>

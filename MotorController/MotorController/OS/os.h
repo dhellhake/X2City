@@ -14,7 +14,7 @@ extern "C" {
 	#include <stddef.h>
 	#include "samc21.h"
 	
-	#define OS_CONFIG_MAX_TASKS 3
+	#define OS_CONFIG_MAX_TASKS 4
 
 	typedef enum os_state 
 	{

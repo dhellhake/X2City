@@ -30,6 +30,8 @@
 #include "CortexM0\CortexM0.h"
 #include "GCLK\GCLK.h"
 #include "PORT\PORT.h"
+#include "DMAC\DMAClib.h"
+#include "SERCOM\SERCOMlib.h"
 
 /* Initialize segments */
 extern uint32_t _sfixed;
@@ -258,6 +260,11 @@ void Reset_Handler(void)
 		InitSysTick();
 		
 		InitPORT();
+		
+		InitDMAC();
+		
+		InitSERCOM5();
+		
 
         /* Initialize the C library */
         __libc_init_array();

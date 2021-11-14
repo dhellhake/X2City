@@ -9,6 +9,7 @@
 #include "OS/os.h"
 #include "BLDCDrive/BLDCDrive.h"
 #include "HallSensor/HallSensor.h"
+#include "ComPort/ComPort.h"
 
 void task_idle(void *params);
 void task_handler(void *params);
@@ -20,11 +21,12 @@ int main(void)
 	static uint32_t stackIdle[128];
 	static uint32_t stack1[128];
 	static uint32_t stack2[128];
+	static uint32_t stack3[128];
 	
-	tasks[2].handler = &task_idle;
-	tasks[2].stack = stackIdle;
-	tasks[2].cycleTime = OS_TASK_CYCLE_TIME_MANUAL;
-	tasks[2].stackSize = sizeof(stackIdle);
+	tasks[OS_CONFIG_MAX_TASKS - 1].handler = &task_idle;
+	tasks[OS_CONFIG_MAX_TASKS - 1].stack = stackIdle;
+	tasks[OS_CONFIG_MAX_TASKS - 1].cycleTime = OS_TASK_CYCLE_TIME_MANUAL;
+	tasks[OS_CONFIG_MAX_TASKS - 1].stackSize = sizeof(stackIdle);
 		
 	tasks[0].handler = &task_handler;
 	tasks[0].executable = (void *)&DRV;
@@ -38,7 +40,13 @@ int main(void)
 	tasks[1].stack = stack2;
 	tasks[1].stackSize = sizeof(stack2);
 	
-	for (uint8_t x = 0; x < 3; x++)
+	tasks[2].handler = &task_handler;
+	tasks[2].executable = (void *)&Com;
+	tasks[2].cycleTime = OS_TASK_CYCLE_TIME_100MS;
+	tasks[2].stack = stack3;
+	tasks[2].stackSize = sizeof(stack3);
+	
+	for (uint8_t x = 0; x < OS_CONFIG_MAX_TASKS; x++)
 		os_task_reset(&tasks[x]);
 		
 	os_start();

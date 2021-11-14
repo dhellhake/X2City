@@ -13,7 +13,10 @@ void InitPORT()
 	PORT->Group[0].OUTCLR.reg = PORT_PA28;
 		
 	PORT->Group[0].DIRSET.reg = PORT_PA13;
-	PORT->Group[0].DIRSET.reg = PORT_PA12;
+		
+	/* Init PORT for USART:*/
+	SetPinPeripheralFunction(PINMUX_PB02D_SERCOM5_PAD0);
+	SetPinPeripheralFunction(PINMUX_PB03D_SERCOM5_PAD1);
 }
 
 void SetPinPeripheralFunction(uint32_t pinmux)
