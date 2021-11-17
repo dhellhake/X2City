@@ -14,8 +14,6 @@ extern "C" {
 	#include "samc21.h"
 		
 	extern volatile uint32_t ElapsedMilis;
-	extern volatile uint32_t *os_curr_sp;
-	extern volatile uint32_t *os_next_sp;
 
 	void InitSysTick();
 

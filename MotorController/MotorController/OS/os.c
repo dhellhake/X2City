@@ -12,6 +12,9 @@ os_task tasks[OS_CONFIG_MAX_TASKS];
 os_state OS_STATE = STATE_DEFAULT;
 uint8_t currentTaskIdx = 0;
 
+volatile uint32_t *os_curr_sp;
+volatile uint32_t *os_next_sp;
+
 
 void task_finished(void *params)
 {

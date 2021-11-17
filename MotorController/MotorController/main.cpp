@@ -18,10 +18,10 @@ void task_handler(void *params);
 int main(void)
 {	
 	/* Initialize tasks: */	
-	static uint32_t stackIdle[128];
-	static uint32_t stack1[128];
-	static uint32_t stack2[128];
-	static uint32_t stack3[128];
+	static uint32_t stackIdle[32];
+	static uint32_t stack1[64];
+	static uint32_t stack2[64];
+	static uint32_t stack3[64];
 	
 	tasks[OS_CONFIG_MAX_TASKS - 1].handler = &task_idle;
 	tasks[OS_CONFIG_MAX_TASKS - 1].stack = stackIdle;

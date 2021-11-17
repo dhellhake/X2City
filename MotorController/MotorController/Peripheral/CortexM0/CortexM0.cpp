@@ -8,8 +8,6 @@
 #include "..\..\OS\os.h"
 
 volatile uint32_t ElapsedMilis = 0;
-volatile uint32_t *os_curr_sp;
-volatile uint32_t *os_next_sp;
 
 void InitSysTick()
 {
