@@ -32,6 +32,7 @@
 #include "PORT\PORT.h"
 #include "DMAC\DMAClib.h"
 #include "SERCOM\SERCOMlib.h"
+#include "EIC\EIClib.h"
 
 /* Initialize segments */
 extern uint32_t _sfixed;
@@ -260,6 +261,8 @@ void Reset_Handler(void)
 		InitSysTick();
 		
 		InitPORT();
+		
+		InitEIC();
 		
 		InitDMAC();
 		

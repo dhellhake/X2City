@@ -199,6 +199,9 @@
     <Compile Include="ComPort\ComPort.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="HallSensor\Hall.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HallSensor\HallSensor.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -232,6 +235,12 @@
     <Compile Include="Peripheral\DMAC\DMAClib.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Peripheral\EIC\EIClib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripheral\EIC\EIClib.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Peripheral\GCLK\GCLK.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -263,6 +272,7 @@
     <Folder Include="Peripheral\GCLK" />
     <Folder Include="Peripheral\CortexM0" />
     <Folder Include="Peripheral\DMAC" />
+    <Folder Include="Peripheral\EIC" />
     <Folder Include="Peripheral\SERCOM" />
     <Folder Include="Peripheral\PORT" />
   </ItemGroup>

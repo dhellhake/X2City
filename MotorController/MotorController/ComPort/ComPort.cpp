@@ -6,6 +6,7 @@
 */
 #include "ComPort.h"
 #include "..\Peripheral\DMAC\DMAClib.h"
+#include "..\HallSensor\HallSensor.h"
 
 ComPort Com;
 
@@ -18,10 +19,11 @@ RUN_RESULT ComPort::Run(uint32_t timeStamp)
 	//this->Record.Tar_Duty = DRV.Tar_Duty;
 	this->Record.Tar_Duty = 123.45f;
 	
-	//this->Record.Avl_AvgHallStateInterval = Hall.Avl_AvgHallStateInterval;
-	//this->Record.Avl_Ticks = Hall.Avl_TriggerCnt;
-	//this->Record.Avl_TicksPerSecond = Hall.Avl_TicksPerSecond;
+	this->Record.Avl_AvgHallStateInterval = Hall.Avl_AvgHallStateInterval;
+	this->Record.Avl_Ticks = Hall.Avl_TriggerCnt;
+	this->Record.Avl_TicksPerSecond = Hall.Avl_TicksPerSecond;
 	//this->Record.Avl_DriveDirection = (uint16_t)DRV.Tar_DriveDirecton;
+	this->Record.AVL_HallState = (uint32_t)Hall.Avl_HallState;
 		
 	DMAC_ChannelStartTransfer(DMA_CHID_COM);
 	

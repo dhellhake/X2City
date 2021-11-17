@@ -23,6 +23,7 @@ typedef struct com_status_t
 	float		Avl_TicksPerSecond =	0.0f;
 	uint32_t	Avl_Ticks = 0;
 	uint32_t	Avl_DriveDirection =	0;
+	uint32_t	AVL_HallState =         0;
 } com_status_t;
 
 class ComPort : public Executable
