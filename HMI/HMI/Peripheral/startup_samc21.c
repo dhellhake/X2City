@@ -29,6 +29,7 @@
 
 #include "samc21.h"
 #include "GCLK\GCLK.h"
+#include "CortexM0\CortexM0.h"
 #include "SERCOM\SERCOMlib.h"
 #include "PORT\PORT.h"
 
@@ -255,6 +256,8 @@ void Reset_Handler(void)
         SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
         
         InitGCLK();
+		
+		InitSysTick();
         
         InitPORT();
         

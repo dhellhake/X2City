@@ -5,128 +5,52 @@
  * Author : dominik hellhake
  */ 
 #include "sam.h"
+#include "Peripheral/CortexM0/CortexM0.h"
+#include "SSD1327/SSD1327.h"
 
-#define DATA_LENGTH 52
+#define TASKPOOL_SIZE	1
 
-void I2C_Write(uint8_t address, uint16_t length, uint8_t* data)
+Task* taskPool[TASKPOOL_SIZE] = {
+	&OLED,
+};
+uint16_t timeSlot[TASKPOOL_SIZE]
 {
-	/* Wait for I2C module to sync. */
-	while (SERCOM1->I2CM.SYNCBUSY.reg & SERCOM_I2CM_SYNCBUSY_MASK);
-		
-	SERCOM1->I2CM.ADDR.reg =	(0x0 << SERCOM_I2CM_ADDR_LEN_Pos) |
-								(0x0 << SERCOM_I2CM_ADDR_TENBITEN_Pos) |
-								(0x0 << SERCOM_I2CM_ADDR_HS_Pos) |
-								(0x0 << SERCOM_I2CM_ADDR_LENEN_Pos) |
-								(address  << SERCOM_I2CM_ADDR_ADDR_Pos);
-	
-	// Wait for Bus -> ToDo: Impl Timeout
-	while (!(SERCOM1->I2CM.INTFLAG.reg & SERCOM_I2CM_INTFLAG_MB));
-	
-	for (uint16_t dlen = 0; dlen < length; dlen++)
-	{
-		if (!(SERCOM1->I2CM.STATUS.reg & SERCOM_I2CM_STATUS_BUSSTATE(2))) {
-			// bus ownership lost / ERR_PACKET_COLLISION
-			return;
-		}
-		
-		/* Wait for I2C module to sync. */
-		while (SERCOM1->I2CM.SYNCBUSY.reg & SERCOM_I2CM_SYNCBUSY_MASK);
-		
-		SERCOM1->I2CM.DATA.reg = data[dlen];
-		
-		// Wait for Bus -> ToDo: Impl Timeout
-		while (!(SERCOM1->I2CM.INTFLAG.reg & SERCOM_I2CM_INTFLAG_MB));
-		
-		if (SERCOM1->I2CM.STATUS.reg & SERCOM_I2CM_STATUS_RXNACK)
-		{
-			return;
-		}
-	}
-		
-	SERCOM1->I2CM.CTRLB.reg |= SERCOM_I2CM_CTRLB_CMD(3);
-}
-
-
-uint8_t frame[8193];
-
-uint8_t example[129] = {
-	0x40, 
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x66, 0x66, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0xAA, 0xAA, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x66, 0xAA, 0xAA, 0x66, 0x66, 0x00, 0x66, 0x00,
-	0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0x00, 0xAA, 0x00,
-	0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0x00, 0xAA, 0x00,
-	0xAA, 0xAA, 0xAA, 0xAA, 0xAA, 0x00, 0xAA, 0x00,
-	0x77, 0xAA, 0xAA, 0x77, 0x77, 0x00, 0x77, 0x00,
-	0x00, 0xAA, 0xAA, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x77, 0x77, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+	10,
 };
 
-int main(void)
+typedef enum RecordType : uint16_t
 {
+	Runtime =			0xEE,
+} RecordType;
+
+typedef struct RuntimeRecord
+{
+	uint32_t Runtime[TASKPOOL_SIZE] { 0 };
+	uint64_t ElapsedMicros	= 0;
+	RecordType Type			= RecordType::Runtime;
+	uint16_t Postamble		= 0xAA55;
+} RuntimeRecord;
+
+int main(void)
+{	
+	uint64_t t_now = 0;
+	uint64_t t_now_2 = 0;
+	uint8_t taskIndex = 0;
+	RuntimeRecord runtimeRecord;
 	
-	SysTick->CTRL =		0;				// Disable SysTick
-	NVIC_SetPriority(SysTick_IRQn, 0);	// Set interrupt priority to highest urgency
-	SysTick->LOAD =		0xFFF;			// Set reload register for overflow interrupts
-	SysTick->VAL =		0;				// Reset the SysTick counter value
-	SysTick->CTRL =		0x00000007;		// Enable SysTick, Enable SysTick Exceptions, Use CPU Clock
-	
-	uint8_t write_buffer[DATA_LENGTH] = {
-		0x3, 0x00, 0xfd, 0x12,			// unlock the controller
-		0x3, 0x00, 0xb3, 0x91,			// set clock divider
-		0x3, 0x00, 0xca, 0x3f,			// set COMS multiplex ratio 1/64
-		0x3, 0x00, 0xa2, 0x00,			// set display offset
-		0x3, 0x00, 0xa1, 0x00,			// set display start line
-		0x3, 0x00, 0xa0, 0x50,			// set display remap
-		0x3, 0x00, 0xb5, 0x00,			// disable GPIO
-		0x3, 0x00, 0xab, 0x01,			// select external VDD regulator (none)
-		0x4, 0x00, 0xb4, 0xa0, 0xfd,	// external VSL display enhancement
-		0x3, 0x00, 0xb1, 0xe2,			// set phase length
-		0x4, 0x00, 0xd1, 0x82, 0x20,	// display enahancement B
-		0x2, 0x00, 0xa4,				// set normal display mode
-		0x2, 0x00, 0xaf 				// Display ON in normal mode
-	};
-	
-	
-	for (uint8_t dataIdx = 0; dataIdx < DATA_LENGTH;)
-	{
-		uint8_t dataLen = write_buffer[dataIdx++];
-		I2C_Write(0x78, dataLen, &(write_buffer[dataIdx]));
-		dataIdx += dataLen;
-	}
-	
-	// Clear Frame
-	for (uint16_t dlen = 0; dlen < 8193; dlen++)
-		frame[dlen] = 0x00;	
-	frame[0] = 0x40;	
-	I2C_Write(0x78, 8193, frame);
-	
-	
-	uint32_t t1 = SysTick->VAL;
-	uint8_t setColAddr[4] = { 0x00, 0x15, 0x00,  0x7};
-	I2C_Write(0x78, 4, setColAddr);
-	uint8_t setRowAddr[4] = { 0x00, 0x75, 0x00,  0xF};
-	I2C_Write(0x78, 4, setRowAddr);
-	
-	I2C_Write(0x78, 129, example);
-	t1 -= SysTick->VAL;
-	t1++;
-	/* Replace with your application code */
 	while (1)
 	{
+		t_now = ElapsedMilis;
+		taskPool[taskIndex]->Run(ElapsedMilis);
+		t_now_2 = ElapsedMilis;
 		
+		runtimeRecord.Runtime[taskIndex] = t_now_2 - t_now;
+		
+		while (t_now_2 - t_now < timeSlot[taskIndex])
+			t_now_2 = ElapsedMilis;
+		
+		taskIndex++;
+		if (taskIndex >= TASKPOOL_SIZE)
+			taskIndex = 0;
 	}
-}
-
-
-
-void SysTick_Handler()
-{
 }
