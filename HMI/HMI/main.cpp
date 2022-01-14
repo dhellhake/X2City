@@ -7,15 +7,16 @@
 #include "sam.h"
 #include "Peripheral/CortexM0/CortexM0.h"
 #include "SSD1327/SSD1327.h"
+#include "Test/Test.h"
 
 #define TASKPOOL_SIZE	1
 
 Task* taskPool[TASKPOOL_SIZE] = {
-	&OLED,
+	&OLED
 };
 uint16_t timeSlot[TASKPOOL_SIZE]
 {
-	10,
+	10
 };
 
 typedef enum RecordType : uint16_t

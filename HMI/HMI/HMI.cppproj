@@ -229,8 +229,12 @@
     <Compile Include="Task.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Test\Test.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Test" />
     <Folder Include="Peripheral\CortexM0" />
     <Folder Include="SSD1327" />
     <Folder Include="Peripheral" />
