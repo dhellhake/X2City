@@ -59,7 +59,7 @@ class SSD1327 : public Task
 				this->AvlVVeh = vVeh;
 		}
 	private:
-		float AvlVVeh	= 34.56f;
+		float AvlVVeh	= 34.5f;
 		uint8_t DrawMainSection = 0x1;
 	
 		OLEDState State = OLEDState::PowerUp;

@@ -11,9 +11,19 @@ void InitPORT()
 	/* Init PORT for Onboard-LED */
 	PORT->Group[0].DIRSET.reg = PORT_PA28;
 	PORT->Group[0].OUTCLR.reg = PORT_PA28;
+	/* Init PORT for CAN STDBY */
+	PORT->Group[0].DIRSET.reg = PORT_PA27;
+	PORT->Group[0].OUTCLR.reg = PORT_PA27;
 		
 	SetPinPeripheralFunction(PINMUX_PA16C_SERCOM1_PAD0);
 	SetPinPeripheralFunction(PINMUX_PA17C_SERCOM1_PAD1);
+	
+	
+	SetPinPeripheralFunction(PINMUX_PB22G_CAN0_TX);
+	SetPinPeripheralFunction(PINMUX_PB23G_CAN0_RX);
+		
+	SetPinPeripheralFunction(PINMUX_PB10G_CAN1_TX);
+	SetPinPeripheralFunction(PINMUX_PB11G_CAN1_RX);	
 }
 
 void SetPinPeripheralFunction(uint32_t pinmux)

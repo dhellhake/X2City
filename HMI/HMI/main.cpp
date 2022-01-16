@@ -6,38 +6,28 @@
  */ 
 #include "sam.h"
 #include "Peripheral/CortexM0/CortexM0.h"
+#include "ComHandler/ComHandler.h"
 #include "SSD1327/SSD1327.h"
-#include "Test/Test.h"
 
-#define TASKPOOL_SIZE	1
+
+#define TASKPOOL_SIZE	2
 
 Task* taskPool[TASKPOOL_SIZE] = {
+	&ComHdl,
 	&OLED
 };
 uint16_t timeSlot[TASKPOOL_SIZE]
 {
+	10,
 	10
 };
-
-typedef enum RecordType : uint16_t
-{
-	Runtime =			0xEE,
-} RecordType;
-
-typedef struct RuntimeRecord
-{
-	uint32_t Runtime[TASKPOOL_SIZE] { 0 };
-	uint64_t ElapsedMicros	= 0;
-	RecordType Type			= RecordType::Runtime;
-	uint16_t Postamble		= 0xAA55;
-} RuntimeRecord;
 
 int main(void)
 {	
 	uint64_t t_now = 0;
 	uint64_t t_now_2 = 0;
 	uint8_t taskIndex = 0;
-	RuntimeRecord runtimeRecord;
+	uint32_t runtimeRecord;
 	
 	while (1)
 	{
@@ -45,7 +35,7 @@ int main(void)
 		taskPool[taskIndex]->Run(ElapsedMilis);
 		t_now_2 = ElapsedMilis;
 		
-		runtimeRecord.Runtime[taskIndex] = t_now_2 - t_now;
+		runtimeRecord = t_now_2 - t_now;
 		
 		while (t_now_2 - t_now < timeSlot[taskIndex])
 			t_now_2 = ElapsedMilis;
@@ -54,4 +44,14 @@ int main(void)
 		if (taskIndex >= TASKPOOL_SIZE)
 			taskIndex = 0;
 	}
+}
+
+void CAN0_Handler()
+{
+}
+
+void CAN1_Handler()
+{
+	uint8_t x = 0;
+	x++;
 }

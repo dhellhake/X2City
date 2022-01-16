@@ -32,6 +32,7 @@
 #include "CortexM0\CortexM0.h"
 #include "SERCOM\SERCOMlib.h"
 #include "PORT\PORT.h"
+#include "CAN\CANlib.h"
 
 /* Initialize segments */
 extern uint32_t _sfixed;
@@ -262,6 +263,9 @@ void Reset_Handler(void)
         InitPORT();
         
         InitSERCOM1();
+
+		InitCAN0();
+		InitCAN1();
 
         /* Initialize the C library */
         __libc_init_array();

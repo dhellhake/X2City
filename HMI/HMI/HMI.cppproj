@@ -187,6 +187,18 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ComHandler\ComHandler.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ComHandler\ComHandler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripheral\CAN\CANlib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripheral\CAN\CANlib.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Peripheral\CortexM0\CortexM0.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -229,13 +241,11 @@
     <Compile Include="Task.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Test\Test.h">
-      <SubType>compile</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test" />
+    <Folder Include="ComHandler" />
     <Folder Include="Peripheral\CortexM0" />
+    <Folder Include="Peripheral\CAN" />
     <Folder Include="SSD1327" />
     <Folder Include="Peripheral" />
     <Folder Include="Peripheral\GCLK" />
