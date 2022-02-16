@@ -15,7 +15,6 @@ ComHandler ComHdl;
 RUN_RESULT ComHandler::Run(uint32_t timeStamp)
 {
 	can0_com();
-	can1_com();
 	
 	if (once > 0)
 	{

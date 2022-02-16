@@ -6,6 +6,18 @@
 */
 #include "CANlib.h"
 
+#define COMPILER_ALIGNED(a)        __attribute__((__aligned__(a)))
+
+COMPILER_ALIGNED(4)
+static CanMramSidfe can0_rx_standard_filter;
+COMPILER_ALIGNED(4)
+static CanMramRxbe  can0_rx_buffer;
+COMPILER_ALIGNED(4)
+static CanMramTxbe  can0_tx_buffer;
+COMPILER_ALIGNED(4)
+static CanMramTxefe can0_tx_event_fifo;
+
+static const uint8_t dlc_to_size[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 16, 20, 24, 32, 48, 64 };
 
 // Nominal bit rate. The time quanta is 48 MHz / (5+1) = 8MHz.
 // And each bit is (1 + NTSEG1 + 1 + NTSEG2 + 1) = 16 time quanta
@@ -102,86 +114,6 @@ void InitCAN0()
 	NVIC_EnableIRQ(CAN0_IRQn);		// Enable SysTick Interrupt
 }
 
-
-void InitCAN1()
-{
-	/* Enable Clock for CAN1 */
-	MCLK->AHBMASK.reg |= MCLK_AHBMASK_CAN1;
-	
-	// Disable the peripheral channel
-	GCLK->PCHCTRL[CAN1_GCLK_ID].reg &= ~GCLK_PCHCTRL_CHEN;
-	while (GCLK->PCHCTRL[CAN1_GCLK_ID].reg & GCLK_PCHCTRL_CHEN);
-
-	// Configure the peripheral channel
-	GCLK->PCHCTRL[CAN1_GCLK_ID].reg = GCLK_PCHCTRL_GEN(0);
-
-	// Enable GCLK for peripheral
-	GCLK->PCHCTRL[CAN1_GCLK_ID].reg |= GCLK_PCHCTRL_CHEN;
-	
-	/* Configure CAN1 Peripheral */
-	CAN1->CCCR.reg =	CAN_CCCR_INIT |												// Initialization
-						CAN_CCCR_CCE;												// Configuration Change Enable
-	CAN1->CCCR.reg =	CAN_CCCR_INIT | 											// Initialization
-						CAN_CCCR_CCE | 												// Configuration Change Enable
-						CAN_CCCR_TXP |												// Transmit Pause
-						CAN_CCCR_EFBI |												// Edge Filtering during Bus Integration
-						CAN_CCCR_PXHD |												// Protocol Exception Handling Disable
-						CAN_CCCR_DAR |												// Disable Automatic Retransmission
-						CAN_CCCR_FDOE |												// FD Operation Enable
-						CAN_CCCR_BRSE;												// Bit Rate Switch Enable
-	CAN1->SIDFC.reg =	CAN_SIDFC_FLSSA((uint32_t)&can1_rx_standard_filter) |		// Filter List Standard Start Address
-						CAN_SIDFC_LSS(1);											// List Size Standard
-	CAN1->XIDFC.reg =	CAN_XIDFC_LSE(0);											// List Size Extended
-
-	CAN1->RXF0C.reg =	CAN_RXF0C_F0OM |											// FIFO 0 Operation Mode
-						CAN_RXF0C_F0WM(0);											// Rx FIFO 0 Watermark (interrupt)
-	CAN1->RXF1C.reg =	CAN_RXF1C_F1OM |											// FIFO 1 Operation Mode
-						CAN_RXF1C_F1WM(0);											// Rx FIFO 1 Watermark (interrupt)
-
-	CAN1->RXBC.reg =	CAN_RXBC_RBSA((uint32_t)&can1_rx_buffer);					// Rx Buffer Start Address
-	CAN1->TXBC.reg =	CAN_TXBC_TBSA((uint32_t)&can1_tx_buffer) |					// Tx Buffers Start Address
-						CAN_TXBC_NDTB(1);											// Number of Dedicated Transmit Buffers
-	CAN1->TXEFC.reg =	CAN_TXEFC_EFSA((uint32_t)&can1_tx_event_fifo) |				// Event FIFO Start Address
-						CAN_TXEFC_EFS(1);											// Event FIFO Size		CAN1->RXESC.reg =	CAN_RXESC_RBDS_DATA64 |										// Rx Buffer Data Field Size
-						CAN_RXESC_F0DS_DATA64 |										// Rx FIFO 0 Data Field Size
-						CAN_RXESC_F1DS_DATA64;										// Rx FIFO 1 Data Field Size
-	CAN1->TXESC.reg =	CAN_TXESC_TBDS_DATA64;										// Tx Buffer Data Field Size
-	
-	CAN1->TSCC.reg =	CAN_TSCC_TCP(0) |											// Timestamp Counter Prescaler
-						CAN_TSCC_TSS_INC_Val;										// Timestamp Select
-	CAN1->TDCR.reg =	CAN_TDCR_TDCO(0) |											// Transmitter Delay Compensation Offset
-						CAN_TDCR_TDCF(0);											// Transmitter Delay Compensation Filter Window Length
-	
-	CAN1->GFC.reg =		CAN_GFC_ANFS_REJECT |										// Accept Non-matching Frames Standard
-						CAN_GFC_ANFE_REJECT |										// Accept Non-matching Frames Extended
-						CAN_GFC_RRFS |												// Reject Remote Frames Standard
-						CAN_GFC_RRFE;												// Reject Remote Frames Extended
-	
-	CAN1->XIDAM.reg =	CAN_XIDAM_MASK;												// Extended ID Mask		CAN1->TXBTIE.reg =	CAN_TXBTIE_MASK;											// Transmission Interrupt Enable
-	CAN1->TXBCIE.reg =	CAN_TXBCIE_MASK;											// Cancellation Finished Interrupt Enable
-	CAN1->NBTP.reg =	CAN_NBTP_NBRP(NBTP_NBRP_VALUE) |							// Nominal Baud Rate Prescaler
-						CAN_NBTP_NSJW(NBTP_NSJW_VALUE) |							// Nominal (Re)Syncronization Jump Width
-						CAN_NBTP_NTSEG1(NBTP_NTSEG1_VALUE) |						// Nominal Time segment before sample point
-						CAN_NBTP_NTSEG2(NBTP_NTSEG2_VALUE);							// Time segment after sample point	
-	CAN1->DBTP.reg =	CAN_DBTP_DBRP(DBTP_DBRP_VALUE) |							// Data Baud Rate Prescaler
-						CAN_DBTP_DSJW(DBTP_DSJW_VALUE) |							// Data (Re)Syncronization Jump Width
-						CAN_DBTP_DTSEG1(DBTP_DTSEG1_VALUE) |						// Fast time segment before sample point
-						CAN_DBTP_DTSEG2(DBTP_DTSEG2_VALUE);							// Data time segment after sample point
-	CAN1->IE.reg |= CAN_IE_PEDE;
-	
-	CAN1->CCCR.reg &= ~CAN_CCCR_INIT;												// Configuration Change Enable
-	while (CAN1->CCCR.reg & CAN_CCCR_INIT);
-
-	can1_rx_standard_filter.SIDFE_0.reg =	CAN_SIDFE_0_SFID2(0) |					// Standard Filter ID 2
-											CAN_SIDFE_0_SFID1(CAN_FILTER_ID) |		// First ID of standard ID filter element
-											CAN_SIDFE_0_SFT_CLASSIC |				// Classic filter: SFID1 = filter, SFID2 = mask
-											CAN_SIDFE_0_SFEC_STRXBUF;				// Store into Rx Buffer or as debug message, configuration of SFT[1:0] ignored
-
-	
-	NVIC_SetPriority(CAN1_IRQn, 1);	// Set interrupt priority to highest urgency	
-	NVIC_EnableIRQ(CAN1_IRQn);		// Enable SysTick Interrupt
-}
-
 void can0_com(void)
 {
 	uint8_t *data = (uint8_t *)can0_rx_buffer.RXBE_DATA;
@@ -198,6 +130,8 @@ void can0_com(void)
 	if (CAN0->NDAT1.bit.ND0 == 0)
 		return;
 
+	uint16_t can_id = can0_rx_buffer.RXBE_0.bit.ID >> 18;
+
 	// Determine data size using  Data Length Code
 	size = dlc_to_size[can0_rx_buffer.RXBE_1.bit.DLC];
 	size++;
@@ -209,31 +143,6 @@ void can0_com(void)
 	CAN0->NDAT1.reg = CAN_NDAT1_ND0;
 }
 
-void can1_com(void)
-{
-	uint8_t *data = (uint8_t *)can1_rx_buffer.RXBE_DATA;
-	int size;
-
-	// Check for Message stored to Dedicated Rx Buffer
-	if (CAN1->IR.bit.DRX == 0)
-		return;
-	
-	// Clear Message stored to Dedicated Rx Buffer Interrupt
-	CAN1->IR.reg = CAN_IR_DRX;
-
-	// Check if new Data is available in Buffer 0
-	if (CAN1->NDAT1.bit.ND0 == 0)
-		return;
-
-	// Determine data size using  Data Length Code
-	size = dlc_to_size[can1_rx_buffer.RXBE_1.bit.DLC];
-	size++;
-
-	//process_command(data, size);
-
-	// Clear new Data Available in Buffer indicator
-	CAN1->NDAT1.reg = CAN_NDAT1_ND0;
-}
 
 void can0_transmit(uint8_t size, uint8_t* data)
 {

@@ -21,7 +21,7 @@ class ComHandler : public Task
 	/* Class implementation                                                 */
 	/************************************************************************/
 	public:
-		uint8_t once = 0x01;
+		uint8_t once = 0x00;
 	
 }; //ComHandler
 

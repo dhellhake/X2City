@@ -265,7 +265,6 @@ void Reset_Handler(void)
         InitSERCOM1();
 
 		InitCAN0();
-		InitCAN1();
 
         /* Initialize the C library */
         __libc_init_array();
