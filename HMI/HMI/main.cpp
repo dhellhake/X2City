@@ -45,13 +45,3 @@ int main(void)
 			taskIndex = 0;
 	}
 }
-
-void CAN0_Handler()
-{
-}
-
-void CAN1_Handler()
-{
-	uint8_t x = 0;
-	x++;
-}

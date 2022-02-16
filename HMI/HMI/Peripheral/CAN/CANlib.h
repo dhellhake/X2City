@@ -17,7 +17,6 @@ extern "C" {
 
 	void InitCAN0();
 
-	void can0_com(void);
 	void can0_transmit(uint8_t size, uint8_t* data);
 
 #ifdef __cplusplus

@@ -5,7 +5,7 @@
 * Author: dominik hellhake
 */
 #include "ComHandler.h"
-#include "..\Peripheral\CAN\CANlib.h"
+#include "..\SSD1327\SSD1327.h"
 
 ComHandler ComHdl;
 
@@ -14,21 +14,11 @@ ComHandler ComHdl;
 /************************************************************************/
 RUN_RESULT ComHandler::Run(uint32_t timeStamp)
 {
-	can0_com();
+	float v_veh = 0.0f;
+	for (uint8_t x = 0; x < 4; x++)
+		((uint8_t*)&v_veh)[x] = this->can_motorcontrol_message_buffer[x];
 	
-	if (once > 0)
-	{
-		once = 0;
-		
-		uint8_t data[64] = { 0x00 };
-		for (uint8_t x = 0; x < 64; x++)
-			data[x] = x;
-		
-		can0_transmit(64, data);		
-	} else 
-	{
-		once = 0;
-	}
+	OLED.SetVVeh(v_veh);
 	
 	
 	return RUN_RESULT::SUCCESS;
