@@ -11,9 +11,7 @@
 #include "HallSensor/HallSensor.h"
 #include "ComPort/ComPort.h"
 
-void task_idle(void *params);
 void task_handler(void *params);
-
 
 int main(void)
 {	
@@ -54,15 +52,10 @@ int main(void)
     while (1) {}
 }
 
-void task_idle(void *params)
-{
-	while (1);
-}
-
 void task_handler(void *params)
 {
 	os_task* task = (os_task*)params;
-	Executable* exec = (Executable*)task->executable; 
+	Executable* exec = (Executable*)task->executable;
 	
 	exec->Run(ElapsedMilis);
 	task->status = OS_TASK_STATUS_COMPLETE;

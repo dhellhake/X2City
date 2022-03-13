@@ -56,9 +56,11 @@ extern "C" {
 	extern os_state OS_STATE;
 
 	uint8_t os_task_reset(os_task* task);
+	
+	void task_idle(void *params);
 	uint8_t os_start();
 	
-	void os_task_scheduler();
+	void os_task_scheduler();	
 
 #ifdef __cplusplus
 }

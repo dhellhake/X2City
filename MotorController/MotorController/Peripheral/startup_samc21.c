@@ -266,8 +266,7 @@ void Reset_Handler(void)
 		
 		InitDMAC();
 		
-		InitSERCOM5();
-		
+		InitSERCOM5();		
 
         /* Initialize the C library */
         __libc_init_array();

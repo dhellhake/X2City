@@ -34,13 +34,13 @@ void HallSensor::HallTrigger(HallSignal source, uint32_t tstmp)
 	/* Update average hall state transition interval */
 	this->AvgHallStateInvervalHistory[this->AvgHallStateIntervalHistoryIdx++] = tstmp - this->LastHallStateSwitchTime_ms;
 	if (this->AvgHallStateIntervalHistoryIdx >= STATE_INTERVAL_HISTORY_SIZE)
-	this->AvgHallStateIntervalHistoryIdx = 0;
+		this->AvgHallStateIntervalHistoryIdx = 0;
 	
 	/* Add current tick to history */
 	this->LastHallStateSwitchTime_ms = tstmp;
 	this->HallStateInvervalHistory[this->HallStateIntervalHistoryIdx++] = tstmp;
 	if (this->HallStateIntervalHistoryIdx >= STATE_INTERVAL_HISTORY_SIZE)
-	this->HallStateIntervalHistoryIdx = 0;
+		this->HallStateIntervalHistoryIdx = 0;
 	
 	this->Avl_HallState = (HALL_STATE)((PORT->Group[0].IN.reg >> 23) & 0b111);
 	this->Avl_TriggerCnt++;

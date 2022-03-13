@@ -21,6 +21,20 @@ void task_finished(void *params)
 	while (1);
 }
 
+void task_idle(void *params)
+{
+	while (1);
+}
+
+void task_handler(void *params)
+{
+	os_task* task = (os_task*)params;
+	Executable* exec = (Executable*)task->executable;
+	
+	exec->Run(ElapsedMilis);
+	task->status = OS_TASK_STATUS_COMPLETE;
+}
+
 uint8_t os_task_reset(os_task* task)
 {
 	// Clear Stack
@@ -88,7 +102,7 @@ inline void os_task_scheduler()
 				if (tasks[x].status == OS_TASK_STATUS_COMPLETE) //Else: MTA
 					os_task_reset(&tasks[x]);
 		
-	// Check for higher priority tasks (ready or suspended.
+	// Check for higher priority tasks (ready or suspended)
 	for (uint8_t x = 0; x < currentTaskIdx; x++)	
 		if (tasks[x].status == OS_TASK_STATUS_READY || tasks[x].status == OS_TASK_STATUS_SUSPENDED)
 		{
