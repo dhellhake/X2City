@@ -53,7 +53,7 @@ void InitSERCOM1()
 								(0x1 << SERCOM_I2CM_CTRLB_SMEN_Pos);
 	
 	uint32_t fgclk		= 48000000;
-	uint32_t fscl		= 500000;
+	uint32_t fscl		= 400000;
 	uint32_t trise		= 215; //ns
 	uint32_t tmp_baud = (int32_t)(div_ceil(fgclk - fscl * (10 + (fgclk * 0.000000001) * trise), 2 * fscl));
 							

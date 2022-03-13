@@ -29,10 +29,12 @@
 
 #include "samc21.h"
 #include "GCLK\GCLK.h"
+#include "SUPC\SUPClib.h"
 #include "CortexM0\CortexM0.h"
 #include "SERCOM\SERCOMlib.h"
 #include "PORT\PORT.h"
 #include "CAN\CANlib.h"
+#include "SDADC\SDADClib.h"
 
 /* Initialize segments */
 extern uint32_t _sfixed;
@@ -258,9 +260,15 @@ void Reset_Handler(void)
         
         InitGCLK();
 		
+		InitSUPC();
+		
 		InitSysTick();
         
         InitPORT();
+        
+        InitEIC();
+		
+		InitSDADC();
         
         InitSERCOM1();
 

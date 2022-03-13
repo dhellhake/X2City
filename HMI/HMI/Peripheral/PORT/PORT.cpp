@@ -14,16 +14,35 @@ void InitPORT()
 	/* Init PORT for CAN STDBY */
 	PORT->Group[0].DIRSET.reg = PORT_PA27;
 	PORT->Group[0].OUTCLR.reg = PORT_PA27;
-		
+	
+	
+	/* Init PORT for CAN STDBY */
+	PORT->Group[0].DIRSET.reg = PORT_PA04;
+	PORT->Group[0].OUTCLR.reg = PORT_PA04;
+	
+	/* Pin-Config: SERCOM1 => I2C to SSD1327 */	
 	SetPinPeripheralFunction(PINMUX_PA16C_SERCOM1_PAD0);
 	SetPinPeripheralFunction(PINMUX_PA17C_SERCOM1_PAD1);
-	
-	
+		
+	/* Pin-Config: CAN0 */
 	SetPinPeripheralFunction(PINMUX_PB22G_CAN0_TX);
 	SetPinPeripheralFunction(PINMUX_PB23G_CAN0_RX);
-		
-	SetPinPeripheralFunction(PINMUX_PB10G_CAN1_TX);
-	SetPinPeripheralFunction(PINMUX_PB11G_CAN1_RX);	
+	
+	/* Pin-Config: SDADC->AINN/AINP */
+	SetPinPeripheralFunction(PINMUX_PB08B_SDADC_INN1);
+	SetPinPeripheralFunction(PINMUX_PB09B_SDADC_INP1);
+	
+	/* Pin-Config: U-Hall on EXTINT13 */
+	PORT->Group[0].DIRCLR.reg = PORT_PA25;
+	PORT->Group[0].OUTSET.reg = PORT_PA25;
+	PORT->Group[0].PINCFG[PIN_PA25].reg = PORT_PINCFG_INEN | PORT_PINCFG_PULLEN;
+	SetPinPeripheralFunction(PINMUX_PA25A_EIC_EXTINT13);
+	
+	/* Pin-Config: V-Hall on EXTINT12 */
+	PORT->Group[0].DIRCLR.reg = PORT_PA24;
+	PORT->Group[0].OUTSET.reg = PORT_PA24;
+	PORT->Group[0].PINCFG[PIN_PA24].reg = PORT_PINCFG_INEN | PORT_PINCFG_PULLEN;
+	SetPinPeripheralFunction(PINMUX_PA24A_EIC_EXTINT12);
 }
 
 void SetPinPeripheralFunction(uint32_t pinmux)

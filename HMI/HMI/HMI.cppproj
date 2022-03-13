@@ -205,6 +205,12 @@
     <Compile Include="Peripheral\CortexM0\CortexM0.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Peripheral\EIC\EIClib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripheral\EIC\EIClib.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Peripheral\GCLK\GCLK.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -217,6 +223,12 @@
     <Compile Include="Peripheral\PORT\PORT.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Peripheral\SDADC\SDADClib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripheral\SDADC\SDADClib.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Peripheral\SERCOM\SERCOMlib.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -227,6 +239,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripheral\SUPC\SUPClib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripheral\SUPC\SUPClib.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="SSD1327\font.h">
@@ -246,6 +264,9 @@
     <Folder Include="ComHandler" />
     <Folder Include="Peripheral\CortexM0" />
     <Folder Include="Peripheral\CAN" />
+    <Folder Include="Peripheral\EIC" />
+    <Folder Include="Peripheral\SUPC" />
+    <Folder Include="Peripheral\SDADC" />
     <Folder Include="SSD1327" />
     <Folder Include="Peripheral" />
     <Folder Include="Peripheral\GCLK" />
