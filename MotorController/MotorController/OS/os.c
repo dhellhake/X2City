@@ -26,15 +26,6 @@ void task_idle(void *params)
 	while (1);
 }
 
-void task_handler(void *params)
-{
-	os_task* task = (os_task*)params;
-	Executable* exec = (Executable*)task->executable;
-	
-	exec->Run(ElapsedMilis);
-	task->status = OS_TASK_STATUS_COMPLETE;
-}
-
 uint8_t os_task_reset(os_task* task)
 {
 	// Clear Stack

@@ -32,6 +32,7 @@
 #include "PORT\PORT.h"
 #include "DMAC\DMAClib.h"
 #include "SERCOM\SERCOMlib.h"
+#include "CAN\CANlib.h"
 #include "EIC\EIClib.h"
 
 /* Initialize segments */
@@ -266,7 +267,9 @@ void Reset_Handler(void)
 		
 		InitDMAC();
 		
-		InitSERCOM5();		
+		InitSERCOM5();
+		
+		InitCAN0();
 
         /* Initialize the C library */
         __libc_init_array();

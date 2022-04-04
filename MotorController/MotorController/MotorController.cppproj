@@ -193,10 +193,10 @@
     <Compile Include="BLDCDrive\BLDCDrive.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="ComPort\ComPort.cpp">
+    <Compile Include="ComHandler\ComHandler.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="ComPort\ComPort.h">
+    <Compile Include="ComHandler\ComHandler.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HallSensor\Hall.h">
@@ -218,6 +218,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="OS\os.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripheral\CAN\CANlib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripheral\CAN\CANlib.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Peripheral\CortexM0\CortexM0.cpp">
@@ -266,13 +272,14 @@
   <ItemGroup>
     <Folder Include="BLDCDrive" />
     <Folder Include="HallSensor" />
-    <Folder Include="ComPort" />
+    <Folder Include="ComHandler" />
     <Folder Include="OS" />
     <Folder Include="Peripheral" />
     <Folder Include="Peripheral\GCLK" />
     <Folder Include="Peripheral\CortexM0" />
     <Folder Include="Peripheral\DMAC" />
     <Folder Include="Peripheral\EIC" />
+    <Folder Include="Peripheral\CAN" />
     <Folder Include="Peripheral\SERCOM" />
     <Folder Include="Peripheral\PORT" />
   </ItemGroup>

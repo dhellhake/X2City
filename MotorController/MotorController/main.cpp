@@ -9,7 +9,7 @@
 #include "OS/os.h"
 #include "BLDCDrive/BLDCDrive.h"
 #include "HallSensor/HallSensor.h"
-#include "ComPort/ComPort.h"
+#include "ComHandler/ComHandler.h"
 
 void task_handler(void *params);
 
@@ -39,7 +39,7 @@ int main(void)
 	tasks[1].stackSize = sizeof(stack2);
 	
 	tasks[2].handler = &task_handler;
-	tasks[2].executable = (void *)&Com;
+	tasks[2].executable = (void *)&ComHdl;
 	tasks[2].cycleTime = OS_TASK_CYCLE_TIME_100MS;
 	tasks[2].stack = stack3;
 	tasks[2].stackSize = sizeof(stack3);

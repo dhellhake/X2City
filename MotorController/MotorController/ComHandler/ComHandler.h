@@ -1,19 +1,19 @@
 /* 
-* ComPort.h
+* ComHandler.h
 *
-* Created: 04.09.2021 18:37:08
+* Created: 15.03.2022 20:07:15
 * Author: dominik hellhake
 */
-#ifndef __COMPORT_H__
-#define __COMPORT_H__
+#ifndef __COMHANDLER_H__
+#define __COMHANDLER_H__
 
 #include "..\OS\Executable.h"
 
-typedef struct com_status_t
+typedef struct com_debug_record_t
 {
 	uint16_t preamble =					0xDEAD;
 	uint16_t bytes =					28;
-		
+	
 	/* DRV8323 */
 	uint32_t	Avl_DRV_State =			0x00;
 	float		Tar_Duty =				0.0f;
@@ -24,24 +24,24 @@ typedef struct com_status_t
 	uint32_t	Avl_Ticks = 0;
 	uint32_t	Avl_DriveDirection =	0;
 	uint32_t	AVL_HallState =         0;
-} com_status_t;
+} com_debug_record_t;
 
-class ComPort : public Executable
+class ComHandler : public Executable
 {
 	/************************************************************************/
-	/* Executable Interface implementation                                  */
+	/* Task Interface implementation										*/
 	/************************************************************************/
 	public:
-		virtual RUN_RESULT Run(uint32_t timeStamp);
+	virtual RUN_RESULT Run(uint32_t timeStamp);
 	
 	/************************************************************************/
 	/* Class implementation                                                 */
 	/************************************************************************/
 	public:
-		com_status_t Record;
+		com_debug_record_t Record;
 
-}; //ComPort
+}; //ComHandler
 
-extern ComPort Com;
+extern ComHandler ComHdl;
 
-#endif //__COMPORT_H__
+#endif //__COMHANDLER_H__

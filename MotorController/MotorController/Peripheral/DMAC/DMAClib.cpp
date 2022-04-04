@@ -5,7 +5,7 @@
 * Author: dominik hellhake
 */
 #include "DMAClib.h"
-#include "..\..\ComPort\ComPort.h"
+#include "..\..\ComHandler\ComHandler.h"
 
 
 #define COMPILER_ALIGNED(a)        __attribute__((__aligned__(a)))
@@ -59,8 +59,8 @@ void InitDMACChannel0()
 										(0x0 << DMAC_BTCTRL_EVOSEL_Pos) |						// Event Output Disabled
 										(0x1 << DMAC_BTCTRL_VALID_Pos);							// Descriptor is Valid
 	
-	descriptor_section[0].BTCNT.reg =	sizeof(Com.Record);										// Set Bytes to transfer
-	descriptor_section[0].SRCADDR.reg = (uint32_t)&Com.Record + sizeof(Com.Record);				// Set Source Address
+	descriptor_section[0].BTCNT.reg =	sizeof(ComHdl.Record);									// Set Bytes to transfer
+	descriptor_section[0].SRCADDR.reg = (uint32_t)&ComHdl.Record + sizeof(ComHdl.Record);		// Set Source Address
 	descriptor_section[0].DSTADDR.reg = (uint32_t)(&SERCOM5->USART.DATA.reg);					// Set Destination Address
 	
 	descriptor_section[0].DESCADDR.reg = 0;														// No successor descriptor
