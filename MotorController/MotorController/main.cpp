@@ -5,16 +5,18 @@
  * Author : dominik hellhake
  */ 
 #include "sam.h"
-#include "Peripheral/CortexM0/CortexM0.h"
+#include "DeviceDriver/CortexM0/CortexM0.h"
+#include "DeviceDriver/SERCOM/SERCOMlib.h"
 #include "OS/os.h"
 #include "BLDCDrive/BLDCDrive.h"
 #include "HallSensor/HallSensor.h"
 #include "ComHandler/ComHandler.h"
+#include "DeviceDriver/KSZ8851/KSZ8851.h"
 
 void task_handler(void *params);
 
 int main(void)
-{	
+{		
 	/* Initialize tasks: */	
 	static uint32_t stackIdle[32];
 	static uint32_t stack1[64];
@@ -27,22 +29,23 @@ int main(void)
 	tasks[OS_CONFIG_MAX_TASKS - 1].stackSize = sizeof(stackIdle);
 		
 	tasks[0].handler = &task_handler;
-	tasks[0].executable = (void *)&DRV;
-	tasks[0].cycleTime = OS_TASK_CYCLE_TIME_100MS;
-	tasks[0].stack = stack1;
-	tasks[0].stackSize = sizeof(stack1);
-	
+	tasks[0].executable = (void *)&ComHdl;
+	tasks[0].cycleTime = OS_TASK_CYCLE_TIME_10MS;
+	tasks[0].stack = stack3;
+	tasks[0].stackSize = sizeof(stack3);
+
 	tasks[1].handler = &task_handler;
-	tasks[1].executable = (void *)&Hall;
-	tasks[1].cycleTime = OS_TASK_CYCLE_TIME_50MS;
-	tasks[1].stack = stack2;
-	tasks[1].stackSize = sizeof(stack2);
-	
+	tasks[1].executable = (void *)&DRV;
+	tasks[1].cycleTime = OS_TASK_CYCLE_TIME_100MS;
+	tasks[1].stack = stack1;
+	tasks[1].stackSize = sizeof(stack1);
+
 	tasks[2].handler = &task_handler;
-	tasks[2].executable = (void *)&ComHdl;
-	tasks[2].cycleTime = OS_TASK_CYCLE_TIME_100MS;
-	tasks[2].stack = stack3;
-	tasks[2].stackSize = sizeof(stack3);
+	tasks[2].executable = (void *)&Hall;
+	tasks[2].cycleTime = OS_TASK_CYCLE_TIME_50MS;
+	tasks[2].stack = stack2;
+	tasks[2].stackSize = sizeof(stack2);
+	
 	
 	for (uint8_t x = 0; x < OS_CONFIG_MAX_TASKS; x++)
 		os_task_reset(&tasks[x]);

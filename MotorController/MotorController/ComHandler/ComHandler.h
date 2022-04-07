@@ -8,22 +8,32 @@
 #define __COMHANDLER_H__
 
 #include "..\OS\Executable.h"
+#include "..\DeviceDriver\KSZ8851\KSZ8851.h"
+
+typedef enum DEBUG_LINK_STATE : uint8_t
+{
+	DEBUG_STATE_OFFLINE =			0x00,
+	DEBUG_STATE_READY =				0x01,
+	DEBUG_STATE_TX_PENDING =		0x02,
+} DEBUG_LINK_STATE;
 
 typedef struct com_debug_record_t
 {
-	uint16_t preamble =					0xDEAD;
-	uint16_t bytes =					28;
+	uint8_t EthHeader[16];
+	uint32_t preamble;
 	
 	/* DRV8323 */
-	uint32_t	Avl_DRV_State =			0x00;
-	float		Tar_Duty =				0.0f;
+	uint32_t	Avl_DRV_State;
+	float		Tar_Duty;
 	
 	/* HallSensor */
-	uint32_t	Avl_AvgHallStateInterval =		0;
-	float		Avl_TicksPerSecond =	0.0f;
-	uint32_t	Avl_Ticks = 0;
-	uint32_t	Avl_DriveDirection =	0;
-	uint32_t	AVL_HallState =         0;
+	uint32_t	Avl_AvgHallStateInterval;
+	float		Avl_TicksPerSecond;
+	uint32_t	Avl_Ticks;
+	uint32_t	Avl_DriveDirection;
+	uint32_t	Avl_HallState;
+
+	uint32_t postamble;
 } com_debug_record_t;
 
 class ComHandler : public Executable
@@ -32,13 +42,24 @@ class ComHandler : public Executable
 	/* Task Interface implementation										*/
 	/************************************************************************/
 	public:
-	virtual RUN_RESULT Run(uint32_t timeStamp);
+		virtual RUN_RESULT Run(uint32_t timeStamp);
 	
 	/************************************************************************/
 	/* Class implementation                                                 */
 	/************************************************************************/
-	public:
-		com_debug_record_t Record;
+	public:		
+		DEBUG_LINK_STATE DebugState =				DEBUG_STATE_OFFLINE;
+	
+		com_debug_record_t *Record;
+		bool once = false;
+
+		inline void SetDebugLinkState(uint8_t state)
+		{
+			if (state > 0x00)
+				this->DebugState = DEBUG_STATE_READY;
+			else
+				this->DebugState = DEBUG_STATE_OFFLINE;
+		}
 
 }; //ComHandler
 

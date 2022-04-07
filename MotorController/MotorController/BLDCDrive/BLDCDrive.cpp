@@ -5,7 +5,7 @@
 * Author: dominik hellhake
 */
 #include "BLDCDrive.h"
-#include "..\Peripheral\CortexM0\CortexM0.h"
+#include "..\DeviceDriver\CortexM0\CortexM0.h"
 
 BLDCDrive DRV;
 

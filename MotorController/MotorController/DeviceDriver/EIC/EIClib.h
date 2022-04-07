@@ -14,6 +14,10 @@ extern "C" {
 	#include "samc21.h"
 	
 	void InitEIC();	
+		
+	void EICEnableInterrupt(uint16_t extInt);
+	void EICDisableInterrupt(uint16_t extInt);
+	
 	
 #ifdef __cplusplus
 }

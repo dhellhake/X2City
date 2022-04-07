@@ -123,67 +123,67 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <ArmGccCpp>
-        <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
-        <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
-        <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
-        <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
-        <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
-        <armgcc.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>DEBUG</Value>
-          </ListValues>
-        </armgcc.compiler.symbols.DefSymbols>
-        <armgcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMC21_DFP\1.2.176\samc21\include</Value>
-          </ListValues>
-        </armgcc.compiler.directories.IncludePaths>
-        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
-        <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
-        <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
-        <armgcccpp.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>DEBUG</Value>
-          </ListValues>
-        </armgcccpp.compiler.symbols.DefSymbols>
-        <armgcccpp.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMC21_DFP\1.2.176\samc21\include</Value>
-          </ListValues>
-        </armgcccpp.compiler.directories.IncludePaths>
-        <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
-        <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
-        <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
-        <armgcccpp.linker.libraries.Libraries>
-          <ListValues>
-            <Value>libm</Value>
-          </ListValues>
-        </armgcccpp.linker.libraries.Libraries>
-        <armgcccpp.linker.libraries.LibrarySearchPaths>
-          <ListValues>
-            <Value>%24(ProjectDir)\Peripheral</Value>
-          </ListValues>
-        </armgcccpp.linker.libraries.LibrarySearchPaths>
-        <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
-        <armgcccpp.linker.memorysettings.ExternalRAM />
-        <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsamc21g18a_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
-        <armgcccpp.assembler.general.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMC21_DFP\1.2.176\samc21\include</Value>
-          </ListValues>
-        </armgcccpp.assembler.general.IncludePaths>
-        <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
-        <armgcccpp.preprocessingassembler.general.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
-            <Value>%24(PackRepoDir)\atmel\SAMC21_DFP\1.2.176\samc21\include</Value>
-          </ListValues>
-        </armgcccpp.preprocessingassembler.general.IncludePaths>
-        <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
-      </ArmGccCpp>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMC21_DFP\1.2.176\samc21\include</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMC21_DFP\1.2.176\samc21\include</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.Libraries>
+  <armgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>%24(ProjectDir)\DeviceDriver</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.LibrarySearchPaths>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.memorysettings.ExternalRAM />
+  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsamc21g18a_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMC21_DFP\1.2.176\samc21\include</Value>
+    </ListValues>
+  </armgcccpp.assembler.general.IncludePaths>
+  <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMC21_DFP\1.2.176\samc21\include</Value>
+    </ListValues>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+  <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
+</ArmGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
@@ -197,6 +197,15 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="ComHandler\ComHandler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\KSZ8851\KSZ8851.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\KSZ8851\KSZ8851.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\KSZ8851\KSZ8851lib.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HallSensor\Hall.h">
@@ -220,74 +229,75 @@
     <Compile Include="OS\os.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\CAN\CANlib.cpp">
+    <Compile Include="DeviceDriver\CAN\CANlib.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\CAN\CANlib.h">
+    <Compile Include="DeviceDriver\CAN\CANlib.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\CortexM0\CortexM0.cpp">
+    <Compile Include="DeviceDriver\CortexM0\CortexM0.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\CortexM0\CortexM0.h">
+    <Compile Include="DeviceDriver\CortexM0\CortexM0.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\CortexM0\PendSVHandler.s">
+    <Compile Include="DeviceDriver\CortexM0\PendSVHandler.s">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\DMAC\DMAClib.cpp">
+    <Compile Include="DeviceDriver\DMAC\DMAClib.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\DMAC\DMAClib.h">
+    <Compile Include="DeviceDriver\DMAC\DMAClib.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\EIC\EIClib.cpp">
+    <Compile Include="DeviceDriver\EIC\EIClib.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\EIC\EIClib.h">
+    <Compile Include="DeviceDriver\EIC\EIClib.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\GCLK\GCLK.cpp">
+    <Compile Include="DeviceDriver\GCLK\GCLK.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\GCLK\GCLK.h">
+    <Compile Include="DeviceDriver\GCLK\GCLK.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\PORT\PORT.cpp">
+    <Compile Include="DeviceDriver\PORT\PORT.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\PORT\PORT.h">
+    <Compile Include="DeviceDriver\PORT\PORT.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\SERCOM\SERCOMlib.cpp">
+    <Compile Include="DeviceDriver\SERCOM\SERCOMlib.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\SERCOM\SERCOMlib.h">
+    <Compile Include="DeviceDriver\SERCOM\SERCOMlib.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Peripheral\startup_samc21.c">
+    <Compile Include="DeviceDriver\startup_samc21.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BLDCDrive" />
+    <Folder Include="DeviceDriver\KSZ8851" />
     <Folder Include="HallSensor" />
     <Folder Include="ComHandler" />
     <Folder Include="OS" />
-    <Folder Include="Peripheral" />
-    <Folder Include="Peripheral\GCLK" />
-    <Folder Include="Peripheral\CortexM0" />
-    <Folder Include="Peripheral\DMAC" />
-    <Folder Include="Peripheral\EIC" />
-    <Folder Include="Peripheral\CAN" />
-    <Folder Include="Peripheral\SERCOM" />
-    <Folder Include="Peripheral\PORT" />
+    <Folder Include="DeviceDriver" />
+    <Folder Include="DeviceDriver\GCLK" />
+    <Folder Include="DeviceDriver\CortexM0" />
+    <Folder Include="DeviceDriver\DMAC" />
+    <Folder Include="DeviceDriver\EIC" />
+    <Folder Include="DeviceDriver\CAN" />
+    <Folder Include="DeviceDriver\SERCOM" />
+    <Folder Include="DeviceDriver\PORT" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Peripheral\samc21g18a_flash.ld">
+    <None Include="DeviceDriver\samc21g18a_flash.ld">
       <SubType>compile</SubType>
     </None>
-    <None Include="Peripheral\samc21g18a_sram.ld">
+    <None Include="DeviceDriver\samc21g18a_sram.ld">
       <SubType>compile</SubType>
     </None>
   </ItemGroup>

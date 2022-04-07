@@ -5,7 +5,7 @@
  *  Author: dominik hellhake
  */ 
 #include "os.h"
-#include "..\Peripheral\CortexM0\CortexM0.h"
+#include "..\DeviceDriver\CortexM0\CortexM0.h"
 
 
 os_task tasks[OS_CONFIG_MAX_TASKS];

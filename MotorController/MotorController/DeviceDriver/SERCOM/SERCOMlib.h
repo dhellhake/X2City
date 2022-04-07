@@ -14,15 +14,17 @@ extern "C" {
 	#include "samc21.h"
 	
 	void InitSERCOM0();
-	void InitSERCOM5();
 	
-	inline void SERCOM5_SendBytes(uint16_t cnt, uint8_t* data)
-	{
-		for (uint16_t x = 0; x < cnt; x++)
-		{
-			while (!(SERCOM5->USART.INTFLAG.reg & SERCOM_USART_INTFLAG_DRE));
-			SERCOM5->USART.DATA.reg = data[x];
-		}
+	void SERCOM0_SetBAUD(uint32_t fbaud);
+	
+	inline void SERCOM0_RxEnable()
+	{		
+		SERCOM0->SPI.CTRLB.reg |= SERCOM_SPI_CTRLB_RXEN;
+	}
+	
+	inline void SERCOM0_RxDisable()
+	{		
+		SERCOM0->SPI.CTRLB.reg &= ~(SERCOM_SPI_CTRLB_RXEN);
 	}
 	
 	inline uint8_t SERCOM0_TransmitByte(uint8_t byte)

@@ -7,6 +7,7 @@
 #include "EIClib.h"
 #include "..\CortexM0\CortexM0.h"
 #include "..\..\HallSensor\HallSensor.h"
+#include "..\KSZ8851\KSZ8851.h"
 
 void InitEIC()
 {
@@ -27,10 +28,11 @@ void InitEIC()
 	
 	
 	NVIC_SetPriority(EIC_IRQn, 1);
-	//NVIC->ISER[0] = (uint32_t)(1 << ((uint32_t)EIC_IRQn & 0x0000001f));
 	NVIC_EnableIRQ(EIC_IRQn);		// Enable SysTick Interrupt
 	
-	EIC->CONFIG[0].reg =	EIC_CONFIG_SENSE7_BOTH |			// EXTINT7
+	EIC->CONFIG[0].reg =	EIC_CONFIG_SENSE0_LOW |
+							EIC_CONFIG_FILTEN0 |
+							EIC_CONFIG_SENSE7_BOTH |			// EXTINT7
 							EIC_CONFIG_FILTEN7;		
 	EIC->CONFIG[1].reg =	EIC_CONFIG_SENSE4_BOTH |			// EXTINT12
 							EIC_CONFIG_FILTEN4 |
@@ -45,18 +47,31 @@ void InitEIC()
 }
 
 void EIC_Handler()
-{
-	volatile uint32_t tstmp = ElapsedMilis * 1000;
-	
+{	
 	if ((EIC->INTFLAG.reg & (1 << 13)) != 0x00)
-		Hall.HallTrigger(HallSignalU, tstmp);
+		Hall.HallTrigger(HallSignalU, ElapsedMilis);
 	else if ((EIC->INTFLAG.reg & (1 << 12)) != 0x00)
-		Hall.HallTrigger(HallSignalV, tstmp);
+		Hall.HallTrigger(HallSignalV, ElapsedMilis);
 	else if ((EIC->INTFLAG.reg & (1 << 7)) != 0x00)
-		Hall.HallTrigger(HallSignalW, tstmp);
+		Hall.HallTrigger(HallSignalW, ElapsedMilis);
+		
+	if ((EIC->INTFLAG.reg & (1 << 0)) != 0x00)
+	{
+		KSZ8851_Handler();
+		EIC->INTFLAG.reg = (1 << 0);
+	}
 	
  	//DRV.Drive_SetPhase(Hall.Avl_HallState);
 	
-	PORT->Group[0].OUTTGL.reg = PORT_PA13;
 	EIC->INTFLAG.reg = (1 << 7) | (1 << 12) | (1 << 13);
+}
+
+	
+void EICEnableInterrupt(uint16_t extInt)
+{
+	EIC->INTENSET.reg |=	(1 << extInt);
+}
+void EICDisableInterrupt(uint16_t extInt)
+{
+	EIC->INTENCLR.reg |=	(1 << extInt);
 }

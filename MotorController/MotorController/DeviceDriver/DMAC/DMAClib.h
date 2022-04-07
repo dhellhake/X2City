@@ -23,8 +23,8 @@ extern "C" {
 		DMAC->CHCTRLA.reg |=	DMAC_CHCTRLA_ENABLE;
 	}
 		
+	void DMAC_ChannelSetSource(uint32_t* data, uint16_t len);	
 	void DMAC_SetDescriptorSrcAddr(uint8_t descrId, uint32_t* addr);
-
 
 #ifdef __cplusplus
 }

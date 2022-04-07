@@ -34,6 +34,7 @@
 #include "SERCOM\SERCOMlib.h"
 #include "CAN\CANlib.h"
 #include "EIC\EIClib.h"
+#include "KSZ8851\KSZ8851.h"
 
 /* Initialize segments */
 extern uint32_t _sfixed;
@@ -230,6 +231,7 @@ const DeviceVectors exception_table = {
 #endif
 };
 
+void SystemStartup();
 /**
  * \brief This is the code that gets called on processor reset.
  * To initialize the device, and call the main() routine.
@@ -267,18 +269,46 @@ void Reset_Handler(void)
 		
 		InitDMAC();
 		
-		InitSERCOM5();
+		InitSERCOM0();
 		
 		InitCAN0();
 
         /* Initialize the C library */
         __libc_init_array();
 
+		/* Initialize Device Driver */
+		SystemStartup();
+
         /* Branch to main function */
         main();
 
         /* Infinite loop */
         while (1);
+}
+
+void SystemStartup()
+{
+	uint8_t errorCode = 0;
+	
+	// Set SERCOM0/SPI Baud to 5Mhz during Initialization
+	SERCOM0_SetBAUD(5000000);
+	
+	/* KZS8851 */
+	// Set Register
+	if(KSZ8851_Init() == 0x00)
+		errorCode = 1;
+	else
+		EICEnableInterrupt(0);
+	
+	
+	// Set SERCOM0/SPI Baud to 24Mhz
+	SERCOM0_SetBAUD(24000000);
+	
+	if (errorCode > 0x00)
+	{
+		PORT->Group[0].OUTSET.reg = PORT_PA28;
+		while(1);
+	}
 }
 
 /**
