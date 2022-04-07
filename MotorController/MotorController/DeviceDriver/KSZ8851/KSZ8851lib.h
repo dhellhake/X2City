@@ -12,6 +12,7 @@
 #define  KZS8851_MAC_L			0x239B
 
 #define KSZ8851_TX_BUFFER_SIZE	1516
+#define KSZ8851_RX_BUFFER_SIZE	256
 
 typedef enum KSZ8851_ADDR
 {

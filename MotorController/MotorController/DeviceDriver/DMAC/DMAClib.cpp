@@ -76,7 +76,7 @@ void DMAC_Handler()
 {
 	if ((DMAC->CHINTFLAG.reg	& DMAC_CHINTFLAG_TCMPL) != 0x00)
 	{
-		SendPacketFinalize();
+		KSZ8851_SendPacketFinalize();
 		DMAC->CHINTFLAG.reg = DMAC_CHINTFLAG_TCMPL;
 	}
 }

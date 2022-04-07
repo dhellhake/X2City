@@ -48,7 +48,8 @@ class ComHandler : public Executable
 	/* Class implementation                                                 */
 	/************************************************************************/
 	public:		
-		DEBUG_LINK_STATE DebugState =				DEBUG_STATE_OFFLINE;
+		volatile DEBUG_LINK_STATE DebugLinkState =		DEBUG_STATE_OFFLINE;
+		volatile uint8_t EthRxPacketCount =				0x00;
 	
 		com_debug_record_t *Record;
 		bool once = false;
@@ -56,9 +57,9 @@ class ComHandler : public Executable
 		inline void SetDebugLinkState(uint8_t state)
 		{
 			if (state > 0x00)
-				this->DebugState = DEBUG_STATE_READY;
+				this->DebugLinkState = DEBUG_STATE_READY;
 			else
-				this->DebugState = DEBUG_STATE_OFFLINE;
+				this->DebugLinkState = DEBUG_STATE_OFFLINE;
 		}
 
 }; //ComHandler
