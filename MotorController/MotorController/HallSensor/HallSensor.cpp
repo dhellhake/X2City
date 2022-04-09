@@ -29,16 +29,16 @@ RUN_RESULT HallSensor::Run(uint32_t timeStamp)
 /************************************************************************/
 /* Class implementation                                                 */
 /************************************************************************/
-void HallSensor::HallTrigger(HallSignal source, uint32_t tstmp)
+void HallSensor::HallTrigger(HallSignal source, uint32_t tstmp_micros)
 {
 	/* Update average hall state transition interval */
-	this->AvgHallStateInvervalHistory[this->AvgHallStateIntervalHistoryIdx++] = tstmp - this->LastHallStateSwitchTime_ms;
+	this->AvgHallStateInvervalHistory[this->AvgHallStateIntervalHistoryIdx++] = tstmp_micros - this->LastHallStateSwitchTime_ms;
 	if (this->AvgHallStateIntervalHistoryIdx >= STATE_INTERVAL_HISTORY_SIZE)
 		this->AvgHallStateIntervalHistoryIdx = 0;
 	
 	/* Add current tick to history */
-	this->LastHallStateSwitchTime_ms = tstmp;
-	this->HallStateInvervalHistory[this->HallStateIntervalHistoryIdx++] = tstmp;
+	this->LastHallStateSwitchTime_ms = tstmp_micros;
+	this->HallStateInvervalHistory[this->HallStateIntervalHistoryIdx++] = tstmp_micros;
 	if (this->HallStateIntervalHistoryIdx >= STATE_INTERVAL_HISTORY_SIZE)
 		this->HallStateIntervalHistoryIdx = 0;
 	

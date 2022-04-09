@@ -7,6 +7,7 @@
 #include "ComHandler.h"
 #include "..\DeviceDriver\DMAC\DMAClib.h"
 #include "..\DeviceDriver\KSZ8851\KSZ8851.h"
+#include "..\DeviceDriver\TC\TClib.h"
 
 ComHandler ComHdl;
 
@@ -31,14 +32,17 @@ RUN_RESULT ComHandler::Run(uint32_t timeStamp)
 		this->Record->postamble = 0x33333333;
 		this->Record->Avl_HallState = 0x22222222;
 		
-		//KSZ8851_SendPacketDMAC();
+		KSZ8851_SendPacketDMAC();
 		
 		this->once = true;
 	}
 	
+	
+	
 	if (this->DebugLinkState != DEBUG_STATE_TX_PENDING && this->EthRxPacketCount > 0)
-	{		
+	{	
 		uint16_t btCnt = KSZ8851_ReceivePacket();
+		
 		
 		tme[tmeIdx++] = 0;
 		

@@ -34,6 +34,7 @@
 #include "SERCOM\SERCOMlib.h"
 #include "CAN\CANlib.h"
 #include "EIC\EIClib.h"
+#include "TC\TClib.h"
 #include "KSZ8851\KSZ8851.h"
 
 /* Initialize segments */
@@ -262,6 +263,8 @@ void Reset_Handler(void)
 		InitGCLK();
 		
 		InitSysTick();
+		
+		InitTC2_3();
 		
 		InitPORT();
 		

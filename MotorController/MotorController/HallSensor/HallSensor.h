@@ -7,7 +7,7 @@
 #ifndef __HALLSENSOR_H__
 #define __HALLSENSOR_H__
 
-#include "..\OS\Executable.h"
+#include "..\DeviceDriver\CortexM0\OS\Executable.h"
 #include "Hall.h"
 
 #define STATE_INTERVAL_HISTORY_SIZE		36
@@ -29,7 +29,7 @@ class HallSensor : public Executable
 		uint16_t				Avl_TicksPerSecond = 0;
 		uint32_t				Avl_AvgHallStateInterval = 0;
 		
-		void HallTrigger(HallSignal source, uint32_t tstmp);
+		void HallTrigger(HallSignal source, uint32_t tstmp_micros);
 	
 	private:
 		uint32_t				LastHallStateSwitchTime_ms = 0;

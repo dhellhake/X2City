@@ -5,7 +5,7 @@
 * Author: domininik hellhake
 */
 #include "EIClib.h"
-#include "..\CortexM0\CortexM0.h"
+#include "..\TC\TClib.h"
 #include "..\..\HallSensor\HallSensor.h"
 #include "..\KSZ8851\KSZ8851.h"
 
@@ -48,12 +48,14 @@ void InitEIC()
 
 void EIC_Handler()
 {	
+	uint32_t elapsedMicros = GetElapsedMicros();
+	
 	if ((EIC->INTFLAG.reg & (1 << 13)) != 0x00)
-		Hall.HallTrigger(HallSignalU, ElapsedMilis);
+		Hall.HallTrigger(HallSignalU, elapsedMicros);
 	else if ((EIC->INTFLAG.reg & (1 << 12)) != 0x00)
-		Hall.HallTrigger(HallSignalV, ElapsedMilis);
+		Hall.HallTrigger(HallSignalV, elapsedMicros);
 	else if ((EIC->INTFLAG.reg & (1 << 7)) != 0x00)
-		Hall.HallTrigger(HallSignalW, ElapsedMilis);
+		Hall.HallTrigger(HallSignalW, elapsedMicros);
 		
 	if ((EIC->INTFLAG.reg & (1 << 0)) != 0x00)
 	{

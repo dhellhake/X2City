@@ -5,9 +5,9 @@
  * Author : dominik hellhake
  */ 
 #include "sam.h"
-#include "DeviceDriver/CortexM0/CortexM0.h"
+#include "DeviceDriver/CortexM0/OS/os.h"
+#include "DeviceDriver/TC/TClib.h"
 #include "DeviceDriver/SERCOM/SERCOMlib.h"
-#include "OS/os.h"
 #include "BLDCDrive/BLDCDrive.h"
 #include "HallSensor/HallSensor.h"
 #include "ComHandler/ComHandler.h"
@@ -60,6 +60,6 @@ void task_handler(void *params)
 	os_task* task = (os_task*)params;
 	Executable* exec = (Executable*)task->executable;
 	
-	exec->Run(ElapsedMilis);
+	exec->Run(GetElapsedMicros());
 	task->status = OS_TASK_STATUS_COMPLETE;
 }

@@ -5,7 +5,7 @@
  *  Author: dominik hellhake
  */ 
 #include "os.h"
-#include "..\DeviceDriver\CortexM0\CortexM0.h"
+#include "..\..\TC\TClib.h"
 
 
 os_task tasks[OS_CONFIG_MAX_TASKS];
@@ -82,11 +82,13 @@ uint8_t GetCyclicTrigger(uint32_t elapsed_ms)
 
 inline void os_task_scheduler()
 {
+	uint32_t elapsedMilis = GetElapsedMicros() / 1000;
+	
 	if (OS_STATE != STATE_STARTED)
 		return;
 		
 	// Reset completed tasks other than currently running
-	uint8_t triggerTaskCycles = GetCyclicTrigger(ElapsedMilis);
+	uint8_t triggerTaskCycles = GetCyclicTrigger(elapsedMilis);
 	for (uint8_t x = 0; x < OS_CONFIG_MAX_TASKS; x++)
 		if (x != currentTaskIdx)
 			if ((tasks[x].cycleTime & triggerTaskCycles) != 0x00)

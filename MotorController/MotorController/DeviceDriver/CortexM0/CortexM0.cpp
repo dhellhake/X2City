@@ -5,9 +5,7 @@
 * Author: dominik hellhake
 */
 #include "CortexM0.h"
-#include "..\..\OS\os.h"
-
-volatile uint32_t ElapsedMilis = 0;
+#include "OS\os.h"
 
 void InitSysTick()
 {
@@ -21,6 +19,5 @@ void InitSysTick()
 
 void SysTick_Handler()
 {
-	ElapsedMilis++;
 	os_task_scheduler();
 }

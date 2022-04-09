@@ -5,7 +5,7 @@
 * Author: dominik hellhake
 */
 #include "KSZ8851.h"
-#include "..\CortexM0\CortexM0.h"
+#include "..\TC\TClib.h"
 #include "..\SERCOM\SERCOMlib.h"
 #include "..\EIC\EIClib.h"
 #include "..\DMAC\DMAClib.h"
