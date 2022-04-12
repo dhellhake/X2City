@@ -37,3 +37,7 @@ MotorController/.vs/*
 HMI/HMI/Debug/*
 HMI/HMI/.vs/*
 HMI/.vs/*
+TraceView/packages/*
+TraceView/obj/*
+TraceView/bin/*
+TraceView/.vs/*

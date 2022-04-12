@@ -1,0 +1,26 @@
+﻿<Window x:Class="TraceView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TraceView"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0" >
+            
+        </Grid>
+        <Grid Grid.Row="1" >
+            <StatusBar DockPanel.Dock="Bottom" VerticalAlignment="Bottom">
+                <StatusBarItem>
+                    <TextBlock Text="Test!"></TextBlock>
+                </StatusBarItem>
+            </StatusBar>
+        </Grid>
+    </Grid>
+</Window>
