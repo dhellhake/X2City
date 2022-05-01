@@ -7,7 +7,7 @@
 #ifndef __COMHANDLER_H__
 #define __COMHANDLER_H__
 
-#include "..\DeviceDriver\CortexM0\OS\Executable.h"
+#include "..\Task.h"
 #include "..\DeviceDriver\KSZ8851\KSZ8851.h"
 
 typedef enum DEBUG_LINK_STATE : uint8_t
@@ -36,7 +36,7 @@ typedef struct com_debug_record_t
 	uint32_t postamble;
 } com_debug_record_t;
 
-class ComHandler : public Executable
+class ComHandler : public Task
 {
 	/************************************************************************/
 	/* Task Interface implementation										*/

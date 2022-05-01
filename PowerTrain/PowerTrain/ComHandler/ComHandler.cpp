@@ -32,12 +32,10 @@ RUN_RESULT ComHandler::Run(uint32_t timeStamp)
 		this->Record->postamble = 0x33333333;
 		this->Record->Avl_HallState = 0x22222222;
 		
-		KSZ8851_SendPacketDMAC();
-		
 		this->once = true;
 	}
-	
-	
+		
+	KSZ8851_SendPacketDMAC();
 	
 	if (this->DebugLinkState != DEBUG_STATE_TX_PENDING && this->EthRxPacketCount > 0)
 	{	

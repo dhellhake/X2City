@@ -102,7 +102,7 @@
 					<Attribute>template</Attribute>
 					<Category>source</Category>
 					<Condition>C Exe</Condition>
-					<FileContentHash>CLXRQ+1efVJju/wYMAoW/Q==</FileContentHash>
+					<FileContentHash>6/9hHadXBPjlFXA8y18Isw==</FileContentHash>
 					<FileVersion></FileVersion>
 					<Name>samc21/templates/main.cpp</Name>
 					<SelectString>Main file (.cpp)</SelectString>

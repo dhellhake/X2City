@@ -97,7 +97,7 @@ void KSZ8851_SendPacketFinalize()
 
 uint16_t KSZ8851_ReceivePacket()
 {
-	uint16_t byteCount;
+	uint16_t byteCount = 0x0000;
 	uint16_t packet_status = KSZ8851_ReadRegister(KSZ8851_RXFHSR);
 	
 	EICDisableInterrupt(0);

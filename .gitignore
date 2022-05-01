@@ -32,8 +32,9 @@
 *.app
 
 # MotorController
-MotorController/MotorController/Debug/*
-MotorController/.vs/*
+PowerTrain/PowerTrain/Debug/*
+PowerTrain/PowerTrain/.vs/*
+PowerTrain/.vs/*
 HMI/HMI/Debug/*
 HMI/HMI/.vs/*
 HMI/.vs/*

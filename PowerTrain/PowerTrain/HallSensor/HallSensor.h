@@ -7,12 +7,12 @@
 #ifndef __HALLSENSOR_H__
 #define __HALLSENSOR_H__
 
-#include "..\DeviceDriver\CortexM0\OS\Executable.h"
+#include "..\Task.h"
 #include "Hall.h"
 
 #define STATE_INTERVAL_HISTORY_SIZE		36
 
-class HallSensor : public Executable
+class HallSensor : public Task
 {
 	/************************************************************************/
 	/* Task Interface implementation										*/

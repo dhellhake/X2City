@@ -7,9 +7,9 @@
 #ifndef __BLDCDRIVE_H__
 #define __BLDCDRIVE_H__
 
-#include "..\DeviceDriver\CortexM0\OS\Executable.h"
+#include "..\Task.h"
 
-class BLDCDrive : public Executable
+class BLDCDrive : public Task
 {	
 	/************************************************************************/
 	/* Task Interface implementation										*/

@@ -1,4 +1,4 @@
-/* 
+/*
 * CortexM0.h
 *
 * Created: 14.11.2021 09:06:25
@@ -13,6 +13,8 @@ extern "C" {
 
 	#include "samc21.h"
 	
+	extern volatile uint32_t ElapsedMilis;
+
 	void InitSysTick();
 
 #ifdef __cplusplus
