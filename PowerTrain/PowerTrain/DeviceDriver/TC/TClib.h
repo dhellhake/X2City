@@ -21,7 +21,7 @@ extern "C" {
 	{
 		TC2->COUNT32.CTRLBSET.reg = TC_CTRLBSET_CMD_READSYNC;
 		while (TC2->COUNT32.SYNCBUSY.bit.COUNT);
-		return (TC2_Overflow * 0xFFFFFFFF) + (TC2->COUNT32.COUNT.reg);
+		return (TC2_Overflow * 0xFFFFFFFF) + (TC2->COUNT32.COUNT.reg) + (uint64_t)((uint64_t)TC2_Overflow << (uint64_t)32) ;
 	}
 	
 	inline void Delay_ms(uint16_t milis)

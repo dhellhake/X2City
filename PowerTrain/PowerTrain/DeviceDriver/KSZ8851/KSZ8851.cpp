@@ -9,6 +9,7 @@
 #include "..\SERCOM\SERCOMlib.h"
 #include "..\EIC\EIClib.h"
 #include "..\DMAC\DMAClib.h"
+#include "..\..\RuntimeEnvironment\RuntimeEnvironment.h"
 #include "..\..\ComHandler\ComHandler.h"
 
 void KSZ8851_ReadFifo(uint8_t *data, uint16_t cnt);
@@ -215,9 +216,9 @@ uint8_t KSZ8851_Init()
 		);
 	
 	// Set Packet buffer for DMA transfer
-	DMAC_ChannelSetSource((uint32_t*)TxPacketBuffer, sizeof(com_debug_record_t));
+	DMAC_ChannelSetSource((uint32_t*)TxPacketBuffer, sizeof(rte_image_record_t));
 	*((uint16_t*)(TxPacketBuffer + 0)) = (KSZ8851_TX_CTRL_TXIC | (0x00 & KSZ8851_TX_CTRL_TXFID));
-	*((uint16_t*)(TxPacketBuffer + 2)) = sizeof(com_debug_record_t) - 4;
+	*((uint16_t*)(TxPacketBuffer + 2)) = sizeof(rte_image_record_t) - 4;
 	
 	return 1;
 }

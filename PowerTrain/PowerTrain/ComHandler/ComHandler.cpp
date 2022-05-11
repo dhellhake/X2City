@@ -23,14 +23,7 @@ RUN_RESULT ComHandler::Run(uint32_t timeStamp)
 		return RUN_RESULT::ERROR;
 	
 	if (!this->once)
-	{		
-		for (uint16_t x = 16; x < 1516; x++)
-			TxPacketBuffer[x] = 0xDE;
-				
-		this->Record = (com_debug_record_t *)TxPacketBuffer;
-		this->Record->preamble = 0x11111111;
-		this->Record->postamble = 0x33333333;
-		this->Record->Avl_HallState = 0x22222222;
+	{
 		
 		this->once = true;
 	}
