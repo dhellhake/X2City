@@ -302,8 +302,7 @@ void SystemStartup()
 		errorCode = 1;
 	else
 		EICEnableInterrupt(0);
-	
-	
+		
 	// Set SERCOM0/SPI Baud to 24Mhz
 	SERCOM0_SetBAUD(24000000);
 	
@@ -319,6 +318,7 @@ void SystemStartup()
  */
 void Dummy_Handler(void)
 {
-        while (1) {
-        }
+    while (1) 
+	{
+    }
 }

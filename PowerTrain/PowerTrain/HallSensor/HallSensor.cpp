@@ -5,22 +5,28 @@
 * Author: dominik hellhake
 */
 #include "HallSensor.h"
+#include "..\RuntimeEnvironment\RuntimeEnvironment.h"
 #include "..\DeviceDriver\CortexM0\CortexM0.h"
 
 HallSensor Hall;
+
+HallSensor::HallSensor()
+{
+	Rte.SetHallState((HALL_STATE)((PORT->Group[0].IN.reg >> 23) & 0b111));
+}
 
 /************************************************************************/
 /* Executable Interface implementation                                  */
 /************************************************************************/
 RUN_RESULT HallSensor::Run(uint32_t timeStamp)
-{
-	this->Avl_AvgHallStateInterval = this->GetAvgHallStateInterval();
-	this->Avl_TicksPerSecond = 1.0f / (((float)this->Avl_AvgHallStateInterval) / 1000000.0f);
+{		
+	Rte.SetHallStateInterval(this->GetAvgHallStateInterval());
+	Rte.SetHallTicksPerSecond(1.0f / (((float)Rte.GetHallStateInterval())) * 1000000.0f);
 	
-	if ((this->LastHallStateSwitchTime_ms / 1000) + 200 < timeStamp)
+	if (this->LastHallStateSwitchTime + 200000 < timeStamp)
 	{
-		this->Avl_TicksPerSecond = 0;
-		this->Avl_AvgHallStateInterval = 0;
+		Rte.SetHallTicksPerSecond(0);
+		Rte.SetHallStateInterval(0);
 	}
 	
 	return RUN_RESULT::SUCCESS;
@@ -32,16 +38,16 @@ RUN_RESULT HallSensor::Run(uint32_t timeStamp)
 void HallSensor::HallTrigger(HallSignal source, uint32_t tstmp_micros)
 {
 	/* Update average hall state transition interval */
-	this->AvgHallStateInvervalHistory[this->AvgHallStateIntervalHistoryIdx++] = tstmp_micros - this->LastHallStateSwitchTime_ms;
+	this->AvgHallStateInvervalHistory[this->AvgHallStateIntervalHistoryIdx++] = tstmp_micros - this->LastHallStateSwitchTime;
 	if (this->AvgHallStateIntervalHistoryIdx >= STATE_INTERVAL_HISTORY_SIZE)
 		this->AvgHallStateIntervalHistoryIdx = 0;
 	
 	/* Add current tick to history */
-	this->LastHallStateSwitchTime_ms = tstmp_micros;
+	this->LastHallStateSwitchTime = tstmp_micros;
 	this->HallStateInvervalHistory[this->HallStateIntervalHistoryIdx++] = tstmp_micros;
 	if (this->HallStateIntervalHistoryIdx >= STATE_INTERVAL_HISTORY_SIZE)
 		this->HallStateIntervalHistoryIdx = 0;
 	
-	this->Avl_HallState = (HALL_STATE)((PORT->Group[0].IN.reg >> 23) & 0b111);
-	this->Avl_TriggerCnt++;
+	Rte.SetHallState((HALL_STATE)((PORT->Group[0].IN.reg >> 23) & 0b111));
+	Rte.SetHallTicks(Rte.GetHallTicks() + 1);
 }

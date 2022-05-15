@@ -24,15 +24,12 @@ class HallSensor : public Task
 	/* Class implementation                                                 */
 	/************************************************************************/
 	public:
-		volatile HALL_STATE		Avl_HallState;		
-		uint32_t				Avl_TriggerCnt = 0;
-		uint16_t				Avl_TicksPerSecond = 0;
-		uint32_t				Avl_AvgHallStateInterval = 0;
-		
+		HallSensor();
+	
 		void HallTrigger(HallSignal source, uint32_t tstmp_micros);
 	
 	private:
-		uint32_t				LastHallStateSwitchTime_ms = 0;
+		uint32_t				LastHallStateSwitchTime = 0;
 		
 		uint8_t					HallStateIntervalHistoryIdx = 0;
 		uint32_t				HallStateInvervalHistory[STATE_INTERVAL_HISTORY_SIZE] = { 0x00 };

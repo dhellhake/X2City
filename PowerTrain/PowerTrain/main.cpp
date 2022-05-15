@@ -11,18 +11,18 @@
 #include "BLDCDrive/BLDCDrive.h"
 #include "HallSensor/HallSensor.h"
 
-#define TASKPOOL_SIZE		1
+#define TASKPOOL_SIZE		2
 
 Task* taskPool[TASKPOOL_SIZE] = {
 	//&DRV,
-	//&Hall,
+	&Hall,
 	&ComHdl
 };
 uint16_t timeSlot[TASKPOOL_SIZE]
 {
 	//4,
-	//4,
-	10000
+	4000,
+	6000
 };
 
 int main(void)
