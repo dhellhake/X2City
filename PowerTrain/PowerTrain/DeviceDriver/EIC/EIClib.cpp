@@ -75,5 +75,5 @@ void EICEnableInterrupt(uint16_t extInt)
 }
 void EICDisableInterrupt(uint16_t extInt)
 {
-	EIC->INTENCLR.reg |=	(1 << extInt);
+	EIC->INTENCLR.reg =		(1 << extInt);
 }
