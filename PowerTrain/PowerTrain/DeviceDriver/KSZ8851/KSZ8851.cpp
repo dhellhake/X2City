@@ -130,9 +130,10 @@ uint16_t KSZ8851_ReceivePacket()
 
 uint8_t KSZ8851_Init()
 {		
-	Delay_ms(20);
+	Delay_ms(40);
 	PORT->Group[0].OUTSET.reg = PORT_PA17;
-	Delay_ms(20);
+	Delay_ms(40);
+	
 	
 	// Set Host MAC Address
 	if (!KSZ8851_WriteRegisterAndCheck(KSZ8851_MARH, KZS8851_MAC_H, KZS8851_MAC_H))
@@ -196,7 +197,7 @@ uint8_t KSZ8851_Init()
 		);
 	
 	// Interrupt Status Register
-	KSZ8851_WriteRegister(KSZ8851_ISR, 0xFFFF);
+	//KSZ8851_WriteRegister(KSZ8851_ISR, 0xFFFF);
 	
 	// Interrupt Enable Register
 	if (!KSZ8851_WriteRegisterAndCheck(
@@ -204,7 +205,7 @@ uint8_t KSZ8851_Init()
 		KSZ8851_IER_LCIE | KSZ8851_IER_TXIE | KSZ8851_IER_RXIE,
 		KSZ8851_IER_LCIE | KSZ8851_IER_TXIE | KSZ8851_IER_RXIE))
 		return 0;
-	
+		
 	// Transmit Control Register
 	KSZ8851_SetRegisterBit(KSZ8851_TXCR,
 		KSZ8851_TXCR_TXE						// Transmit Enable

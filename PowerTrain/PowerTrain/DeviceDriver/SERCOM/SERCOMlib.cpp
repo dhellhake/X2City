@@ -8,7 +8,7 @@
 
 void InitSERCOM0()
 {
-	//Enable Clock for SERCOM0
+//Enable Clock for SERCOM0
 	//Set bits in the clock mask for an APBx bus.
 	MCLK->APBCMASK.bit.SERCOM0_ = 1;
 	
@@ -30,6 +30,8 @@ void InitSERCOM0()
 								(0x0 << SERCOM_SPI_CTRLA_CPOL_Pos);
 	
 	SERCOM0->SPI.CTRLB.reg =	(1 << SERCOM_SPI_CTRLB_RXEN_Pos);
+	
+	SERCOM0->SPI.BAUD.reg = (48000000 / (2 * 500000)) - 1;
 	
 	SERCOM0->SPI.CTRLA.bit.ENABLE = 1;
 	while(SERCOM0->SPI.SYNCBUSY.bit.ENABLE);

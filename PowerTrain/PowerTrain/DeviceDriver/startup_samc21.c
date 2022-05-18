@@ -36,6 +36,7 @@
 #include "EIC\EIClib.h"
 #include "TC\TClib.h"
 #include "KSZ8851\KSZ8851.h"
+#include "..\BLDC\DRV8323Config.h"
 
 /* Initialize segments */
 extern uint32_t _sfixed;
@@ -294,7 +295,12 @@ void SystemStartup()
 	uint8_t errorCode = 0;
 	
 	// Set SERCOM0/SPI Baud to 5Mhz during Initialization
-	SERCOM0_SetBAUD(5000000);
+	SERCOM0_SetBAUD(1000000);
+	
+	if (WriteConfiguration() == 0x00)
+		errorCode = 1;
+	else if (VerifyConfiguration() == 0x00)
+		errorCode = 1;
 	
 	/* KZS8851 */
 	// Set Register

@@ -71,7 +71,7 @@ void EIC_Handler()
 	
 void EICEnableInterrupt(uint16_t extInt)
 {
-	EIC->INTENSET.reg |=	(1 << extInt);
+	EIC->INTENSET.reg =	(1 << extInt);
 }
 void EICDisableInterrupt(uint16_t extInt)
 {

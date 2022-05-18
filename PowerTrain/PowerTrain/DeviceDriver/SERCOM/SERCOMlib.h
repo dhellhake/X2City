@@ -17,16 +17,6 @@ extern "C" {
 	
 	void SERCOM0_SetBAUD(uint32_t fbaud);
 	
-	inline void SERCOM0_RxEnable()
-	{		
-		SERCOM0->SPI.CTRLB.reg |= SERCOM_SPI_CTRLB_RXEN;
-	}
-	
-	inline void SERCOM0_RxDisable()
-	{		
-		SERCOM0->SPI.CTRLB.reg &= ~(SERCOM_SPI_CTRLB_RXEN);
-	}
-	
 	inline uint8_t SERCOM0_TransmitByte(uint8_t byte)
 	{
 		while(SERCOM0->SPI.INTFLAG.bit.DRE == 0);
