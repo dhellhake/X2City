@@ -13,13 +13,13 @@ uint16_t ReadRegister(uint8_t addr)
 	result[0] |= (addr & 0b1111) << 3;
 	
 	//CS Low
-	PORT->Group[0].OUTCLR.reg = PORT_PA03;
+	PORT->Group[0].OUTCLR.reg = PORT_PA17;
 
 	result[0] = SERCOM0_TransmitByte(result[0]);
 	result[1] = SERCOM0_TransmitByte(result[1]);
 
 	//CS High
-	PORT->Group[0].OUTSET.reg = PORT_PA03;
+	PORT->Group[0].OUTSET.reg = PORT_PA17;
 	
 	return ((result[0] << 8) | result[1]);
 }
@@ -32,13 +32,13 @@ uint16_t WriteRegister(uint8_t addr, uint16_t value)
 	result[1] |= value & 0xFF;
 	
 	//CS Low
-	PORT->Group[0].OUTCLR.reg = PORT_PA03;
+	PORT->Group[0].OUTCLR.reg = PORT_PA17;
 
 	result[0] = SERCOM0_TransmitByte(result[0]);
 	result[1] = SERCOM0_TransmitByte(result[1]);
 
 	//CS High
-	PORT->Group[0].OUTSET.reg = PORT_PA03;
+	PORT->Group[0].OUTSET.reg = PORT_PA17;
 	
 	return ((result[0] << 8) | result[1]);
 }

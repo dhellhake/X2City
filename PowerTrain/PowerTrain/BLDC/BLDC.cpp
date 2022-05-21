@@ -5,9 +5,16 @@
 * Author: dominik hellhake
 */
 #include "BLDC.h"
-#include "..\DeviceDriver\SERCOM\SERCOMlib.h"
-#include "DRV8323Config.h"
+
+BLDC DRV;
 
 /************************************************************************/
 /* Class implementation                                                 */
 /************************************************************************/
+RUN_RESULT BLDC::Run(uint32_t timeStamp)
+{
+	if (this->Max_Duty > this->Tar_Duty)
+		this->Tar_Duty += 0.1f;
+	
+	return RUN_RESULT::SUCCESS;
+}

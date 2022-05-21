@@ -8,21 +8,21 @@
 #include "RuntimeEnvironment/RuntimeEnvironment.h"
 #include "DeviceDriver/TC/TClib.h"
 #include "ComHandler/ComHandler.h"
-#include "BLDCDrive/BLDCDrive.h"
+#include "BLDC/BLDC.h"
 #include "HallSensor/HallSensor.h"
 
-#define TASKPOOL_SIZE		2
+#define TASKPOOL_SIZE		3
 
 Task* taskPool[TASKPOOL_SIZE] = {
-	//&DRV,
+	&DRV,
 	&Hall,
 	&ComHdl
 };
 uint16_t timeSlot[TASKPOOL_SIZE]
 {
-	//4,
+	2000,
 	4000,
-	6000
+	4000
 };
 
 int main(void)
@@ -50,5 +50,14 @@ int main(void)
 		taskIndex++;
 		if (taskIndex >= TASKPOOL_SIZE)
 			taskIndex = 0;
+	}
+}
+
+
+void HardFault_Handler(void)
+{
+	PORT->Group[0].OUTSET.reg = PORT_PA28;
+	while (1)
+	{
 	}
 }

@@ -5,11 +5,10 @@
 * Author: dominik hellhake
 */
 #include "RuntimeEnvironment.h"
-#include "..\DeviceDriver\KSZ8851\KSZ8851.h"
 
 RuntimeEnvironment Rte;
 
 RuntimeEnvironment::RuntimeEnvironment()
 {
-	this->Record = (rte_image_record_t *)TxPacketBuffer;
+	//this->Record = (rte_image_record_t *)TxPacketBuffer;
 }

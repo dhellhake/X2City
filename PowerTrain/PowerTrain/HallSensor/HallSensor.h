@@ -26,7 +26,7 @@ class HallSensor : public Task
 	public:
 		HallSensor();
 	
-		void HallTrigger(HallSignal source, uint32_t tstmp_micros);
+		HALL_STATE HallTrigger(HallSignal source, uint32_t tstmp_micros);
 	
 	private:
 		uint32_t				LastHallStateSwitchTime = 0;

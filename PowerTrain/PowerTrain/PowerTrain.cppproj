@@ -187,16 +187,13 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BLDCDrive\BLDCDrive.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="BLDCDrive\BLDCDrive.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="BLDC\BLDC.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="BLDC\BLDC.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BLDC\BLDCPattern.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="BLDC\DRV8323Config.cpp">
@@ -241,15 +238,6 @@
     <Compile Include="DeviceDriver\GCLK\GCLK.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="DeviceDriver\KSZ8851\KSZ8851.cpp">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="DeviceDriver\KSZ8851\KSZ8851.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="DeviceDriver\KSZ8851\KSZ8851lib.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="DeviceDriver\PORT\PORT.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -263,6 +251,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="DeviceDriver\startup_samc21.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\TCC\TCClib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\TCC\TCClib.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="DeviceDriver\TC\TClib.cpp">
@@ -300,11 +294,10 @@
     <Folder Include="DeviceDriver\DMAC" />
     <Folder Include="DeviceDriver\EIC" />
     <Folder Include="DeviceDriver\GCLK" />
-    <Folder Include="DeviceDriver\KSZ8851" />
+    <Folder Include="DeviceDriver\TCC" />
     <Folder Include="DeviceDriver\TC" />
     <Folder Include="DeviceDriver\SERCOM" />
     <Folder Include="DeviceDriver\PORT" />
-    <Folder Include="BLDCDrive" />
     <Folder Include="ComHandler" />
     <Folder Include="HallSensor" />
     <Folder Include="BLDC" />

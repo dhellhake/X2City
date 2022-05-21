@@ -35,8 +35,14 @@ RUN_RESULT HallSensor::Run(uint32_t timeStamp)
 /************************************************************************/
 /* Class implementation                                                 */
 /************************************************************************/
-void HallSensor::HallTrigger(HallSignal source, uint32_t tstmp_micros)
+HALL_STATE HallSensor::HallTrigger(HallSignal source, uint32_t tstmp_micros)
 {
+	HALL_STATE currentState = Rte.GetHallState();
+	HALL_STATE newState = (HALL_STATE)((PORT->Group[0].IN.reg >> 23) & 0b111);
+	
+	if (currentState == newState)		
+		PORT->Group[0].OUTTGL.reg = PORT_PA13;
+	
 	/* Update average hall state transition interval */
 	this->AvgHallStateInvervalHistory[this->AvgHallStateIntervalHistoryIdx++] = tstmp_micros - this->LastHallStateSwitchTime;
 	if (this->AvgHallStateIntervalHistoryIdx >= STATE_INTERVAL_HISTORY_SIZE)
@@ -48,6 +54,8 @@ void HallSensor::HallTrigger(HallSignal source, uint32_t tstmp_micros)
 	if (this->HallStateIntervalHistoryIdx >= STATE_INTERVAL_HISTORY_SIZE)
 		this->HallStateIntervalHistoryIdx = 0;
 	
-	Rte.SetHallState((HALL_STATE)((PORT->Group[0].IN.reg >> 23) & 0b111));
+	Rte.SetHallState(newState);
 	Rte.SetHallTicks(Rte.GetHallTicks() + 1);
+	
+	return newState;
 }

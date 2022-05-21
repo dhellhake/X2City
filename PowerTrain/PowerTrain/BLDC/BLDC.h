@@ -8,6 +8,9 @@
 #define __BLDC_H__
 
 #include "..\Task.h"
+#include "..\DeviceDriver\TCC\TCClib.h"
+#include "..\BLDC\BLDCPattern.h"
+#include "..\HallSensor\Hall.h"
 
 class BLDC : public Task
 {
@@ -20,8 +23,20 @@ class BLDC : public Task
 	/************************************************************************/
 	/* Class implementation                                                 */
 	/************************************************************************/
-	public:	
+	public:
+		float Tar_Duty = 2.0f;
+		float Max_Duty = 10.0f;
+	
+		inline void Drive_SetPhase(HALL_STATE state)
+		{				
+			TCC0_SetDuty(this->Tar_Duty);
+			
+			uint32_t pattern = GetPattern(state, DrvDir_Forward);
+			TCC0_SetPattern(pattern);			
+		}
 	
 }; //BLDC
+
+extern BLDC DRV;
 
 #endif //__BLDC_H__

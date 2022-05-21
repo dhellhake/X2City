@@ -35,8 +35,8 @@
 #include "CAN\CANlib.h"
 #include "EIC\EIClib.h"
 #include "TC\TClib.h"
-#include "KSZ8851\KSZ8851.h"
 #include "..\BLDC\DRV8323Config.h"
+#include "TCC\TCClib.h"
 
 /* Initialize segments */
 extern uint32_t _sfixed;
@@ -271,6 +271,8 @@ void Reset_Handler(void)
 		
 		InitEIC();
 		
+		InitTCC0();
+		
 		InitDMAC();
 		
 		InitSERCOM0();
@@ -295,23 +297,14 @@ void SystemStartup()
 	uint8_t errorCode = 0;
 	
 	// Set SERCOM0/SPI Baud to 5Mhz during Initialization
-	SERCOM0_SetBAUD(1000000);
+	SERCOM0_SetBAUD(5000000);
 	
 	if (WriteConfiguration() == 0x00)
 		errorCode = 1;
 	else if (VerifyConfiguration() == 0x00)
-		errorCode = 1;
+		errorCode = 2;
 	
-	/* KZS8851 */
-	// Set Register
-	if(KSZ8851_Init() == 0x00)
-		errorCode = 1;
-	else
-		EICEnableInterrupt(0);
 		
-	// Set SERCOM0/SPI Baud to 24Mhz
-	SERCOM0_SetBAUD(24000000);
-	
 	if (errorCode > 0x00)
 	{
 		PORT->Group[0].OUTSET.reg = PORT_PA28;
@@ -319,11 +312,13 @@ void SystemStartup()
 	}
 }
 
+
 /**
  * \brief Default interrupt handler for unused IRQs.
  */
 void Dummy_Handler(void)
 {
+	PORT->Group[0].OUTSET.reg = PORT_PA28;
     while (1) 
 	{
     }
