@@ -5,7 +5,6 @@
 * Author: dominik hellhake
 */
 #include "DMAClib.h"
-#include "..\KSZ8851\KSZ8851.h"
 
 
 #define COMPILER_ALIGNED(a)        __attribute__((__aligned__(a)))
@@ -76,7 +75,6 @@ void DMAC_Handler()
 {
 	if ((DMAC->CHINTFLAG.reg	& DMAC_CHINTFLAG_TCMPL) != 0x00)
 	{
-		KSZ8851_SendPacketFinalize();
 		DMAC->CHINTFLAG.reg = DMAC_CHINTFLAG_TCMPL;
 	}
 }

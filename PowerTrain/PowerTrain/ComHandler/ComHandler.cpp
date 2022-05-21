@@ -5,9 +5,11 @@
 * Author: dominik hellhake
 */
 #include "ComHandler.h"
-#include "..\DeviceDriver\DMAC\DMAClib.h"
-#include "..\DeviceDriver\KSZ8851\KSZ8851.h"
-#include "..\DeviceDriver\TC\TClib.h"
+#include "..\RuntimeEnvironment\RuntimeEnvironment.h"
+#include "..\DeviceDriver\CAN\CANlib.h"
+
+#define CAN_FILTER_ID_MOTORCONTROL			0x45a
+#define CAN_FILTER_ID_BATTERYCONTROL        0x25a
 
 ComHandler ComHdl;
 
@@ -19,28 +21,9 @@ uint8_t tmeIdx = 0x00;
 /************************************************************************/
 RUN_RESULT ComHandler::Run(uint32_t timeStamp)
 {		
-	if (this->DebugLinkState == DEBUG_STATE_OFFLINE)
-		return RUN_RESULT::ERROR;
+	can0_com();
 	
-	if (!this->once)
-	{
-		
-		this->once = true;
-	}
-		
-	KSZ8851_SendPacketDMAC();
-	
-	if (this->DebugLinkState != DEBUG_STATE_TX_PENDING && this->EthRxPacketCount > 0)
-	{	
-		uint16_t btCnt = KSZ8851_ReceivePacket();
-		
-		
-		tme[tmeIdx++] = 0;
-		
-		if (tmeIdx >= 10)
-			tmeIdx = 0;
-	}
-	
+	//can0_transmit(CAN_FILTER_ID_MOTORCONTROL, sizeof(rte_image_record_t), (uint8_t*)&Rte.Record);
 	
 	return RUN_RESULT::SUCCESS;
 }

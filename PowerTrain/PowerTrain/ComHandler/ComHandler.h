@@ -8,7 +8,6 @@
 #define __COMHANDLER_H__
 
 #include "..\Task.h"
-#include "..\DeviceDriver\KSZ8851\KSZ8851.h"
 
 typedef enum DEBUG_LINK_STATE : uint8_t
 {
@@ -30,19 +29,6 @@ class ComHandler : public Task
 	/* Class implementation                                                 */
 	/************************************************************************/
 	public:		
-		volatile DEBUG_LINK_STATE DebugLinkState =		DEBUG_STATE_OFFLINE;
-		volatile uint8_t EthRxPacketCount =				0x00;
-		
-		bool once = false;
-
-		inline void SetDebugLinkState(uint8_t state)
-		{
-			if (state > 0x00)
-				this->DebugLinkState = DEBUG_STATE_READY;
-			else
-				this->DebugLinkState = DEBUG_STATE_OFFLINE;
-		}
-
 }; //ComHandler
 
 extern ComHandler ComHdl;
