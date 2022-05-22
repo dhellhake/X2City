@@ -26,9 +26,7 @@ uint16_t timeSlot[TASKPOOL_SIZE]
 };
 
 int main(void)
-{
-	uint32_t sz = sizeof(rte_image_record_t);
-	
+{	
 	uint64_t t_now = 0;
 	uint64_t t_now_2 = 0;
 	uint8_t taskIndex = 0;
@@ -40,7 +38,7 @@ int main(void)
 		taskPool[taskIndex]->Run(t_now);
 		t_now_2 = GetElapsedMicros();
 		
-		Rte.SetSystemTime(t_now);
+		Rte.Record.SystemTime = t_now;
 		
 		runtimeRecord = t_now_2 - t_now;
 		

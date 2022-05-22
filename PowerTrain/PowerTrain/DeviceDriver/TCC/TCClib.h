@@ -13,7 +13,7 @@ extern "C" {
 
 	#include "samc21.h"
 	
-	#define TCC0_PER_VAL				1000		// f_PWM = 48Mhz / 1 (1199 + 1)  => 40Khz
+	#define TCC0_PER_VAL				2399		// f_PWM = 48Mhz / 1 (2399 + 1)  => 20Khz
 
 	void InitTCC0();
 

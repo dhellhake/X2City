@@ -10,7 +10,7 @@
 #include "..\Task.h"
 #include "Hall.h"
 
-#define STATE_INTERVAL_HISTORY_SIZE		36
+#define STATE_INTERVAL_HISTORY_SIZE		512
 
 class HallSensor : public Task
 {
@@ -26,22 +26,21 @@ class HallSensor : public Task
 	public:
 		HallSensor();
 	
-		HALL_STATE HallTrigger(HallSignal source, uint32_t tstmp_micros);
+		void HallTrigger(HALL_STATE newState, uint32_t tstmp_micros);
+		
+		uint16_t		HallStateIntervalHistoryIdx = 0;
 	
 	private:
-		uint32_t				LastHallStateSwitchTime = 0;
+		HALL_STATE		HallState = HALL_STATE::UNDEFINED_1;
 		
-		uint8_t					HallStateIntervalHistoryIdx = 0;
-		uint32_t				HallStateInvervalHistory[STATE_INTERVAL_HISTORY_SIZE] = { 0x00 };
-		uint8_t					AvgHallStateIntervalHistoryIdx = 0;
-		uint32_t				AvgHallStateInvervalHistory[STATE_INTERVAL_HISTORY_SIZE] = { 0x00 };
+		uint32_t		HallStateInvervalHistory[STATE_INTERVAL_HISTORY_SIZE] = { 0x00 };			
 						
 		/* Average Time between Hall State Changes */
 		volatile inline uint32_t GetAvgHallStateInterval()
 		{
 			uint32_t result = 0;
-			for (uint8_t x = 0; x < STATE_INTERVAL_HISTORY_SIZE; x++)
-				result += this->AvgHallStateInvervalHistory[x];
+			for (uint16_t x = 0; x < STATE_INTERVAL_HISTORY_SIZE; x++)
+				result += this->HallStateInvervalHistory[x];
 			return result / STATE_INTERVAL_HISTORY_SIZE;
 		}
 	

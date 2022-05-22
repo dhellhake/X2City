@@ -5,6 +5,7 @@
 * Author: dominik hellhake
 */
 #include "HallSensor.h"
+#include "..\BLDC\BLDC.h"
 #include "..\RuntimeEnvironment\RuntimeEnvironment.h"
 #include "..\DeviceDriver\CortexM0\CortexM0.h"
 
@@ -12,7 +13,6 @@ HallSensor Hall;
 
 HallSensor::HallSensor()
 {
-	Rte.SetHallState((HALL_STATE)((PORT->Group[0].IN.reg >> 23) & 0b111));
 }
 
 /************************************************************************/
@@ -20,14 +20,10 @@ HallSensor::HallSensor()
 /************************************************************************/
 RUN_RESULT HallSensor::Run(uint32_t timeStamp)
 {		
-	Rte.SetHallStateInterval(this->GetAvgHallStateInterval());
-	Rte.SetHallTicksPerSecond(1.0f / (((float)Rte.GetHallStateInterval())) * 1000000.0f);
-	
-	if (this->LastHallStateSwitchTime + 200000 < timeStamp)
-	{
-		Rte.SetHallTicksPerSecond(0);
-		Rte.SetHallStateInterval(0);
-	}
+	if (this->HallStateInvervalHistory[this->HallStateIntervalHistoryIdx] + 200000 < timeStamp)
+		Rte.Record.Avl_TicksPerSecond = 0.0f;
+	else
+		Rte.Record.Avl_TicksPerSecond = 1.0f / (((float)this->GetAvgHallStateInterval())) * 1000000.0f;
 	
 	return RUN_RESULT::SUCCESS;
 }
@@ -35,27 +31,18 @@ RUN_RESULT HallSensor::Run(uint32_t timeStamp)
 /************************************************************************/
 /* Class implementation                                                 */
 /************************************************************************/
-HALL_STATE HallSensor::HallTrigger(HallSignal source, uint32_t tstmp_micros)
-{
-	HALL_STATE currentState = Rte.GetHallState();
-	HALL_STATE newState = (HALL_STATE)((PORT->Group[0].IN.reg >> 23) & 0b111);
-	
-	if (currentState == newState)		
-		PORT->Group[0].OUTTGL.reg = PORT_PA13;
-	
-	/* Update average hall state transition interval */
-	this->AvgHallStateInvervalHistory[this->AvgHallStateIntervalHistoryIdx++] = tstmp_micros - this->LastHallStateSwitchTime;
-	if (this->AvgHallStateIntervalHistoryIdx >= STATE_INTERVAL_HISTORY_SIZE)
-		this->AvgHallStateIntervalHistoryIdx = 0;
+void HallSensor::HallTrigger(HALL_STATE newState, uint32_t tstmp_micros)
+{	
+	if (this->HallState == newState)
+		return;
 	
 	/* Add current tick to history */
-	this->LastHallStateSwitchTime = tstmp_micros;
 	this->HallStateInvervalHistory[this->HallStateIntervalHistoryIdx++] = tstmp_micros;
 	if (this->HallStateIntervalHistoryIdx >= STATE_INTERVAL_HISTORY_SIZE)
 		this->HallStateIntervalHistoryIdx = 0;
 	
-	Rte.SetHallState(newState);
-	Rte.SetHallTicks(Rte.GetHallTicks() + 1);
-	
-	return newState;
+	this->HallState = newState;
+	Rte.Record.Avl_Ticks++;
+		
+	DRV.Drive_SetPhase(newState);
 }

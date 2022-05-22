@@ -21,12 +21,6 @@ enum class HALL_STATE
 	UNDEFINED_2  = 0b111
 };
 
-typedef enum HallSignal
-{
-	HallSignalU = 0x01,
-	HallSignalV = 0x02,
-	HallSignalW = 0x04
-} HallSignal;
 
 typedef enum DrvDir
 {

@@ -13,6 +13,7 @@ extern "C" {
 
 	#include "sam.h"
 
+	void InitTC0();
 	void InitTC2_3();
 	
 	// Overflow of 32bit-TC2/3 running at 1Mhz
