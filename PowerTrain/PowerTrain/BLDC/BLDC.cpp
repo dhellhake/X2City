@@ -5,6 +5,7 @@
 * Author: dominik hellhake
 */
 #include "BLDC.h"
+#include "..\HallSensor\HallSensor.h"
 
 BLDC DRV;
 
@@ -13,8 +14,9 @@ BLDC DRV;
 /************************************************************************/
 RUN_RESULT BLDC::Run(uint32_t timeStamp)
 {
-	if (this->Max_Duty > this->Tar_Duty)
-		this->Tar_Duty += 0.1f;
+	if (Hall.HallStateIntervalHistoryIdx != 0)
+		if (this->Max_Duty > this->Tar_Duty)
+			this->Tar_Duty += 0.05f;
 	
 	return RUN_RESULT::SUCCESS;
 }

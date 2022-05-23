@@ -261,20 +261,21 @@ void Reset_Handler(void)
         pSrc = (uint32_t *) & _sfixed;
         SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
 		
-		InitGCLK();
 		
+		InitGCLK();
+				
 		InitSysTick();
 		
 		InitTC0();
 		InitTC2_3();
 		
 		InitPORT();
-		
+				
 		InitEIC();
 		
 		InitTCC0();
 		
-		InitDMAC();
+		//InitDMAC();
 		
 		InitSERCOM0();
 		
@@ -285,7 +286,7 @@ void Reset_Handler(void)
 
 		/* Initialize Device Driver */
 		SystemStartup();
-
+		
         /* Branch to main function */
         main();
 
@@ -304,7 +305,6 @@ void SystemStartup()
 		errorCode = 1;
 	else if (VerifyConfiguration() == 0x00)
 		errorCode = 2;
-	
 		
 	if (errorCode > 0x00)
 	{

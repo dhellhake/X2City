@@ -18,7 +18,8 @@
 #define W_LOW_PATT_Pos		4
 
 
-#define BLCD_ACC_PATT_1		(((0 << U_HIGH_PATT_Pos) | \
+/* Reverse Rotation Pattern */
+#define BLCD_ACC_PATT_1	    (((0 << U_HIGH_PATT_Pos) | \
 							  (0 << U_LOW_PATT_Pos) | \
 							  (1 << V_HIGH_PATT_Pos) | \
 							  (1 << V_LOW_PATT_Pos) | \
@@ -95,12 +96,11 @@
 							  (1 << V_LOW_PATT_Pos) | \
 							  (0 << W_HIGH_PATT_Pos) | \
 							  (0 << W_LOW_PATT_Pos)) << TCC_PATT_PGV_Pos);
-							  			  
-				  
+ 			  				  
 
 							  
 
-#define BLCD_BRK_PATT_1		(((1 << U_HIGH_PATT_Pos) | \
+#define BLCD_BRK_PATT_1	  (((1 << U_HIGH_PATT_Pos) | \
 							(0 << U_LOW_PATT_Pos) | \
 							(1 << V_HIGH_PATT_Pos) | \
 							(0 << V_LOW_PATT_Pos) | \
@@ -137,13 +137,13 @@ inline uint32_t GetPattern(HALL_STATE state, DrvDir direction)
 			switch (direction)
 			{
 				case DrvDir_Forward:
-					pattern = BLCD_ACC_PATT_1;
+					pattern = BLCD_ACC_PATT_4;
 				break;
 				case DrvDir_Forward_Brake:
 					pattern = BLCD_BRK_PATT_1;
 				break;
 				case  DrvDir_Reverse:
-					pattern = BLCD_ACC_PATT_4;
+					pattern = BLCD_ACC_PATT_1;
 				break;
 				case DrvDir_Reverse_Brake:
 					pattern = BLCD_BRK_PATT_1;
@@ -157,13 +157,13 @@ inline uint32_t GetPattern(HALL_STATE state, DrvDir direction)
 			switch (direction)
 			{
 				case DrvDir_Forward:
-					pattern = BLCD_ACC_PATT_2;
+					pattern = BLCD_ACC_PATT_5;
 				break;
 				case DrvDir_Forward_Brake:
 					pattern = BLCD_BRK_PATT_1;
 				break;
 				case  DrvDir_Reverse:
-					pattern = BLCD_ACC_PATT_5;
+					pattern = BLCD_ACC_PATT_2;
 				break;
 				case DrvDir_Reverse_Brake:
 					pattern = BLCD_BRK_PATT_1;
@@ -177,13 +177,13 @@ inline uint32_t GetPattern(HALL_STATE state, DrvDir direction)
 			switch (direction)
 			{
 				case DrvDir_Forward:
-					pattern = BLCD_ACC_PATT_3;
+					pattern = BLCD_ACC_PATT_6;
 				break;
 				case DrvDir_Forward_Brake:
 					pattern = BLCD_BRK_PATT_1;
 				break;
 				case  DrvDir_Reverse:
-					pattern = BLCD_ACC_PATT_6;
+					pattern = BLCD_ACC_PATT_3;
 				break;
 				case DrvDir_Reverse_Brake:
 					pattern = BLCD_BRK_PATT_1;
@@ -197,13 +197,13 @@ inline uint32_t GetPattern(HALL_STATE state, DrvDir direction)
 			switch (direction)
 			{
 				case DrvDir_Forward:
-					pattern = BLCD_ACC_PATT_4;
+					pattern = BLCD_ACC_PATT_1;
 				break;
 				case DrvDir_Forward_Brake:
 					pattern = BLCD_BRK_PATT_1;
 				break;
 				case  DrvDir_Reverse:
-					pattern = BLCD_ACC_PATT_1;
+					pattern = BLCD_ACC_PATT_4;
 				break;
 				case DrvDir_Reverse_Brake:
 					pattern = BLCD_BRK_PATT_1;
@@ -217,13 +217,13 @@ inline uint32_t GetPattern(HALL_STATE state, DrvDir direction)
 			switch (direction)
 			{
 				case DrvDir_Forward:
-					pattern = BLCD_ACC_PATT_5;
+					pattern = BLCD_ACC_PATT_2;
 				break;
 				case DrvDir_Forward_Brake:
 					pattern = BLCD_BRK_PATT_1;
 				break;
 				case  DrvDir_Reverse:
-					pattern = BLCD_ACC_PATT_2;
+					pattern = BLCD_ACC_PATT_5;
 				break;
 				case DrvDir_Reverse_Brake:
 					pattern = BLCD_BRK_PATT_1;
@@ -237,19 +237,19 @@ inline uint32_t GetPattern(HALL_STATE state, DrvDir direction)
 			switch (direction)
 			{
 				case DrvDir_Forward:
-				pattern = BLCD_ACC_PATT_6;
+					pattern = BLCD_ACC_PATT_3;
 				break;
 				case DrvDir_Forward_Brake:
-				pattern = BLCD_BRK_PATT_1;
+					pattern = BLCD_PATT_DISABLED;
 				break;
 				case  DrvDir_Reverse:
-				pattern = BLCD_ACC_PATT_3;
+					pattern = BLCD_ACC_PATT_6;
 				break;
 				case DrvDir_Reverse_Brake:
-				pattern = BLCD_BRK_PATT_1;
+					pattern = BLCD_PATT_DISABLED;
 				break;
 				default:
-				pattern = BLCD_PATT_DISABLED;
+					pattern = BLCD_PATT_DISABLED;
 				break;
 			}
 		break;

@@ -25,13 +25,14 @@ class BLDC : public Task
 	/************************************************************************/
 	public:
 		float Tar_Duty = 2.0f;
-		float Max_Duty = 10.0f;
+		float Max_Duty = 9.0f;
 	
+		uint8_t once = 0;
 		inline void Drive_SetPhase(HALL_STATE state)
 		{				
 			TCC0_SetDuty(this->Tar_Duty);
 			
-			uint32_t pattern = GetPattern(state, DrvDir_Forward);
+			uint32_t pattern = GetPattern(state, DrvDir_Forward);						
 			TCC0_SetPattern(pattern);			
 		}
 	

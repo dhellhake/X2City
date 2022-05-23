@@ -19,7 +19,7 @@ HallSensor::HallSensor()
 /* Executable Interface implementation                                  */
 /************************************************************************/
 RUN_RESULT HallSensor::Run(uint32_t timeStamp)
-{		
+{
 	if (this->HallStateInvervalHistory[this->HallStateIntervalHistoryIdx] + 200000 < timeStamp)
 		Rte.Record.Avl_TicksPerSecond = 0.0f;
 	else
@@ -35,7 +35,9 @@ void HallSensor::HallTrigger(HALL_STATE newState, uint32_t tstmp_micros)
 {	
 	if (this->HallState == newState)
 		return;
-	
+		
+	DRV.Drive_SetPhase(newState);
+		
 	/* Add current tick to history */
 	this->HallStateInvervalHistory[this->HallStateIntervalHistoryIdx++] = tstmp_micros;
 	if (this->HallStateIntervalHistoryIdx >= STATE_INTERVAL_HISTORY_SIZE)
@@ -44,5 +46,4 @@ void HallSensor::HallTrigger(HALL_STATE newState, uint32_t tstmp_micros)
 	this->HallState = newState;
 	Rte.Record.Avl_Ticks++;
 		
-	DRV.Drive_SetPhase(newState);
 }

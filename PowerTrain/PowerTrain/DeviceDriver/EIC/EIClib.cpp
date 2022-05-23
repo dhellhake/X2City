@@ -36,7 +36,7 @@ void InitEIC()
 	EIC->INTENSET.reg |=	(1 << 0);
 	EIC->INTFLAG.reg =		0xFFFF;		// Clear Interrupt on all EXTINT
 	
-	EIC->CTRLA.reg = EIC_CTRLA_ENABLE;
+	//EIC->CTRLA.reg = EIC_CTRLA_ENABLE;
 }
 
 void EIC_Handler()

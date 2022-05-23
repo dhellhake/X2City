@@ -11,12 +11,12 @@
 
 enum class HALL_STATE
 {	//State decoding: 0vUVW
-	HALL_STATE_5 = 0b001,	// 1
-	HALL_STATE_6 = 0b011,	// 3
-	HALL_STATE_1 = 0b010,	// 2
-	HALL_STATE_2 = 0b110,	// 6
-	HALL_STATE_3 = 0b100,	// 4
-	HALL_STATE_4 = 0b101,	// 5
+	HALL_STATE_1 = 0b001,	// 1
+	HALL_STATE_2 = 0b011,	// 3
+	HALL_STATE_3 = 0b010,	// 2
+	HALL_STATE_4 = 0b110,	// 6
+	HALL_STATE_5 = 0b100,	// 4
+	HALL_STATE_6 = 0b101,	// 5
 	UNDEFINED_1  = 0b000,
 	UNDEFINED_2  = 0b111
 };
