@@ -30,21 +30,31 @@ void InitEIC()
 	NVIC_SetPriority(EIC_IRQn, 1);
 	NVIC_EnableIRQ(EIC_IRQn);
 	
-	EIC->CONFIG[0].reg =	EIC_CONFIG_SENSE0_LOW |			// EXTINT0
-							EIC_CONFIG_FILTEN0;	
+	EIC->CONFIG[0].reg =	EIC_CONFIG_SENSE7_BOTH |			// EXTINT7
+							EIC_CONFIG_FILTEN7;
+	EIC->CONFIG[1].reg =	EIC_CONFIG_SENSE4_BOTH |			// EXTINT12
+							EIC_CONFIG_FILTEN4 |
+							EIC_CONFIG_SENSE5_BOTH |			// EXTINT13
+							EIC_CONFIG_FILTEN5;
+	
+	//EIC->CONFIG[0].reg =	EIC_CONFIG_SENSE0_LOW |			// EXTINT0
+	//						EIC_CONFIG_FILTEN0;	
 							
-	EIC->INTENSET.reg |=	(1 << 0);
+	EIC->INTENSET.reg |=	(1 << 7) | (1 << 12) | (1 << 13);
 	EIC->INTFLAG.reg =		0xFFFF;		// Clear Interrupt on all EXTINT
 	
-	//EIC->CTRLA.reg = EIC_CTRLA_ENABLE;
+	EIC->CTRLA.reg = EIC_CTRLA_ENABLE;
 }
 
 void EIC_Handler()
-{			
-	if ((EIC->INTFLAG.reg & (1 << 0)) != 0x00)
-	{
-		EIC->INTFLAG.reg = (1 << 0);
-	}	
+{
+	uint32_t elapsedMicros = GetElapsedMicros();
+	HALL_STATE newState = (HALL_STATE)((PORT->Group[0].IN.reg >> 23) & 0b111);
+		
+	if (!(newState == HALL_STATE::UNDEFINED_1 || newState == HALL_STATE::UNDEFINED_2))
+		Hall.HallTrigger(newState, elapsedMicros);
+			
+	EIC->INTFLAG.reg = (1 << 7) | (1 << 12) | (1 << 13);
 }
 
 	
