@@ -7,10 +7,11 @@
 #ifndef __HALLSENSOR_H__
 #define __HALLSENSOR_H__
 
+#include <math.h>
 #include "..\Task.h"
 #include "Hall.h"
 
-#define STATE_INTERVAL_HISTORY_SIZE		512
+#define STATE_INTERVAL_HISTORY_SIZE		32
 
 class HallSensor : public Task
 {
@@ -33,17 +34,27 @@ class HallSensor : public Task
 	private:
 		HALL_STATE		HallState = HALL_STATE::UNDEFINED_1;
 		
-		uint32_t		HallStateInvervalHistory[STATE_INTERVAL_HISTORY_SIZE] = { 0x00 };			
-						
-		/* Average Time between Hall State Changes */
-		volatile inline uint32_t GetAvgHallStateInterval()
-		{
-			uint32_t result = 0;
-			for (uint16_t x = 0; x < STATE_INTERVAL_HISTORY_SIZE; x++)
-				result += this->HallStateInvervalHistory[x];
-			return result / STATE_INTERVAL_HISTORY_SIZE;
+		inline float GetAverageHallStateInterval()
+		{			
+			float result = 0.0f;
+			for (uint8_t x = 0; x < STATE_INTERVAL_HISTORY_SIZE; x++)
+				result += this->HallStateIntervalHistory[x];
+			return result / STATE_INTERVAL_HISTORY_SIZE;			
 		}
-	
+		
+		inline float GetHallStateInterval_RelativeStdDeriv()
+		{			
+			float avgHallStateInterval = this->GetAverageHallStateInterval();
+			
+			float variance = 0.0f;
+			for (uint8_t x = 0; x < STATE_INTERVAL_HISTORY_SIZE; x++)
+				variance += pow(this->HallStateIntervalHistory[x] - avgHallStateInterval, 2);
+			variance = variance/(STATE_INTERVAL_HISTORY_SIZE - 1);
+			
+			return sqrt(variance) / (avgHallStateInterval / 100.0f);
+		}
+		
+		uint32_t		HallStateIntervalHistory[STATE_INTERVAL_HISTORY_SIZE] = { 0x00 };				
 }; //HallSensor
 
 extern HallSensor Hall;

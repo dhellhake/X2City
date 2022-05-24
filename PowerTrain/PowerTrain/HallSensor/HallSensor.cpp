@@ -18,19 +18,33 @@ HallSensor::HallSensor()
 /************************************************************************/
 /* Executable Interface implementation                                  */
 /************************************************************************/
+bool once = false;
 RUN_RESULT HallSensor::Run(uint32_t timeStamp)
 {
-	if (this->HallStateInvervalHistory[this->HallStateIntervalHistoryIdx] + 200000 < timeStamp)
-		Rte.Record.Avl_TicksPerSecond = 0.0f;
-	else
-		Rte.Record.Avl_TicksPerSecond = 1.0f / (((float)this->GetAvgHallStateInterval())) * 1000000.0f;
+	if (!once)
+	{
+		once = true;
+		
+		HALL_STATE newState = (HALL_STATE)((PORT->Group[0].IN.reg >> 23) & 0b111);
+		DRV.Drive_SetPhase(newState);
+	}
 	
+	uint16_t t1 = SysTick->VAL;
+	float stdAbw = this->GetHallStateInterval_RelativeStdDeriv();
+	if (stdAbw < 20.0f)
+		PORT->Group[0].OUTSET.reg = PORT_PA13;
+	else	
+		PORT->Group[0].OUTCLR.reg = PORT_PA13;
+	
+	t1 -= SysTick->VAL;
+			
 	return RUN_RESULT::SUCCESS;
 }
 
 /************************************************************************/
 /* Class implementation                                                 */
 /************************************************************************/
+uint32_t HallStateLastTstmp = 0;
 void HallSensor::HallTrigger(HALL_STATE newState, uint32_t tstmp_micros)
 {	
 	if (this->HallState == newState)
@@ -39,11 +53,11 @@ void HallSensor::HallTrigger(HALL_STATE newState, uint32_t tstmp_micros)
 	DRV.Drive_SetPhase(newState);
 		
 	/* Add current tick to history */
-	this->HallStateInvervalHistory[this->HallStateIntervalHistoryIdx++] = tstmp_micros;
+	this->HallStateIntervalHistory[this->HallStateIntervalHistoryIdx++] = tstmp_micros - HallStateLastTstmp;
+	HallStateLastTstmp = tstmp_micros;
 	if (this->HallStateIntervalHistoryIdx >= STATE_INTERVAL_HISTORY_SIZE)
 		this->HallStateIntervalHistoryIdx = 0;
 	
 	this->HallState = newState;
-	Rte.Record.Avl_Ticks++;
-		
+	Rte.Record.Avl_Ticks++;		
 }
