@@ -29,7 +29,7 @@ void InitTCC0()
 						(0 << TCC_CTRLA_ALOCK_Pos) |			// Lock Update bit in CTRLB not affected by TTC event
 						(0 << TCC_CTRLA_PRESCSYNC_Pos) |		// Reload or reset Counter on GCLK
 						(1 << TCC_CTRLA_RUNSTDBY_Pos) |			// TCC continues to run in standby
-						(1 << TCC_CTRLA_PRESCALER_Pos) |		// No division of 48Mhz GCLK
+						(0 << TCC_CTRLA_PRESCALER_Pos) |		// No division of 48Mhz GCLK
 						(0 << TCC_CTRLA_RESOLUTION_Pos);		// Dithering is disabled
 	
 	TCC0->DBGCTRL.reg = (1 << TCC_DBGCTRL_FDDBD_Pos) |			// Halting the CPU generates non-recoverable fault
