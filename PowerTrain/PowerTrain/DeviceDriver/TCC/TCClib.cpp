@@ -32,6 +32,8 @@ void InitTCC0()
 						(0 << TCC_CTRLA_PRESCALER_Pos) |		// No division of 48Mhz GCLK
 						(0 << TCC_CTRLA_RESOLUTION_Pos);		// Dithering is disabled
 	
+	TCC0->CTRLBCLR.reg = (1 << TCC_CTRLBCLR_LUPD_Pos);			// Enable Register update on Hardware Update Condition 
+	
 	TCC0->DBGCTRL.reg = (1 << TCC_DBGCTRL_FDDBD_Pos) |			// Halting the CPU generates non-recoverable fault
 						(1 << TCC_DBGCTRL_DBGRUN_Pos);			// TCC continues normal operation when halted
 	
@@ -45,7 +47,7 @@ void InitTCC0()
 	TCC0->WEXCTRL.reg = (0x0 << TCC_WEXCTRL_DTHS_Pos) |			// 0 number of GCLK as dead time on High Side Output
 						(0x0 << TCC_WEXCTRL_DTLS_Pos) |			// 0 number of GCLK as dead time on Low Side Output
 						(0x0 << TCC_WEXCTRL_DTIEN_Pos) |		// Dead-time Insertion disabled
-						(0x2 << TCC_WEXCTRL_OTMX_Pos);			// Use CC0 for each output
+						(0x0 << TCC_WEXCTRL_OTMX_Pos);			// Use individual CCx for each channel
 	
 	TCC0->DRVCTRL.reg = (0x0 << TCC_DRVCTRL_FILTERVAL1_Pos) |	// Non-Recoverable Fault Input 1 Filter
 						(0x0 << TCC_DRVCTRL_FILTERVAL0_Pos) |	// Non-Recoverable Fault Input 0 Filter
@@ -68,7 +70,9 @@ void InitTCC0()
 
 	TCC0->COUNT.reg	=	0x00;									// Timer Counter start at 0
 	TCC0->PER.reg =		TCC0_PER_VAL;							// Set Phase Length
-	TCC0->CC[0].reg	=	0;										// 0% Duty on Phase- U V W
+	TCC0->CC[0].reg	=	0; // CC for W
+	TCC0->CC[2].reg	=	0; // CC for V
+	TCC0->CC[3].reg	=	0; // CC for U
 	
 	TCC0->CTRLA.bit.ENABLE = 1;
 }

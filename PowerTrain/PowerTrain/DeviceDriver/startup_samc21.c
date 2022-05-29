@@ -266,8 +266,8 @@ void Reset_Handler(void)
 				
 		InitSysTick();
 		
-		InitTC0();
-		InitTC2_3();
+		InitTC3();
+		InitTC0_1();
 		
 		InitPORT();
 				

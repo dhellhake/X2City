@@ -8,6 +8,7 @@
 #include "..\TC\TClib.h"
 #include "..\..\HallSensor\HallSensor.h"
 #include "..\..\BLDC\BLDC.h"
+#include "..\CortexM0\CortexM0.h"
 
 void InitEIC()
 {
@@ -27,7 +28,7 @@ void InitEIC()
 	while (EIC->CTRLA.reg & EIC_CTRLA_SWRST);
 	
 	
-	NVIC_SetPriority(EIC_IRQn, 1);
+	NVIC_SetPriority(EIC_IRQn, 0);
 	NVIC_EnableIRQ(EIC_IRQn);
 	
 	EIC->CONFIG[0].reg =	EIC_CONFIG_SENSE7_BOTH |			// EXTINT7

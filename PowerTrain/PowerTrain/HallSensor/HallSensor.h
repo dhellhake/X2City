@@ -11,7 +11,7 @@
 #include "..\Task.h"
 #include "Hall.h"
 
-#define STATE_INTERVAL_HISTORY_SIZE		32
+#define STATE_INTERVAL_HISTORY_SIZE		64
 
 class HallSensor : public Task
 {
@@ -30,7 +30,9 @@ class HallSensor : public Task
 		void HallTrigger(HALL_STATE newState, uint32_t tstmp_micros);
 		
 		uint16_t		HallStateIntervalHistoryIdx = 0;
-	
+		HALL_STATE history[256];
+		
+		uint8_t AvlWheelSpeedStability = 0x00;
 	private:
 		HALL_STATE		HallState = HALL_STATE::UNDEFINED_1;
 		
@@ -41,10 +43,10 @@ class HallSensor : public Task
 				result += this->HallStateIntervalHistory[x];
 			return result / STATE_INTERVAL_HISTORY_SIZE;			
 		}
-		
+		float avgHallStateInterval;
 		inline float GetHallStateInterval_RelativeStdDeriv()
 		{			
-			float avgHallStateInterval = this->GetAverageHallStateInterval();
+			avgHallStateInterval = this->GetAverageHallStateInterval();
 			
 			float variance = 0.0f;
 			for (uint8_t x = 0; x < STATE_INTERVAL_HISTORY_SIZE; x++)

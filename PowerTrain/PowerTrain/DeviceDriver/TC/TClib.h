@@ -13,16 +13,16 @@ extern "C" {
 
 	#include "sam.h"
 
-	void InitTC0();
-	void InitTC2_3();
+	void InitTC3();
+	void InitTC0_1();
 	
 	// Overflow of 32bit-TC2/3 running at 1Mhz
-	extern volatile uint32_t TC2_Overflow;
+	extern volatile uint32_t TC0_Overflow;
 	inline uint64_t GetElapsedMicros()
 	{	
-		TC2->COUNT32.CTRLBSET.reg = TC_CTRLBSET_CMD_READSYNC;		
-		while (TC2->COUNT32.SYNCBUSY.bit.COUNT);
-		return (TC2_Overflow * 0xFFFFFFFF) + (TC2->COUNT32.COUNT.reg);
+		TC0->COUNT32.CTRLBSET.reg = TC_CTRLBSET_CMD_READSYNC;		
+		while (TC0->COUNT32.SYNCBUSY.bit.COUNT);
+		return (TC0_Overflow * 0xFFFFFFFF) + (TC0->COUNT32.COUNT.reg);
 	}
 	
 	inline void Delay_ms(uint16_t milis)
@@ -30,7 +30,6 @@ extern "C" {
 		uint32_t tarms = (GetElapsedMicros() / 1000) + milis;
 		while ((GetElapsedMicros() / 1000) < tarms);
 	}
-
 	
 #ifdef __cplusplus
 }

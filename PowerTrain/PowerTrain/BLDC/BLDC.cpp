@@ -16,7 +16,11 @@ RUN_RESULT BLDC::Run(uint32_t timeStamp)
 {
 	if (Hall.HallStateIntervalHistoryIdx != 0)
 		if (this->Max_Duty > this->Tar_Duty)
+		{			
 			this->Tar_Duty += 0.05f;
+			for (uint8_t x = 0; x < 120; x++)
+				this->sineTarDuty[x] = this->Tar_Duty * sine120[x];
+		}
 	
 	return RUN_RESULT::SUCCESS;
 }
