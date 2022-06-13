@@ -232,6 +232,12 @@
     <Compile Include="DeviceDriver\EIC\EIClib.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="DeviceDriver\EVSYS\EVSYSlib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\EVSYS\EVSYSlib.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="DeviceDriver\GCLK\GCLK.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -294,6 +300,7 @@
     <Folder Include="DeviceDriver\DMAC" />
     <Folder Include="DeviceDriver\EIC" />
     <Folder Include="DeviceDriver\GCLK" />
+    <Folder Include="DeviceDriver\EVSYS" />
     <Folder Include="DeviceDriver\TCC" />
     <Folder Include="DeviceDriver\TC" />
     <Folder Include="DeviceDriver\SERCOM" />

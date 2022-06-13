@@ -1,0 +1,38 @@
+/* 
+* EVSYSlib.cpp
+*
+* Created: 10.06.2022 18:02:07
+* Author: dominik hellhake
+*/
+#include "EVSYSlib.h"
+
+void InitEVSYS()
+{
+	//Set bits in the clock mask for an APBx bus.
+	MCLK->APBCMASK.bit.EVSYS_ = 1;
+	/* Disable the peripheral channel */
+	GCLK->PCHCTRL[EVSYS_GCLK_ID_0].reg &= ~GCLK_PCHCTRL_CHEN;
+	while (GCLK->PCHCTRL[EVSYS_GCLK_ID_0].reg & GCLK_PCHCTRL_CHEN);
+	/* Configure the peripheral channel */
+	GCLK->PCHCTRL[EVSYS_GCLK_ID_0].reg = GCLK_PCHCTRL_GEN(0);
+	// Enable GCLK for peripheral
+	GCLK->PCHCTRL[EVSYS_GCLK_ID_0].reg |= GCLK_PCHCTRL_CHEN;
+	
+	// Config Channel 0: GEN->EXTINT_13, USER->TC0
+	EVSYS->USER[23].reg =				EVSYS_USER_CHANNEL(1);
+	EVSYS->CHANNEL[0].reg =				EVSYS_CHANNEL_EDGSEL_NO_EVT_OUTPUT |
+										EVSYS_CHANNEL_PATH_ASYNCHRONOUS |
+										EVSYS_CHANNEL_EVGEN(EVSYS_ID_GEN_EIC_EXTINT_13);
+
+	// Config Channel 1: GEN->EXTINT_12, USER->TC1
+	EVSYS->USER[24].reg =				EVSYS_USER_CHANNEL(2);
+	EVSYS->CHANNEL[1].reg =				EVSYS_CHANNEL_EDGSEL_NO_EVT_OUTPUT |
+										EVSYS_CHANNEL_PATH_ASYNCHRONOUS |
+										EVSYS_CHANNEL_EVGEN(EVSYS_ID_GEN_EIC_EXTINT_12);
+
+	// Config Channel 1: GEN->EXTINT_7, USER->TC2
+	EVSYS->USER[25].reg =				EVSYS_USER_CHANNEL(3);
+	EVSYS->CHANNEL[2].reg =				EVSYS_CHANNEL_EDGSEL_NO_EVT_OUTPUT |
+										EVSYS_CHANNEL_PATH_ASYNCHRONOUS |
+										EVSYS_CHANNEL_EVGEN(EVSYS_ID_GEN_EIC_EXTINT_7);
+}

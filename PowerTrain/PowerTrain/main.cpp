@@ -5,6 +5,7 @@
  * Author : dominik hellhake
  */ 
 #include "sam.h"
+#include "DeviceDriver/CortexM0/CortexM0.h"
 #include "RuntimeEnvironment/RuntimeEnvironment.h"
 #include "DeviceDriver/TC/TClib.h"
 #include "ComHandler/ComHandler.h"

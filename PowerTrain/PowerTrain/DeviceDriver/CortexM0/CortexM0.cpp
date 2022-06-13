@@ -6,12 +6,19 @@
 */
 #include "CortexM0.h"
 
+volatile uint64_t SysTick_Overflow;
+
 void InitSysTick()
 {
 	SysTick->CTRL =		0;				// Disable SysTick
 	SysTick->LOAD =		0xFFFFFF;		// Set reload register for overflow interrupts
 	SysTick->VAL =		0;				// Reset the SysTick counter value
-	SysTick->CTRL =		0b101;			// Enable SysTick[0], Disable SysTick Exceptions[1], Use CPU Clock[2]
-	//NVIC_SetPriority(SysTick_IRQn, 0);	// Set interrupt priority to highest urgency
-	//NVIC_EnableIRQ(SysTick_IRQn);		// Enable SysTick Interrupt
+	SysTick->CTRL =		0b111;			// Enable SysTick[0], Disable SysTick Exceptions[1], Use CPU Clock[2]
+	NVIC_SetPriority(SysTick_IRQn, 0);	// Set interrupt priority to highest urgency
+	NVIC_EnableIRQ(SysTick_IRQn);		// Enable SysTick Interrupt
+}
+
+void SysTick_Handler(void)
+{
+	SysTick_Overflow++;
 }

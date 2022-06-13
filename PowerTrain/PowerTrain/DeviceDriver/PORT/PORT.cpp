@@ -8,10 +8,8 @@
 
 void InitPORT()
 {
-	PORT->Group[0].DIRSET.reg = PORT_PA11;
-	PORT->Group[0].OUTSET.reg = PORT_PA11;
-	PORT->Group[0].DIRSET.reg = PORT_PA13;
-	PORT->Group[0].OUTCLR.reg = PORT_PA13;
+	PORT->Group[0].DIRSET.reg = PORT_PA02;
+	PORT->Group[0].OUTSET.reg = PORT_PA02;
 	
 	// Pin-Config: Onboard-LED
 	PORT->Group[0].DIRSET.reg = PORT_PA28;

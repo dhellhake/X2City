@@ -34,6 +34,7 @@
 #include "SERCOM\SERCOMlib.h"
 #include "CAN\CANlib.h"
 #include "EIC\EIClib.h"
+#include "EVSYS\EVSYSlib.h"
 #include "TC\TClib.h"
 #include "..\BLDC\DRV8323Config.h"
 #include "TCC\TCClib.h"
@@ -263,19 +264,23 @@ void Reset_Handler(void)
 		
 		
 		InitGCLK();
+		
+		InitDMAC();
 				
 		InitSysTick();
 		
+		InitTC0();
+		InitTC1();
+		InitTC2();
 		InitTC3();
-		InitTC0_1();
 		
 		InitPORT();
 				
 		InitEIC();
 		
-		InitTCC0();
+		InitEVSYS();
 		
-		//InitDMAC();
+		InitTCC0();
 		
 		InitSERCOM0();
 		

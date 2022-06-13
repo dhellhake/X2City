@@ -34,9 +34,6 @@ void InitTCC0()
 	
 	TCC0->CTRLBCLR.reg = (1 << TCC_CTRLBCLR_LUPD_Pos);			// Enable Register update on Hardware Update Condition 
 	
-	TCC0->DBGCTRL.reg = (1 << TCC_DBGCTRL_FDDBD_Pos) |			// Halting the CPU generates non-recoverable fault
-						(1 << TCC_DBGCTRL_DBGRUN_Pos);			// TCC continues normal operation when halted
-	
 	TCC0->WAVE.reg =	(0x0 << TCC_WAVE_SWAP_Pos) |			// No output swap
 						(0x0 << TCC_WAVE_POL_Pos) |				// no output polarity change
 						(0x0 << TCC_WAVE_CICCEN_Pos) |			// No compare circular buffer

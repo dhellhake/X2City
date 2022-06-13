@@ -13,6 +13,12 @@
 
 #define STATE_INTERVAL_HISTORY_SIZE		64
 
+enum class QU_AVG_HALL_INTERVAL
+{
+	INSTABLE = 0,
+	CONTINUOUS = 1
+};
+
 class HallSensor : public Task
 {
 	/************************************************************************/
@@ -25,38 +31,33 @@ class HallSensor : public Task
 	/* Class implementation                                                 */
 	/************************************************************************/
 	public:
-		HallSensor();
-	
-		void HallTrigger(HALL_STATE newState, uint32_t tstmp_micros);
 		
-		uint16_t		HallStateIntervalHistoryIdx = 0;
-		HALL_STATE history[256];
+		void HallTrigger(HALL_STATE newState, uint32_t interval);
 		
-		uint8_t AvlWheelSpeedStability = 0x00;
+		QU_AVG_HALL_INTERVAL	QuAvgHallStateInterval = QU_AVG_HALL_INTERVAL::INSTABLE;
+		uint32_t				AvgHallStateInterval = 0;
 	private:
-		HALL_STATE		HallState = HALL_STATE::UNDEFINED_1;
+		HALL_STATE				HallState = HALL_STATE::UNDEFINED_1;
+				
+		float HallStatIntervalAveragingFactor = 0.7f;
 		
-		inline float GetAverageHallStateInterval()
-		{			
-			float result = 0.0f;
-			for (uint8_t x = 0; x < STATE_INTERVAL_HISTORY_SIZE; x++)
-				result += this->HallStateIntervalHistory[x];
-			return result / STATE_INTERVAL_HISTORY_SIZE;			
-		}
-		float avgHallStateInterval;
+		uint32_t HallStateIntervalHistory[64];
+		uint8_t HallStateIntervalHistoryIdx = 0;
 		inline float GetHallStateInterval_RelativeStdDeriv()
-		{			
-			avgHallStateInterval = this->GetAverageHallStateInterval();
+		{	
+			float avgHallInterval = 0.0f;
+			for (uint8_t x = 0; x < 64; x++)
+				avgHallInterval += HallStateIntervalHistory[x];
+			avgHallInterval /= 64;
 			
 			float variance = 0.0f;
 			for (uint8_t x = 0; x < STATE_INTERVAL_HISTORY_SIZE; x++)
-				variance += pow(this->HallStateIntervalHistory[x] - avgHallStateInterval, 2);
+				variance += pow(this->HallStateIntervalHistory[x] - avgHallInterval, 2);
 			variance = variance/(STATE_INTERVAL_HISTORY_SIZE - 1);
 			
-			return sqrt(variance) / (avgHallStateInterval / 100.0f);
+			return sqrt(variance) / (avgHallInterval / 100.0f);
 		}
 		
-		uint32_t		HallStateIntervalHistory[STATE_INTERVAL_HISTORY_SIZE] = { 0x00 };				
 }; //HallSensor
 
 extern HallSensor Hall;

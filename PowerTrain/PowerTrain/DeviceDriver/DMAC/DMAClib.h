@@ -13,18 +13,19 @@ extern "C" {
 
 	#include "sam.h"
 	
-	#define DMA_CHID_COM	0
+	#define DMA_CHID_BLDC_U		0
+	#define DMA_CHID_BLDC_V		1
+	#define DMA_CHID_BLDC_W		2
 	
 	void InitDMAC();
 	
-	inline void DMAC_ChannelStartTransfer(uint8_t chId)
+	inline void DMAC_ChannelForceStartTransfer(uint8_t chId)
 	{
 		DMAC->CHID.reg =		DMAC_CHID_ID(chId);
+		DMAC->CHCTRLA.reg &=	~DMAC_CHCTRLA_ENABLE;
+		while ((DMAC->CHCTRLA.reg & DMAC_CHCTRLA_ENABLE) != 0);
 		DMAC->CHCTRLA.reg |=	DMAC_CHCTRLA_ENABLE;
 	}
-		
-	void DMAC_ChannelSetSource(uint32_t* data, uint16_t len);	
-	void DMAC_SetDescriptorSrcAddr(uint8_t descrId, uint32_t* addr);
 
 #ifdef __cplusplus
 }

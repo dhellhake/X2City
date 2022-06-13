@@ -24,6 +24,11 @@ extern "C" {
 	{
 		TCC0->CCBUF[cc].reg	=	(uint32_t)(((float)(TCC0_PER_VAL / 100)) * duty);
 	}
+	
+	inline void TCC0_SetDutyRaw(uint32_t ccVal, uint8_t cc)
+	{
+		TCC0->CCBUF[cc].reg	=	ccVal;
+	}
 
 	inline void TCC0_SetPattern(uint32_t pattern)
 	{

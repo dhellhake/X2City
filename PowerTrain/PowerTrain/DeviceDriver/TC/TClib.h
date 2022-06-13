@@ -12,23 +12,27 @@ extern "C" {
 #endif
 
 	#include "sam.h"
-
+	void InitTC0();
+	void InitTC1();
+	void InitTC2();
 	void InitTC3();
-	void InitTC0_1();
 	
-	// Overflow of 32bit-TC2/3 running at 1Mhz
-	extern volatile uint32_t TC0_Overflow;
-	inline uint64_t GetElapsedMicros()
-	{	
-		TC0->COUNT32.CTRLBSET.reg = TC_CTRLBSET_CMD_READSYNC;		
-		while (TC0->COUNT32.SYNCBUSY.bit.COUNT);
-		return (TC0_Overflow * 0xFFFFFFFF) + (TC0->COUNT32.COUNT.reg);
+	inline void TC3_SetEnabled(uint8_t enabled)
+	{
+		if (enabled > 0)
+		{
+			if ((TC3->COUNT16.CTRLA.reg & TC_CTRLA_ENABLE) == 0)
+				TC3->COUNT16.CTRLA.reg |= TC_CTRLA_ENABLE;
+		} else
+		{
+			TC3->COUNT16.CTRLA.reg &= ~TC_CTRLA_ENABLE;
+			TC3->COUNT16.COUNT.reg = 0;
+		}
 	}
 	
-	inline void Delay_ms(uint16_t milis)
-	{
-		uint32_t tarms = (GetElapsedMicros() / 1000) + milis;
-		while ((GetElapsedMicros() / 1000) < tarms);
+	inline void TC3_SetInterval_us(uint16_t micros)
+	{		
+		TC3->COUNT16.CCBUF[0].reg = micros;
 	}
 	
 #ifdef __cplusplus

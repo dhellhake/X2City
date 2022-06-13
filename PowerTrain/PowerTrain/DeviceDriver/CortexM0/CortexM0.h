@@ -15,6 +15,13 @@ extern "C" {
 
 	void InitSysTick();
 
+	// Overflow of 32bit-TC2/3 running at 1Mhz
+	extern volatile uint64_t SysTick_Overflow;
+	inline uint64_t GetElapsedMicros()
+	{
+		return ((SysTick_Overflow << 24) + ((uint64_t)(0xFFFFFF - SysTick->VAL))) / (uint64_t)48;
+	}
+	
 #ifdef __cplusplus
 }
 #endif

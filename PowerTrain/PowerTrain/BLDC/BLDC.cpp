@@ -14,12 +14,12 @@ BLDC DRV;
 /************************************************************************/
 RUN_RESULT BLDC::Run(uint32_t timeStamp)
 {
-	if (Hall.HallStateIntervalHistoryIdx != 0)
+	if (Hall.AvgHallStateInterval != 0)
 		if (this->Max_Duty > this->Tar_Duty)
 		{			
-			this->Tar_Duty += 0.05f;
+			this->Tar_Duty += 0.0005f;
 			for (uint8_t x = 0; x < 120; x++)
-				this->sineTarDuty[x] = this->Tar_Duty * sine120[x];
+				this->TarSineDuty[x] = (uint32_t)(this->Tar_Duty * sine120[x] * 1200.0f);
 		}
 	
 	return RUN_RESULT::SUCCESS;
