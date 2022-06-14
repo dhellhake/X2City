@@ -31,8 +31,15 @@ class BLDC : public Task
 	/* Class implementation                                                 */
 	/************************************************************************/
 	public:
+		BLDC();
+	
 		float Tar_Duty = 0.04f;
-		float Max_Duty = 0.10f;
+		float Max_Duty = 0.14f;
+	
+		uint32_t BLDC_TrapezoidalForwardPattern_LuT[8];
+		uint32_t BLDC_TrapezoidalReversePattern_LuT[8];
+		uint32_t BLDC_SinusoidalForwardPattern_LuT[8];
+		uint32_t BLDC_SinusoidalReversePattern_LuT[8];
 	
 		uint8_t once = 0;
 		inline void Drive_SetPhase(HALL_STATE state, COMMUTATION_TYPE type)
@@ -44,7 +51,18 @@ class BLDC : public Task
 				TCC0_SetDuty(this->Tar_Duty * 100.0f, TCC0_CC_W_IDX);
 			}
 			
-			uint32_t pattern = GetPattern(state, DrvDir_Forward, type == COMMUTATION_TYPE::SINUSOIDAL ? 1 : 0);						
+			
+			uint32_t pattern;
+			
+			if (type == COMMUTATION_TYPE::SINUSOIDAL)
+				pattern = this->BLDC_SinusoidalForwardPattern_LuT[(uint8_t)state];
+			else
+			{
+				pattern = this->BLDC_TrapezoidalForwardPattern_LuT[(uint8_t)state];
+			}
+			
+			
+								
 			TCC0_SetPattern(pattern);			
 		}
 		
