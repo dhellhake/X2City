@@ -42,3 +42,5 @@ TraceView/packages/*
 TraceView/obj/*
 TraceView/bin/*
 TraceView/.vs/*
+BMS/BMS/Debug/*
+BMS/.vs/*

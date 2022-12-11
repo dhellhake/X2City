@@ -1,0 +1,30 @@
+/* 
+* CANlib.h
+*
+* Created: 16.01.2022 10:02:22
+* Author: dominik hellhake
+*/
+#ifndef __CANLIB_H__
+#define __CANLIB_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+	#include <stdalign.h>
+	#include "samc21.h"
+
+	
+
+	void InitCAN0();
+	void InitCAN1();
+
+	void can0_com(void);
+	void can1_com(void);
+	void can0_transmit(uint16_t address, uint8_t size, uint8_t* data);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif //__CANLIB_H__
