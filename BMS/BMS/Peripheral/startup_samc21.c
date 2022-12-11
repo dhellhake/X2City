@@ -33,6 +33,7 @@
 #include "PORT\PORT.h"
 #include "CAN\CANlib.h"
 #include "SERCOM\SERCOMlib.h"
+#include "SDADC\SDADClib.h"
 
 /* Initialize segments */
 extern uint32_t _sfixed;
@@ -265,6 +266,8 @@ void Reset_Handler(void)
 		InitSERCOM1();
 
 		InitCAN0();
+		
+		InitSDADC();
 
         /* Initialize the C library */
         __libc_init_array();

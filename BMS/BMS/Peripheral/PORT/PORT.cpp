@@ -18,6 +18,10 @@ void InitPORT()
 	PORT->Group[0].DIRSET.reg = PORT_PA25;
 	PORT->Group[0].OUTCLR.reg = PORT_PA25;
 		
+	/* SDADC */
+	SetPinPeripheralFunction(PINMUX_PA06B_SDADC_INN0);
+	SetPinPeripheralFunction(PINMUX_PA07B_SDADC_INP0);
+		
 	/* SPI on SERCOM1 */
 	SetPinPeripheralFunction(PINMUX_PA16C_SERCOM1_PAD0);	//MOSI
 	SetPinPeripheralFunction(PINMUX_PA17C_SERCOM1_PAD1);	//SCK

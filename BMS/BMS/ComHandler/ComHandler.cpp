@@ -6,6 +6,7 @@
 */
 #include "ComHandler.h"
 #include "..\Peripheral\CAN\CANlib.h"
+#include "..\Peripheral\SDADC\SDADClib.h"
 
 
 #define CAN_FILTER_ID_MOTORCONTROL         0x45a
@@ -21,9 +22,14 @@ RUN_RESULT ComHandler::Run(uint32_t timeStamp)
 	can0_com();
 		
 	uint8_t data[64] = { 0x00 };
-		
+	
+	float val = (tmpVoltage - 1.654f) / 50.0f;
+	val /= 0.002f;
+	
+	val *= 100.0f;
+	
 	for (uint8_t x = 0; x < 4; x++)
-		data[x] = ((uint8_t*)((float*)&this->TxBuffer.IBat3))[x];
+		data[x] = ((uint8_t*)((float*)&val))[x];
 	
 	can0_transmit(CAN_FILTER_ID_MOTORCONTROL, 64, data);
 	

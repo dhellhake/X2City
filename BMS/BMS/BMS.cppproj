@@ -139,7 +139,6 @@
       <Value>%24(PackRepoDir)\atmel\SAMC21_DFP\1.2.176\samc21\include</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
-  <armgcc.compiler.optimization.level>Optimize debugging experience (-Og)</armgcc.compiler.optimization.level>
   <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
   <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
   <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
@@ -154,7 +153,6 @@
       <Value>%24(PackRepoDir)\atmel\SAMC21_DFP\1.2.176\samc21\include</Value>
     </ListValues>
   </armgcccpp.compiler.directories.IncludePaths>
-  <armgcccpp.compiler.optimization.level>Optimize debugging experience (-Og)</armgcccpp.compiler.optimization.level>
   <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
   <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
   <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
@@ -225,6 +223,12 @@
     <Compile Include="Peripheral\PORT\PORT.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Peripheral\SDADC\SDADClib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripheral\SDADC\SDADClib.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Peripheral\SERCOM\SERCOMlib.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -246,6 +250,7 @@
     <Folder Include="Peripheral\GCLK" />
     <Folder Include="Peripheral\CortexM0" />
     <Folder Include="Peripheral\CAN" />
+    <Folder Include="Peripheral\SDADC" />
     <Folder Include="Peripheral\SERCOM" />
     <Folder Include="Peripheral\PORT" />
   </ItemGroup>

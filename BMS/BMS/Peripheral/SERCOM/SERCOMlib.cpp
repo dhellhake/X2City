@@ -8,7 +8,7 @@
 
 void InitSERCOM1()
 {
-//Enable Clock for SERCOM0
+	//Enable Clock for SERCOM0
 	//Set bits in the clock mask for an APBx bus.
 	MCLK->APBCMASK.bit.SERCOM1_ = 1;
 	
