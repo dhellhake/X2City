@@ -150,6 +150,7 @@ Discarded input sections
  .group         0x00000000        0x8 Com/Com.o
  .group         0x00000000        0x8 Com/Com.o
  .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
  .text          0x00000000        0x0 Com/Com.o
  .data          0x00000000        0x0 Com/Com.o
  .bss           0x00000000        0x0 Com/Com.o
@@ -441,6 +442,7 @@ Discarded input sections
  .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
  .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
  .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
  .text          0x00000000        0x0 Peripheral/CAN/CANlib.o
  .data          0x00000000        0x0 Peripheral/CAN/CANlib.o
  .text.can0_transmit
@@ -535,6 +537,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x46b Peripheral/CAN/CANlib.o
  .debug_macro   0x00000000     0x1de3 Peripheral/CAN/CANlib.o
  .debug_macro   0x00000000       0x82 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x10 Peripheral/CAN/CANlib.o
  .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
  .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
  .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
@@ -991,6 +994,7 @@ Discarded input sections
  .group         0x00000000        0x8 Peripheral/startup_samc21.o
  .group         0x00000000        0x8 Peripheral/startup_samc21.o
  .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
  .text          0x00000000        0x0 Peripheral/startup_samc21.o
  .data          0x00000000        0x0 Peripheral/startup_samc21.o
  .bss           0x00000000        0x0 Peripheral/startup_samc21.o
@@ -1175,6 +1179,7 @@ Discarded input sections
  .group         0x00000000        0x8 main.o
  .group         0x00000000        0x8 main.o
  .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
@@ -1268,6 +1273,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x46b main.o
  .debug_macro   0x00000000     0x1de3 main.o
  .debug_macro   0x00000000       0x82 main.o
+ .debug_macro   0x00000000       0x10 main.o
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_udivsi3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_udivsi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
@@ -1747,119 +1753,121 @@ OUTPUT(HMI.elf elf32-littlearm)
  .debug_ranges  0x000000d8       0x18 Peripheral/startup_samc21.o
  .debug_ranges  0x000000f0       0x18 main.o
 
-.debug_macro    0x00000000    0x169e3
- .debug_macro   0x00000000      0x3d8 Com/Com.o
- .debug_macro   0x000003d8      0x89e Com/Com.o
- .debug_macro   0x00000c76       0x22 Com/Com.o
- .debug_macro   0x00000c98       0x87 Com/Com.o
- .debug_macro   0x00000d1f       0x51 Com/Com.o
- .debug_macro   0x00000d70       0xef Com/Com.o
- .debug_macro   0x00000e5f       0x6a Com/Com.o
- .debug_macro   0x00000ec9      0x1df Com/Com.o
- .debug_macro   0x000010a8       0x39 Com/Com.o
- .debug_macro   0x000010e1       0x1c Com/Com.o
- .debug_macro   0x000010fd       0x22 Com/Com.o
- .debug_macro   0x0000111f       0xb5 Com/Com.o
- .debug_macro   0x000011d4      0x4da Com/Com.o
- .debug_macro   0x000016ae      0x11f Com/Com.o
- .debug_macro   0x000017cd      0x897 Com/Com.o
- .debug_macro   0x00002064      0x8c0 Com/Com.o
- .debug_macro   0x00002924     0x2d61 Com/Com.o
- .debug_macro   0x00005685      0x21e Com/Com.o
- .debug_macro   0x000058a3      0x282 Com/Com.o
- .debug_macro   0x00005b25      0x130 Com/Com.o
- .debug_macro   0x00005c55      0xd32 Com/Com.o
- .debug_macro   0x00006987      0x61f Com/Com.o
- .debug_macro   0x00006fa6      0x5be Com/Com.o
- .debug_macro   0x00007564      0x824 Com/Com.o
- .debug_macro   0x00007d88      0x172 Com/Com.o
- .debug_macro   0x00007efa      0x306 Com/Com.o
- .debug_macro   0x00008200      0x55f Com/Com.o
- .debug_macro   0x0000875f      0x421 Com/Com.o
- .debug_macro   0x00008b80      0x21c Com/Com.o
- .debug_macro   0x00008d9c      0x719 Com/Com.o
- .debug_macro   0x000094b5      0x5ab Com/Com.o
- .debug_macro   0x00009a60      0x335 Com/Com.o
- .debug_macro   0x00009d95      0x68d Com/Com.o
- .debug_macro   0x0000a422       0xc4 Com/Com.o
- .debug_macro   0x0000a4e6      0x340 Com/Com.o
- .debug_macro   0x0000a826       0x6a Com/Com.o
- .debug_macro   0x0000a890     0x124b Com/Com.o
- .debug_macro   0x0000badb      0x5a5 Com/Com.o
- .debug_macro   0x0000c080      0xfc4 Com/Com.o
- .debug_macro   0x0000d044      0x59e Com/Com.o
- .debug_macro   0x0000d5e2      0x8ae Com/Com.o
- .debug_macro   0x0000de90     0x19be Com/Com.o
- .debug_macro   0x0000f84e      0x39c Com/Com.o
- .debug_macro   0x0000fbea      0x36a Com/Com.o
- .debug_macro   0x0000ff54       0x94 Com/Com.o
- .debug_macro   0x0000ffe8       0xac Com/Com.o
- .debug_macro   0x00010094       0xac Com/Com.o
- .debug_macro   0x00010140      0x149 Com/Com.o
- .debug_macro   0x00010289      0x149 Com/Com.o
- .debug_macro   0x000103d2       0x4c Com/Com.o
- .debug_macro   0x0001041e       0x58 Com/Com.o
- .debug_macro   0x00010476       0x3a Com/Com.o
- .debug_macro   0x000104b0       0xd6 Com/Com.o
- .debug_macro   0x00010586       0xb8 Com/Com.o
- .debug_macro   0x0001063e       0x64 Com/Com.o
- .debug_macro   0x000106a2      0x5d7 Com/Com.o
- .debug_macro   0x00010c79       0x4c Com/Com.o
- .debug_macro   0x00010cc5      0x1be Com/Com.o
- .debug_macro   0x00010e83      0x184 Com/Com.o
- .debug_macro   0x00011007       0x52 Com/Com.o
- .debug_macro   0x00011059       0xa0 Com/Com.o
- .debug_macro   0x000110f9       0xd6 Com/Com.o
- .debug_macro   0x000111cf       0x94 Com/Com.o
- .debug_macro   0x00011263       0x4c Com/Com.o
- .debug_macro   0x000112af       0x64 Com/Com.o
- .debug_macro   0x00011313       0x22 Com/Com.o
- .debug_macro   0x00011335      0x16c Com/Com.o
- .debug_macro   0x000114a1       0x2e Com/Com.o
- .debug_macro   0x000114cf       0x16 Com/Com.o
- .debug_macro   0x000114e5       0xd6 Com/Com.o
- .debug_macro   0x000115bb       0xa0 Com/Com.o
- .debug_macro   0x0001165b      0x133 Com/Com.o
- .debug_macro   0x0001178e      0x133 Com/Com.o
- .debug_macro   0x000118c1      0x133 Com/Com.o
- .debug_macro   0x000119f4      0x133 Com/Com.o
- .debug_macro   0x00011b27      0x133 Com/Com.o
- .debug_macro   0x00011c5a      0x133 Com/Com.o
- .debug_macro   0x00011d8d       0x4c Com/Com.o
- .debug_macro   0x00011dd9       0xfa Com/Com.o
- .debug_macro   0x00011ed3       0xfa Com/Com.o
- .debug_macro   0x00011fcd       0xfa Com/Com.o
- .debug_macro   0x000120c7       0xfa Com/Com.o
- .debug_macro   0x000121c1       0xfa Com/Com.o
- .debug_macro   0x000122bb      0x124 Com/Com.o
- .debug_macro   0x000123df       0xfa Com/Com.o
- .debug_macro   0x000124d9       0xee Com/Com.o
- .debug_macro   0x000125c7       0x76 Com/Com.o
- .debug_macro   0x0001263d       0x3a Com/Com.o
- .debug_macro   0x00012677      0x46b Com/Com.o
- .debug_macro   0x00012ae2     0x1de3 Com/Com.o
- .debug_macro   0x000148c5       0x82 Com/Com.o
- .debug_macro   0x00014947      0x487 OS/os.o
- .debug_macro   0x00014dce       0x10 OS/os.o
- .debug_macro   0x00014dde       0x58 OS/os.o
- .debug_macro   0x00014e36       0x35 OS/os.o
- .debug_macro   0x00014e6b       0x9c OS/os.o
- .debug_macro   0x00014f07      0x16d OS/os.o
- .debug_macro   0x00015074       0x58 OS/os.o
- .debug_macro   0x000150cc       0x1f OS/os.o
- .debug_macro   0x000150eb       0x43 OS/os.o
- .debug_macro   0x0001512e       0x20 OS/os.o
- .debug_macro   0x0001514e      0x187 OS/os.o
- .debug_macro   0x000152d5      0x34d OS/os.o
- .debug_macro   0x00015622       0x10 OS/os.o
- .debug_macro   0x00015632       0x35 OS/os.o
- .debug_macro   0x00015667      0x403 Peripheral/CAN/CANlib.o
- .debug_macro   0x00015a6a       0x22 Peripheral/CAN/CANlib.o
- .debug_macro   0x00015a8c      0x3c4 Peripheral/GCLK/GCLK.o
- .debug_macro   0x00015e50      0x3c4 Peripheral/PORT/PORT.o
- .debug_macro   0x00016214      0x3d8 Peripheral/startup_samc21.o
- .debug_macro   0x000165ec      0x3e1 main.o
- .debug_macro   0x000169cd       0x16 main.o
+.debug_macro    0x00000000    0x16a0b
+ .debug_macro   0x00000000      0x3dd Com/Com.o
+ .debug_macro   0x000003dd      0x89e Com/Com.o
+ .debug_macro   0x00000c7b       0x22 Com/Com.o
+ .debug_macro   0x00000c9d       0x87 Com/Com.o
+ .debug_macro   0x00000d24       0x51 Com/Com.o
+ .debug_macro   0x00000d75       0xef Com/Com.o
+ .debug_macro   0x00000e64       0x6a Com/Com.o
+ .debug_macro   0x00000ece      0x1df Com/Com.o
+ .debug_macro   0x000010ad       0x39 Com/Com.o
+ .debug_macro   0x000010e6       0x1c Com/Com.o
+ .debug_macro   0x00001102       0x22 Com/Com.o
+ .debug_macro   0x00001124       0xb5 Com/Com.o
+ .debug_macro   0x000011d9      0x4da Com/Com.o
+ .debug_macro   0x000016b3      0x11f Com/Com.o
+ .debug_macro   0x000017d2      0x897 Com/Com.o
+ .debug_macro   0x00002069      0x8c0 Com/Com.o
+ .debug_macro   0x00002929     0x2d61 Com/Com.o
+ .debug_macro   0x0000568a      0x21e Com/Com.o
+ .debug_macro   0x000058a8      0x282 Com/Com.o
+ .debug_macro   0x00005b2a      0x130 Com/Com.o
+ .debug_macro   0x00005c5a      0xd32 Com/Com.o
+ .debug_macro   0x0000698c      0x61f Com/Com.o
+ .debug_macro   0x00006fab      0x5be Com/Com.o
+ .debug_macro   0x00007569      0x824 Com/Com.o
+ .debug_macro   0x00007d8d      0x172 Com/Com.o
+ .debug_macro   0x00007eff      0x306 Com/Com.o
+ .debug_macro   0x00008205      0x55f Com/Com.o
+ .debug_macro   0x00008764      0x421 Com/Com.o
+ .debug_macro   0x00008b85      0x21c Com/Com.o
+ .debug_macro   0x00008da1      0x719 Com/Com.o
+ .debug_macro   0x000094ba      0x5ab Com/Com.o
+ .debug_macro   0x00009a65      0x335 Com/Com.o
+ .debug_macro   0x00009d9a      0x68d Com/Com.o
+ .debug_macro   0x0000a427       0xc4 Com/Com.o
+ .debug_macro   0x0000a4eb      0x340 Com/Com.o
+ .debug_macro   0x0000a82b       0x6a Com/Com.o
+ .debug_macro   0x0000a895     0x124b Com/Com.o
+ .debug_macro   0x0000bae0      0x5a5 Com/Com.o
+ .debug_macro   0x0000c085      0xfc4 Com/Com.o
+ .debug_macro   0x0000d049      0x59e Com/Com.o
+ .debug_macro   0x0000d5e7      0x8ae Com/Com.o
+ .debug_macro   0x0000de95     0x19be Com/Com.o
+ .debug_macro   0x0000f853      0x39c Com/Com.o
+ .debug_macro   0x0000fbef      0x36a Com/Com.o
+ .debug_macro   0x0000ff59       0x94 Com/Com.o
+ .debug_macro   0x0000ffed       0xac Com/Com.o
+ .debug_macro   0x00010099       0xac Com/Com.o
+ .debug_macro   0x00010145      0x149 Com/Com.o
+ .debug_macro   0x0001028e      0x149 Com/Com.o
+ .debug_macro   0x000103d7       0x4c Com/Com.o
+ .debug_macro   0x00010423       0x58 Com/Com.o
+ .debug_macro   0x0001047b       0x3a Com/Com.o
+ .debug_macro   0x000104b5       0xd6 Com/Com.o
+ .debug_macro   0x0001058b       0xb8 Com/Com.o
+ .debug_macro   0x00010643       0x64 Com/Com.o
+ .debug_macro   0x000106a7      0x5d7 Com/Com.o
+ .debug_macro   0x00010c7e       0x4c Com/Com.o
+ .debug_macro   0x00010cca      0x1be Com/Com.o
+ .debug_macro   0x00010e88      0x184 Com/Com.o
+ .debug_macro   0x0001100c       0x52 Com/Com.o
+ .debug_macro   0x0001105e       0xa0 Com/Com.o
+ .debug_macro   0x000110fe       0xd6 Com/Com.o
+ .debug_macro   0x000111d4       0x94 Com/Com.o
+ .debug_macro   0x00011268       0x4c Com/Com.o
+ .debug_macro   0x000112b4       0x64 Com/Com.o
+ .debug_macro   0x00011318       0x22 Com/Com.o
+ .debug_macro   0x0001133a      0x16c Com/Com.o
+ .debug_macro   0x000114a6       0x2e Com/Com.o
+ .debug_macro   0x000114d4       0x16 Com/Com.o
+ .debug_macro   0x000114ea       0xd6 Com/Com.o
+ .debug_macro   0x000115c0       0xa0 Com/Com.o
+ .debug_macro   0x00011660      0x133 Com/Com.o
+ .debug_macro   0x00011793      0x133 Com/Com.o
+ .debug_macro   0x000118c6      0x133 Com/Com.o
+ .debug_macro   0x000119f9      0x133 Com/Com.o
+ .debug_macro   0x00011b2c      0x133 Com/Com.o
+ .debug_macro   0x00011c5f      0x133 Com/Com.o
+ .debug_macro   0x00011d92       0x4c Com/Com.o
+ .debug_macro   0x00011dde       0xfa Com/Com.o
+ .debug_macro   0x00011ed8       0xfa Com/Com.o
+ .debug_macro   0x00011fd2       0xfa Com/Com.o
+ .debug_macro   0x000120cc       0xfa Com/Com.o
+ .debug_macro   0x000121c6       0xfa Com/Com.o
+ .debug_macro   0x000122c0      0x124 Com/Com.o
+ .debug_macro   0x000123e4       0xfa Com/Com.o
+ .debug_macro   0x000124de       0xee Com/Com.o
+ .debug_macro   0x000125cc       0x76 Com/Com.o
+ .debug_macro   0x00012642       0x3a Com/Com.o
+ .debug_macro   0x0001267c      0x46b Com/Com.o
+ .debug_macro   0x00012ae7     0x1de3 Com/Com.o
+ .debug_macro   0x000148ca       0x82 Com/Com.o
+ .debug_macro   0x0001494c       0x10 Com/Com.o
+ .debug_macro   0x0001495c      0x487 OS/os.o
+ .debug_macro   0x00014de3       0x10 OS/os.o
+ .debug_macro   0x00014df3       0x58 OS/os.o
+ .debug_macro   0x00014e4b       0x35 OS/os.o
+ .debug_macro   0x00014e80       0x9c OS/os.o
+ .debug_macro   0x00014f1c      0x16d OS/os.o
+ .debug_macro   0x00015089       0x58 OS/os.o
+ .debug_macro   0x000150e1       0x1f OS/os.o
+ .debug_macro   0x00015100       0x43 OS/os.o
+ .debug_macro   0x00015143       0x20 OS/os.o
+ .debug_macro   0x00015163      0x187 OS/os.o
+ .debug_macro   0x000152ea      0x34d OS/os.o
+ .debug_macro   0x00015637       0x10 OS/os.o
+ .debug_macro   0x00015647       0x35 OS/os.o
+ .debug_macro   0x0001567c      0x3fc Peripheral/CAN/CANlib.o
+ .debug_macro   0x00015a78       0x22 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00015a9a      0x3c4 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00015e5e      0x3c4 Peripheral/PORT/PORT.o
+ .debug_macro   0x00016222      0x3d7 Peripheral/startup_samc21.o
+ .debug_macro   0x000165f9       0x16 Peripheral/startup_samc21.o
+ .debug_macro   0x0001660f      0x3e6 main.o
+ .debug_macro   0x000169f5       0x16 main.o
 
 .debug_line     0x00000000     0x39ec
  .debug_line    0x00000000      0x7f0 Com/Com.o
@@ -1872,20 +1880,20 @@ OUTPUT(HMI.elf elf32-littlearm)
  .debug_line    0x000031f8      0x7f4 main.o
 
 .debug_str      0x00000000    0x85ecb
- .debug_str     0x00000000    0x80f14 Com/Com.o
-                              0x81926 (size before relaxing)
- .debug_str     0x00080f14     0x34b5 OS/os.o
+ .debug_str     0x00000000    0x80f58 Com/Com.o
+                              0x8196a (size before relaxing)
+ .debug_str     0x00080f58     0x34b5 OS/os.o
                               0x84e83 (size before relaxing)
- .debug_str     0x000843c9     0x10af Peripheral/CAN/CANlib.o
+ .debug_str     0x0008440d     0x106b Peripheral/CAN/CANlib.o
                               0x82ca2 (size before relaxing)
  .debug_str     0x00085478      0x472 Peripheral/GCLK/GCLK.o
                               0x81e5d (size before relaxing)
  .debug_str     0x000858ea      0x212 Peripheral/PORT/PORT.o
                               0x81ab0 (size before relaxing)
  .debug_str     0x00085afc      0x3af Peripheral/startup_samc21.o
-                              0x81c92 (size before relaxing)
+                              0x81cd6 (size before relaxing)
  .debug_str     0x00085eab       0x20 main.o
-                              0x8197c (size before relaxing)
+                              0x819c0 (size before relaxing)
 
 .debug_frame    0x00000000      0x5a4
  .debug_frame   0x00000000       0x4c Com/Com.o

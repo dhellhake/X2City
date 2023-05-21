@@ -25,13 +25,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  10 .debug_ranges 00000108  00000000  00000000  00029598  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_macro  000169e3  00000000  00000000  000296a0  2**0
+ 11 .debug_macro  00016a0b  00000000  00000000  000296a0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_line   000039ec  00000000  00000000  00040083  2**0
+ 12 .debug_line   000039ec  00000000  00000000  000400ab  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00085ecb  00000000  00000000  00043a6f  2**0
+ 13 .debug_str    00085ecb  00000000  00000000  00043a97  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_frame  000005a4  00000000  00000000  000c993c  2**2
+ 14 .debug_frame  000005a4  00000000  00000000  000c9964  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -1353,19 +1353,18 @@ void InitCAN0()
      86e:	50d1      	str	r1, [r2, r3]
 
 	/* Configure  Rx FIFO 0 Configuration register */
-	CAN0->RXF0C.reg =												// FIFO 0 Operation Mode : overwrite
+	CAN0->RXF0C.reg =	CAN_RXF0C_F0WM(0) |											// Rx FIFO 0 Watermark (interrupt)
      870:	4924      	ldr	r1, [pc, #144]	; (904 <InitCAN0+0x124>)
-						CAN_RXF0C_F0WM(32) |											// Rx FIFO 0 Watermark (interrupt)
-						CAN_RXF0C_F0S(64) |											// Rx FIFO 0 size
-						CAN_RXF0C_F0SA((uint32_t)&can0_rx_fifo0);					
+						CAN_RXF0C_F0S(CAN0_RX_FIFO_SIZE) |							// Rx FIFO 0 size
+						CAN_RXF0C_F0SA((uint32_t)&can0_rx_fifo0);					// Rx FIFO 0 Address
      872:	4b28      	ldr	r3, [pc, #160]	; (914 <InitCAN0+0x134>)
      874:	041b      	lsls	r3, r3, #16
      876:	0c1b      	lsrs	r3, r3, #16
-						CAN_RXF0C_F0S(64) |											// Rx FIFO 0 size
-     878:	2281      	movs	r2, #129	; 0x81
-     87a:	0592      	lsls	r2, r2, #22
+						CAN_RXF0C_F0S(CAN0_RX_FIFO_SIZE) |							// Rx FIFO 0 size
+     878:	2280      	movs	r2, #128	; 0x80
+     87a:	0352      	lsls	r2, r2, #13
      87c:	4313      	orrs	r3, r2
-	CAN0->RXF0C.reg =												// FIFO 0 Operation Mode : overwrite
+	CAN0->RXF0C.reg =	CAN_RXF0C_F0WM(0) |											// Rx FIFO 0 Watermark (interrupt)
      87e:	22a0      	movs	r2, #160	; 0xa0
      880:	508b      	str	r3, [r1, r2]
 	
