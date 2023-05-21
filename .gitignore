@@ -27,7 +27,7 @@
 *.lib
 
 # Executables
-*.exe
+*.hex
 *.out
 *.app
 
@@ -35,8 +35,7 @@
 PowerTrain/PowerTrain/Debug/*
 PowerTrain/PowerTrain/.vs/*
 PowerTrain/.vs/*
-HMI/HMI/Debug/*
-HMI/HMI/.vs/*
+HMI/Debug/*
 HMI/.vs/*
 TraceView/packages/*
 TraceView/obj/*
