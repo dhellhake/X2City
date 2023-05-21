@@ -1,0 +1,1905 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_udivsi3.o)
+                              OS/os.o (__aeabi_uidiv)
+c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-exit.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/crt0.o (exit)
+c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-impure.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-exit.o) (_global_impure_ptr)
+c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-init.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/crt0.o (__libc_init_array)
+c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-memset.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/crt0.o (memset)
+c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-exit.o) (__call_exitprocs)
+c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-atexit.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o) (atexit)
+c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-fini.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o) (__libc_fini_array)
+c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o) (__retarget_lock_acquire_recursive)
+c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__atexit.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-atexit.o) (__register_exitproc)
+
+Allocating common symbols
+Common symbol       size              file
+
+__lock___atexit_recursive_mutex
+                    0x1               c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+__lock___arc4random_mutex
+                    0x1               c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+os_curr_task        0x4               OS/os.o
+__lock___env_recursive_mutex
+                    0x1               c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+__lock___sinit_recursive_mutex
+                    0x1               c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+__lock___malloc_recursive_mutex
+                    0x1               c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+can0_rx_fifo0       0x100             Peripheral/CAN/CANlib.o
+__lock___at_quick_exit_mutex
+                    0x1               c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+__lock___dd_hash_mutex
+                    0x1               c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+__lock___tz_mutex   0x1               c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+os_next_task        0x4               OS/os.o
+__lock___sfp_recursive_mutex
+                    0x1               c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crti.o
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crti.o
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crti.o
+ .data          0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtbegin.o
+ .text          0x00000000       0x78 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/crt0.o
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/crt0.o
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/crt0.o
+ .ARM.exidx     0x00000000        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/crt0.o
+ .ARM.attributes
+                0x00000000       0x1b c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/crt0.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .group         0x00000000        0x8 Com/Com.o
+ .text          0x00000000        0x0 Com/Com.o
+ .data          0x00000000        0x0 Com/Com.o
+ .bss           0x00000000        0x0 Com/Com.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .group         0x00000000        0x8 OS/os.o
+ .text          0x00000000        0x0 OS/os.o
+ .data          0x00000000        0x0 OS/os.o
+ .debug_macro   0x00000000      0x89e OS/os.o
+ .debug_macro   0x00000000       0x22 OS/os.o
+ .debug_macro   0x00000000       0x87 OS/os.o
+ .debug_macro   0x00000000       0x51 OS/os.o
+ .debug_macro   0x00000000       0xef OS/os.o
+ .debug_macro   0x00000000       0x6a OS/os.o
+ .debug_macro   0x00000000      0x1df OS/os.o
+ .debug_macro   0x00000000       0x39 OS/os.o
+ .debug_macro   0x00000000       0x1c OS/os.o
+ .debug_macro   0x00000000       0x22 OS/os.o
+ .debug_macro   0x00000000       0xb5 OS/os.o
+ .debug_macro   0x00000000      0x4da OS/os.o
+ .debug_macro   0x00000000      0x11f OS/os.o
+ .debug_macro   0x00000000      0x897 OS/os.o
+ .debug_macro   0x00000000      0x8c0 OS/os.o
+ .debug_macro   0x00000000     0x2d61 OS/os.o
+ .debug_macro   0x00000000      0x21e OS/os.o
+ .debug_macro   0x00000000      0x282 OS/os.o
+ .debug_macro   0x00000000      0x130 OS/os.o
+ .debug_macro   0x00000000      0xd32 OS/os.o
+ .debug_macro   0x00000000      0x61f OS/os.o
+ .debug_macro   0x00000000      0x5be OS/os.o
+ .debug_macro   0x00000000      0x824 OS/os.o
+ .debug_macro   0x00000000      0x172 OS/os.o
+ .debug_macro   0x00000000      0x306 OS/os.o
+ .debug_macro   0x00000000      0x55f OS/os.o
+ .debug_macro   0x00000000      0x421 OS/os.o
+ .debug_macro   0x00000000      0x21c OS/os.o
+ .debug_macro   0x00000000      0x719 OS/os.o
+ .debug_macro   0x00000000      0x5ab OS/os.o
+ .debug_macro   0x00000000      0x335 OS/os.o
+ .debug_macro   0x00000000      0x68d OS/os.o
+ .debug_macro   0x00000000       0xc4 OS/os.o
+ .debug_macro   0x00000000      0x340 OS/os.o
+ .debug_macro   0x00000000       0x6a OS/os.o
+ .debug_macro   0x00000000     0x124b OS/os.o
+ .debug_macro   0x00000000      0x5a5 OS/os.o
+ .debug_macro   0x00000000      0xfc4 OS/os.o
+ .debug_macro   0x00000000      0x59e OS/os.o
+ .debug_macro   0x00000000      0x8ae OS/os.o
+ .debug_macro   0x00000000     0x19be OS/os.o
+ .debug_macro   0x00000000      0x39c OS/os.o
+ .debug_macro   0x00000000      0x36a OS/os.o
+ .debug_macro   0x00000000       0x94 OS/os.o
+ .debug_macro   0x00000000       0xac OS/os.o
+ .debug_macro   0x00000000       0xac OS/os.o
+ .debug_macro   0x00000000      0x149 OS/os.o
+ .debug_macro   0x00000000      0x149 OS/os.o
+ .debug_macro   0x00000000       0x4c OS/os.o
+ .debug_macro   0x00000000       0x58 OS/os.o
+ .debug_macro   0x00000000       0x3a OS/os.o
+ .debug_macro   0x00000000       0xd6 OS/os.o
+ .debug_macro   0x00000000       0xb8 OS/os.o
+ .debug_macro   0x00000000       0x64 OS/os.o
+ .debug_macro   0x00000000      0x5d7 OS/os.o
+ .debug_macro   0x00000000       0x4c OS/os.o
+ .debug_macro   0x00000000      0x1be OS/os.o
+ .debug_macro   0x00000000      0x184 OS/os.o
+ .debug_macro   0x00000000       0x52 OS/os.o
+ .debug_macro   0x00000000       0xa0 OS/os.o
+ .debug_macro   0x00000000       0xd6 OS/os.o
+ .debug_macro   0x00000000       0x94 OS/os.o
+ .debug_macro   0x00000000       0x4c OS/os.o
+ .debug_macro   0x00000000       0x64 OS/os.o
+ .debug_macro   0x00000000       0x22 OS/os.o
+ .debug_macro   0x00000000      0x16c OS/os.o
+ .debug_macro   0x00000000       0x2e OS/os.o
+ .debug_macro   0x00000000       0x16 OS/os.o
+ .debug_macro   0x00000000       0xd6 OS/os.o
+ .debug_macro   0x00000000       0xa0 OS/os.o
+ .debug_macro   0x00000000      0x133 OS/os.o
+ .debug_macro   0x00000000      0x133 OS/os.o
+ .debug_macro   0x00000000      0x133 OS/os.o
+ .debug_macro   0x00000000      0x133 OS/os.o
+ .debug_macro   0x00000000      0x133 OS/os.o
+ .debug_macro   0x00000000      0x133 OS/os.o
+ .debug_macro   0x00000000       0x4c OS/os.o
+ .debug_macro   0x00000000       0xfa OS/os.o
+ .debug_macro   0x00000000       0xfa OS/os.o
+ .debug_macro   0x00000000       0xfa OS/os.o
+ .debug_macro   0x00000000       0xfa OS/os.o
+ .debug_macro   0x00000000       0xfa OS/os.o
+ .debug_macro   0x00000000      0x124 OS/os.o
+ .debug_macro   0x00000000       0xfa OS/os.o
+ .debug_macro   0x00000000       0xee OS/os.o
+ .debug_macro   0x00000000       0x76 OS/os.o
+ .debug_macro   0x00000000       0x3a OS/os.o
+ .debug_macro   0x00000000      0x46b OS/os.o
+ .debug_macro   0x00000000     0x1de3 OS/os.o
+ .debug_macro   0x00000000       0x82 OS/os.o
+ .data          0x00000000        0x0 OS/PendSv.o
+ .bss           0x00000000        0x0 OS/PendSv.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/CAN/CANlib.o
+ .text          0x00000000        0x0 Peripheral/CAN/CANlib.o
+ .data          0x00000000        0x0 Peripheral/CAN/CANlib.o
+ .text.can0_transmit
+                0x00000000       0x90 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x89e Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x22 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x87 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x51 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xef Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x6a Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x1df Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x39 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x1c Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x22 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xb5 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x4da Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x11f Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x897 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x8c0 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000     0x2d61 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x21e Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x282 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x130 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0xd32 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x61f Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x5be Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x824 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x172 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x306 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x55f Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x421 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x21c Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x719 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x5ab Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x335 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x68d Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xc4 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x340 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x6a Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000     0x124b Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x5a5 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0xfc4 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x59e Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x8ae Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000     0x19be Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x39c Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x36a Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x94 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xac Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xac Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x149 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x149 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x4c Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x58 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x3a Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xd6 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xb8 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x64 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x5d7 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x4c Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x1be Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x184 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x52 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xa0 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xd6 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x94 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x4c Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x64 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x22 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x16c Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x2e Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x16 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xd6 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xa0 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x133 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x133 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x133 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x133 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x133 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x133 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x4c Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xfa Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xfa Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xfa Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xfa Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xfa Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x124 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xfa Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0xee Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x76 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x3a Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000      0x46b Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000     0x1de3 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00000000       0x82 Peripheral/CAN/CANlib.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/GCLK/GCLK.o
+ .text          0x00000000        0x0 Peripheral/GCLK/GCLK.o
+ .data          0x00000000        0x0 Peripheral/GCLK/GCLK.o
+ .bss           0x00000000        0x0 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x89e Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x22 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x87 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x51 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xef Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x6a Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x1df Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x39 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x1c Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x22 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xb5 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x4da Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x11f Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x897 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x8c0 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000     0x2d61 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x21e Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x282 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x130 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0xd32 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x61f Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x5be Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x824 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x172 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x306 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x55f Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x421 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x21c Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x719 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x5ab Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x335 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x68d Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xc4 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x340 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x6a Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000     0x124b Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x5a5 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0xfc4 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x59e Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x8ae Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000     0x19be Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x39c Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x36a Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x94 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xac Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xac Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x149 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x149 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x4c Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x58 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x3a Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xd6 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xb8 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x64 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x5d7 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x4c Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x1be Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x184 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x52 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xa0 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xd6 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x94 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x4c Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x64 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x22 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x16c Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x2e Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x16 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xd6 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xa0 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x133 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x133 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x133 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x133 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x133 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x133 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x4c Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xfa Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xfa Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xfa Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xfa Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xfa Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x124 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xfa Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0xee Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x76 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x3a Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000      0x46b Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000     0x1de3 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00000000       0x82 Peripheral/GCLK/GCLK.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/PORT/PORT.o
+ .text          0x00000000        0x0 Peripheral/PORT/PORT.o
+ .data          0x00000000        0x0 Peripheral/PORT/PORT.o
+ .bss           0x00000000        0x0 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x89e Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x22 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x87 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x51 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xef Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x6a Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x1df Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x39 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x1c Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x22 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xb5 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x4da Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x11f Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x897 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x8c0 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000     0x2d61 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x21e Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x282 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x130 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0xd32 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x61f Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x5be Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x824 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x172 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x306 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x55f Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x421 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x21c Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x719 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x5ab Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x335 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x68d Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xc4 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x340 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x6a Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000     0x124b Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x5a5 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0xfc4 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x59e Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x8ae Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000     0x19be Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x39c Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x36a Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x94 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xac Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xac Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x149 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x149 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x4c Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x58 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x3a Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xd6 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xb8 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x64 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x5d7 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x4c Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x1be Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x184 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x52 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xa0 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xd6 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x94 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x4c Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x64 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x22 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x16c Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x2e Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x16 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xd6 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xa0 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x133 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x133 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x133 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x133 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x133 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x133 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x4c Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xfa Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xfa Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xfa Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xfa Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xfa Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x124 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xfa Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0xee Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x76 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x3a Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000      0x46b Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000     0x1de3 Peripheral/PORT/PORT.o
+ .debug_macro   0x00000000       0x82 Peripheral/PORT/PORT.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 Peripheral/startup_samc21.o
+ .text          0x00000000        0x0 Peripheral/startup_samc21.o
+ .data          0x00000000        0x0 Peripheral/startup_samc21.o
+ .bss           0x00000000        0x0 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x89e Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x22 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x87 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x51 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xef Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x6a Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x1df Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x39 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x1c Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x22 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xb5 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x4da Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x11f Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x897 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x8c0 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000     0x2d61 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x21e Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x282 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x130 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0xd32 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x61f Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x5be Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x824 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x172 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x306 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x55f Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x421 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x21c Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x719 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x5ab Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x335 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x68d Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xc4 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x340 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x6a Peripheral/startup_samc21.o
+ .debug_macro   0x00000000     0x124b Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x5a5 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0xfc4 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x59e Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x8ae Peripheral/startup_samc21.o
+ .debug_macro   0x00000000     0x19be Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x39c Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x36a Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x94 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xac Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xac Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x149 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x149 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x4c Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x58 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x3a Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xd6 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xb8 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x64 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x5d7 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x4c Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x1be Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x184 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x52 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xa0 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xd6 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x94 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x4c Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x64 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x22 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x16c Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x2e Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x16 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xd6 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xa0 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x133 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x133 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x133 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x133 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x133 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x133 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x4c Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xfa Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xfa Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xfa Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xfa Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xfa Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x124 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xfa Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0xee Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x76 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x3a Peripheral/startup_samc21.o
+ .debug_macro   0x00000000      0x46b Peripheral/startup_samc21.o
+ .debug_macro   0x00000000     0x1de3 Peripheral/startup_samc21.o
+ .debug_macro   0x00000000       0x82 Peripheral/startup_samc21.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
+ .debug_macro   0x00000000      0x89e main.o
+ .debug_macro   0x00000000       0x22 main.o
+ .debug_macro   0x00000000       0x87 main.o
+ .debug_macro   0x00000000       0x51 main.o
+ .debug_macro   0x00000000       0xef main.o
+ .debug_macro   0x00000000       0x6a main.o
+ .debug_macro   0x00000000      0x1df main.o
+ .debug_macro   0x00000000       0x39 main.o
+ .debug_macro   0x00000000       0x1c main.o
+ .debug_macro   0x00000000       0x22 main.o
+ .debug_macro   0x00000000       0xb5 main.o
+ .debug_macro   0x00000000      0x4da main.o
+ .debug_macro   0x00000000      0x11f main.o
+ .debug_macro   0x00000000      0x897 main.o
+ .debug_macro   0x00000000      0x8c0 main.o
+ .debug_macro   0x00000000     0x2d61 main.o
+ .debug_macro   0x00000000      0x21e main.o
+ .debug_macro   0x00000000      0x282 main.o
+ .debug_macro   0x00000000      0x130 main.o
+ .debug_macro   0x00000000      0xd32 main.o
+ .debug_macro   0x00000000      0x61f main.o
+ .debug_macro   0x00000000      0x5be main.o
+ .debug_macro   0x00000000      0x824 main.o
+ .debug_macro   0x00000000      0x172 main.o
+ .debug_macro   0x00000000      0x306 main.o
+ .debug_macro   0x00000000      0x55f main.o
+ .debug_macro   0x00000000      0x421 main.o
+ .debug_macro   0x00000000      0x21c main.o
+ .debug_macro   0x00000000      0x719 main.o
+ .debug_macro   0x00000000      0x5ab main.o
+ .debug_macro   0x00000000      0x335 main.o
+ .debug_macro   0x00000000      0x68d main.o
+ .debug_macro   0x00000000       0xc4 main.o
+ .debug_macro   0x00000000      0x340 main.o
+ .debug_macro   0x00000000       0x6a main.o
+ .debug_macro   0x00000000     0x124b main.o
+ .debug_macro   0x00000000      0x5a5 main.o
+ .debug_macro   0x00000000      0xfc4 main.o
+ .debug_macro   0x00000000      0x59e main.o
+ .debug_macro   0x00000000      0x8ae main.o
+ .debug_macro   0x00000000     0x19be main.o
+ .debug_macro   0x00000000      0x39c main.o
+ .debug_macro   0x00000000      0x36a main.o
+ .debug_macro   0x00000000       0x94 main.o
+ .debug_macro   0x00000000       0xac main.o
+ .debug_macro   0x00000000       0xac main.o
+ .debug_macro   0x00000000      0x149 main.o
+ .debug_macro   0x00000000      0x149 main.o
+ .debug_macro   0x00000000       0x4c main.o
+ .debug_macro   0x00000000       0x58 main.o
+ .debug_macro   0x00000000       0x3a main.o
+ .debug_macro   0x00000000       0xd6 main.o
+ .debug_macro   0x00000000       0xb8 main.o
+ .debug_macro   0x00000000       0x64 main.o
+ .debug_macro   0x00000000      0x5d7 main.o
+ .debug_macro   0x00000000       0x4c main.o
+ .debug_macro   0x00000000      0x1be main.o
+ .debug_macro   0x00000000      0x184 main.o
+ .debug_macro   0x00000000       0x52 main.o
+ .debug_macro   0x00000000       0xa0 main.o
+ .debug_macro   0x00000000       0xd6 main.o
+ .debug_macro   0x00000000       0x94 main.o
+ .debug_macro   0x00000000       0x4c main.o
+ .debug_macro   0x00000000       0x64 main.o
+ .debug_macro   0x00000000       0x22 main.o
+ .debug_macro   0x00000000      0x16c main.o
+ .debug_macro   0x00000000       0x2e main.o
+ .debug_macro   0x00000000       0x16 main.o
+ .debug_macro   0x00000000       0xd6 main.o
+ .debug_macro   0x00000000       0xa0 main.o
+ .debug_macro   0x00000000      0x133 main.o
+ .debug_macro   0x00000000      0x133 main.o
+ .debug_macro   0x00000000      0x133 main.o
+ .debug_macro   0x00000000      0x133 main.o
+ .debug_macro   0x00000000      0x133 main.o
+ .debug_macro   0x00000000      0x133 main.o
+ .debug_macro   0x00000000       0x4c main.o
+ .debug_macro   0x00000000       0xfa main.o
+ .debug_macro   0x00000000       0xfa main.o
+ .debug_macro   0x00000000       0xfa main.o
+ .debug_macro   0x00000000       0xfa main.o
+ .debug_macro   0x00000000       0xfa main.o
+ .debug_macro   0x00000000      0x124 main.o
+ .debug_macro   0x00000000       0xfa main.o
+ .debug_macro   0x00000000       0xee main.o
+ .debug_macro   0x00000000       0x76 main.o
+ .debug_macro   0x00000000       0x3a main.o
+ .debug_macro   0x00000000      0x46b main.o
+ .debug_macro   0x00000000     0x1de3 main.o
+ .debug_macro   0x00000000       0x82 main.o
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-exit.o)
+ .debug_frame   0x00000000       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x00000000      0x110 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-atexit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-atexit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-atexit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-fini.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-fini.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-fini.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init
+                0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init_recursive
+                0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_close
+                0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_close_recursive
+                0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_release
+                0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__atexit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__atexit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__atexit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtend.o
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtend.o
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtend.o
+ .eh_frame      0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtend.o
+ .jcr           0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtend.o
+ .ARM.attributes
+                0x00000000       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtend.o
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtn.o
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtn.o
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00040000         xr
+ram              0x20000000         0x00008000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crti.o
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtbegin.o
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/crt0.o
+LOAD Com/Com.o
+LOAD OS/os.o
+LOAD OS/PendSv.o
+LOAD Peripheral/CAN/CANlib.o
+LOAD Peripheral/GCLK/GCLK.o
+LOAD Peripheral/PORT/PORT.o
+LOAD Peripheral/startup_samc21.o
+LOAD main.o
+START GROUP
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libm.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a
+END GROUP
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtend.o
+LOAD c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtn.o
+                0x00002000                STACK_SIZE = DEFINED (STACK_SIZE)?STACK_SIZE:DEFINED (__stack_size__)?__stack_size__:0x2000
+
+.text           0x00000000     0x106c
+                0x00000000                . = ALIGN (0x4)
+                0x00000000                _sfixed = .
+ *(.vectors .vectors.*)
+ .vectors       0x00000000       0xbc Peripheral/startup_samc21.o
+                0x00000000                exception_table
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x000000bc       0x60 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtbegin.o
+ .text.Com_Init
+                0x0000011c       0x14 Com/Com.o
+                0x0000011c                Com_Init
+ .text.Com_Rx_Cyclic
+                0x00000130       0x6c Com/Com.o
+                0x00000130                Com_Rx_Cyclic
+ .text.__NVIC_EnableIRQ
+                0x0000019c       0x34 OS/os.o
+ .text.__NVIC_SetPriority
+                0x000001d0       0xdc OS/os.o
+ .text.cyclic_handler
+                0x000002ac       0x54 OS/os.o
+ .text.os_init  0x00000300       0x54 OS/os.o
+                0x00000300                os_init
+ .text.os_task_init
+                0x00000354       0xc0 OS/os.o
+                0x00000354                os_task_init
+ .text.os_start
+                0x00000414       0x8c OS/os.o
+                0x00000414                os_start
+ .text.SetTaskSwitch
+                0x000004a0       0x8c OS/os.o
+                0x000004a0                SetTaskSwitch
+ .text.GetElapsedMilis
+                0x0000052c       0x20 OS/os.o
+                0x0000052c                GetElapsedMilis
+ .text.SysTick_Handler
+                0x0000054c      0x13c OS/os.o
+                0x0000054c                SysTick_Handler
+ .text          0x00000688       0x48 OS/PendSv.o
+                0x00000688                PendSV_Handler
+ .text.__NVIC_EnableIRQ
+                0x000006d0       0x34 Peripheral/CAN/CANlib.o
+ .text.__NVIC_SetPriority
+                0x00000704       0xdc Peripheral/CAN/CANlib.o
+ .text.InitCAN0
+                0x000007e0      0x150 Peripheral/CAN/CANlib.o
+                0x000007e0                InitCAN0
+ .text.CAN0_Start
+                0x00000930       0x28 Peripheral/CAN/CANlib.o
+                0x00000930                CAN0_Start
+ .text.can0_fifo0_data_available
+                0x00000958       0x1c Peripheral/CAN/CANlib.o
+                0x00000958                can0_fifo0_data_available
+ .text.can0_fifo0_read_message
+                0x00000974       0x68 Peripheral/CAN/CANlib.o
+                0x00000974                can0_fifo0_read_message
+ .text.CAN0_Handler
+                0x000009dc        0xa Peripheral/CAN/CANlib.o
+                0x000009dc                CAN0_Handler
+ *fill*         0x000009e6        0x2 
+ .text.InitGCLK
+                0x000009e8       0x44 Peripheral/GCLK/GCLK.o
+                0x000009e8                InitGCLK
+ .text.InitPORT
+                0x00000a2c       0xe0 Peripheral/PORT/PORT.o
+                0x00000a2c                InitPORT
+ .text.SetPinPeripheralFunction
+                0x00000b0c       0xfe Peripheral/PORT/PORT.o
+                0x00000b0c                SetPinPeripheralFunction
+ *fill*         0x00000c0a        0x2 
+ .text.Reset_Handler
+                0x00000c0c       0x9c Peripheral/startup_samc21.o
+                0x00000c0c                Reset_Handler
+ .text.Dummy_Handler
+                0x00000ca8        0x6 Peripheral/startup_samc21.o
+                0x00000ca8                SVCall_Handler
+                0x00000ca8                DMAC_Handler
+                0x00000ca8                HardFault_Handler
+                0x00000ca8                TC2_Handler
+                0x00000ca8                AC_Handler
+                0x00000ca8                SERCOM1_Handler
+                0x00000ca8                NonMaskableInt_Handler
+                0x00000ca8                TCC1_Handler
+                0x00000ca8                SERCOM2_Handler
+                0x00000ca8                TCC0_Handler
+                0x00000ca8                RTC_Handler
+                0x00000ca8                ADC1_Handler
+                0x00000ca8                EIC_Handler
+                0x00000ca8                WDT_Handler
+                0x00000ca8                TC4_Handler
+                0x00000ca8                TC1_Handler
+                0x00000ca8                TC3_Handler
+                0x00000ca8                SDADC_Handler
+                0x00000ca8                Dummy_Handler
+                0x00000ca8                SERCOM5_Handler
+                0x00000ca8                CAN1_Handler
+                0x00000ca8                ADC0_Handler
+                0x00000ca8                TSENS_Handler
+                0x00000ca8                TCC2_Handler
+                0x00000ca8                EVSYS_Handler
+                0x00000ca8                SERCOM3_Handler
+                0x00000ca8                SERCOM4_Handler
+                0x00000ca8                NVMCTRL_Handler
+                0x00000ca8                SYSTEM_Handler
+                0x00000ca8                SERCOM0_Handler
+                0x00000ca8                DAC_Handler
+                0x00000ca8                PTC_Handler
+                0x00000ca8                FREQM_Handler
+                0x00000ca8                TC0_Handler
+ .text.background
+                0x00000cae        0xa main.o
+ .text.main     0x00000cb8       0x40 main.o
+                0x00000cb8                main
+ .text          0x00000cf8      0x114 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_udivsi3.o)
+                0x00000cf8                __aeabi_uidiv
+                0x00000cf8                __udivsi3
+                0x00000e04                __aeabi_uidivmod
+ .text          0x00000e0c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
+                0x00000e0c                __aeabi_idiv0
+                0x00000e0c                __aeabi_ldiv0
+ .text.__libc_init_array
+                0x00000e10       0x48 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-init.o)
+                0x00000e10                __libc_init_array
+ .text.memset   0x00000e58       0x94 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-memset.o)
+                0x00000e58                memset
+ .text.startup.register_fini
+                0x00000eec       0x18 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x00000f04       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-atexit.o)
+                0x00000f04                atexit
+ .text.__libc_fini_array
+                0x00000f14       0x34 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-fini.o)
+                0x00000f14                __libc_fini_array
+ .text.__retarget_lock_acquire_recursive
+                0x00000f48        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+                0x00000f48                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x00000f4c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+                0x00000f4c                __retarget_lock_release_recursive
+ .text.__register_exitproc
+                0x00000f50       0xf4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__atexit.o)
+                0x00000f50                __register_exitproc
+ *(.glue_7t)
+ .glue_7t       0x00001044        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00001044        0x0 linker stubs
+ *(.rodata .rodata* .gnu.linkonce.r.*)
+ .rodata._global_impure_ptr
+                0x00001044        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-impure.o)
+                0x00001044                _global_impure_ptr
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00001048                . = ALIGN (0x4)
+ *(.init)
+ .init          0x00001048        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crti.o
+                0x00001048                _init
+ .init          0x0000104c        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtn.o
+                0x00001054                . = ALIGN (0x4)
+                0x00001054                __preinit_array_start = .
+ *(.preinit_array)
+                0x00001054                __preinit_array_end = .
+                0x00001054                . = ALIGN (0x4)
+                0x00001054                __init_array_start = .
+ *(SORT(.init_array.*))
+ .init_array.00000
+                0x00001054        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o)
+ *(.init_array)
+ .init_array    0x00001058        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtbegin.o
+                0x0000105c                __init_array_end = .
+                0x0000105c                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+                0x0000105c                . = ALIGN (0x4)
+ *(.fini)
+ .fini          0x0000105c        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crti.o
+                0x0000105c                _fini
+ .fini          0x00001060        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtn.o
+                0x00001068                . = ALIGN (0x4)
+                0x00001068                __fini_array_start = .
+ *(.fini_array)
+ .fini_array    0x00001068        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x0000106c                __fini_array_end = .
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+                0x0000106c                . = ALIGN (0x4)
+                0x0000106c                _efixed = .
+                [!provide]                PROVIDE (__exidx_start, .)
+
+.vfp11_veneer   0x0000106c        0x0
+ .vfp11_veneer  0x0000106c        0x0 linker stubs
+
+.v4_bx          0x0000106c        0x0
+ .v4_bx         0x0000106c        0x0 linker stubs
+
+.iplt           0x0000106c        0x0
+ .iplt          0x0000106c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtbegin.o
+
+.eh_frame       0x0000106c        0x0
+ .eh_frame      0x0000106c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtbegin.o
+
+.rel.dyn        0x0000106c        0x0
+ .rel.iplt      0x0000106c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtbegin.o
+
+.jcr            0x0000106c        0x0
+ .jcr           0x0000106c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtbegin.o
+
+.igot.plt       0x0000106c        0x0
+ .igot.plt      0x0000106c        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtbegin.o
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                [!provide]                PROVIDE (__exidx_end, .)
+                0x0000106c                . = ALIGN (0x4)
+                0x0000106c                _etext = .
+
+.relocate       0x20000000      0x42c load address 0x0000106c
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _srelocate = .
+ *(.ramfunc .ramfunc.*)
+ *(.data .data.*)
+ .data.impure_data
+                0x20000000      0x428 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-impure.o)
+ .data.__atexit_recursive_mutex
+                0x20000428        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o)
+                0x20000428                __atexit_recursive_mutex
+                0x2000042c                . = ALIGN (0x4)
+                0x2000042c                _erelocate = .
+
+.bss            0x2000042c      0x5c4 load address 0x00001498
+                0x2000042c                . = ALIGN (0x4)
+                0x2000042c                _sbss = .
+                0x2000042c                _szero = .
+ *(.bss .bss.*)
+ .bss           0x2000042c       0x1c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtbegin.o
+ .bss           0x20000448      0x428 OS/os.o
+                0x20000448                elapsed_100us
+ .bss           0x20000870       0x54 Peripheral/CAN/CANlib.o
+ *(COMMON)
+ COMMON         0x200008c4        0x8 OS/os.o
+                0x200008c4                os_curr_task
+                0x200008c8                os_next_task
+ COMMON         0x200008cc      0x100 Peripheral/CAN/CANlib.o
+                0x200008cc                can0_rx_fifo0
+ COMMON         0x200009cc       0x21 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+                0x200009cc                __lock___atexit_recursive_mutex
+                0x200009d0                __lock___arc4random_mutex
+                0x200009d4                __lock___env_recursive_mutex
+                0x200009d8                __lock___sinit_recursive_mutex
+                0x200009dc                __lock___malloc_recursive_mutex
+                0x200009e0                __lock___at_quick_exit_mutex
+                0x200009e4                __lock___dd_hash_mutex
+                0x200009e8                __lock___tz_mutex
+                0x200009ec                __lock___sfp_recursive_mutex
+                0x200009f0                . = ALIGN (0x4)
+ *fill*         0x200009ed        0x3 
+                0x200009f0                _ebss = .
+                0x200009f0                _ezero = .
+
+.stack          0x200009f0     0x2000 load address 0x00001a5c
+                0x200009f0                . = ALIGN (0x8)
+                0x200009f0                _sstack = .
+                0x200029f0                . = (. + STACK_SIZE)
+ *fill*         0x200009f0     0x2000 
+                0x200029f0                . = ALIGN (0x8)
+                0x200029f0                _estack = .
+                0x200029f0                . = ALIGN (0x4)
+                0x200029f0                _end = .
+OUTPUT(HMI.elf elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x28
+ .ARM.attributes
+                0x00000000       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crti.o
+ .ARM.attributes
+                0x0000001e       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtbegin.o
+ .ARM.attributes
+                0x0000004a       0x32 Com/Com.o
+ .ARM.attributes
+                0x0000007c       0x32 OS/os.o
+ .ARM.attributes
+                0x000000ae       0x21 OS/PendSv.o
+ .ARM.attributes
+                0x000000cf       0x32 Peripheral/CAN/CANlib.o
+ .ARM.attributes
+                0x00000101       0x32 Peripheral/GCLK/GCLK.o
+ .ARM.attributes
+                0x00000133       0x32 Peripheral/PORT/PORT.o
+ .ARM.attributes
+                0x00000165       0x32 Peripheral/startup_samc21.o
+ .ARM.attributes
+                0x00000197       0x32 main.o
+ .ARM.attributes
+                0x000001c9       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000001e7       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000205       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000231       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000025d       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000289       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x000002b5       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x000002e1       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-fini.o)
+ .ARM.attributes
+                0x0000030d       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .ARM.attributes
+                0x00000339       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x00000365       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m/crtn.o
+
+.comment        0x00000000       0x59
+ .comment       0x00000000       0x59 Com/Com.o
+                                 0x5a (size before relaxing)
+ .comment       0x00000059       0x5a OS/os.o
+ .comment       0x00000059       0x5a Peripheral/CAN/CANlib.o
+ .comment       0x00000059       0x5a Peripheral/GCLK/GCLK.o
+ .comment       0x00000059       0x5a Peripheral/PORT/PORT.o
+ .comment       0x00000059       0x5a Peripheral/startup_samc21.o
+ .comment       0x00000059       0x5a main.o
+
+.debug_info     0x00000000     0x7dfe
+ .debug_info    0x00000000      0x192 Com/Com.o
+ .debug_info    0x00000192     0x14ea OS/os.o
+ .debug_info    0x0000167c       0x65 OS/PendSv.o
+ .debug_info    0x000016e1     0x44e6 Peripheral/CAN/CANlib.o
+ .debug_info    0x00005bc7     0x1449 Peripheral/GCLK/GCLK.o
+ .debug_info    0x00007010      0x71b Peripheral/PORT/PORT.o
+ .debug_info    0x0000772b      0x568 Peripheral/startup_samc21.o
+ .debug_info    0x00007c93      0x16b main.o
+
+.debug_abbrev   0x00000000      0xc24
+ .debug_abbrev  0x00000000       0xcb Com/Com.o
+ .debug_abbrev  0x000000cb      0x3b2 OS/os.o
+ .debug_abbrev  0x0000047d       0x14 OS/PendSv.o
+ .debug_abbrev  0x00000491      0x2b0 Peripheral/CAN/CANlib.o
+ .debug_abbrev  0x00000741      0x15d Peripheral/GCLK/GCLK.o
+ .debug_abbrev  0x0000089e      0x176 Peripheral/PORT/PORT.o
+ .debug_abbrev  0x00000a14      0x142 Peripheral/startup_samc21.o
+ .debug_abbrev  0x00000b56       0xce main.o
+
+.debug_loc      0x00000000      0x52c
+ .debug_loc     0x00000000       0x64 Com/Com.o
+ .debug_loc     0x00000064      0x1e0 OS/os.o
+ .debug_loc     0x00000244      0x190 Peripheral/CAN/CANlib.o
+ .debug_loc     0x000003d4       0x2c Peripheral/GCLK/GCLK.o
+ .debug_loc     0x00000400       0x64 Peripheral/PORT/PORT.o
+ .debug_loc     0x00000464       0x64 Peripheral/startup_samc21.o
+ .debug_loc     0x000004c8       0x64 main.o
+
+.debug_aranges  0x00000000      0x198
+ .debug_aranges
+                0x00000000       0x28 Com/Com.o
+ .debug_aranges
+                0x00000028       0x60 OS/os.o
+ .debug_aranges
+                0x00000088       0x20 OS/PendSv.o
+ .debug_aranges
+                0x000000a8       0x58 Peripheral/CAN/CANlib.o
+ .debug_aranges
+                0x00000100       0x20 Peripheral/GCLK/GCLK.o
+ .debug_aranges
+                0x00000120       0x28 Peripheral/PORT/PORT.o
+ .debug_aranges
+                0x00000148       0x28 Peripheral/startup_samc21.o
+ .debug_aranges
+                0x00000170       0x28 main.o
+
+.debug_ranges   0x00000000      0x108
+ .debug_ranges  0x00000000       0x18 Com/Com.o
+ .debug_ranges  0x00000018       0x50 OS/os.o
+ .debug_ranges  0x00000068       0x48 Peripheral/CAN/CANlib.o
+ .debug_ranges  0x000000b0       0x10 Peripheral/GCLK/GCLK.o
+ .debug_ranges  0x000000c0       0x18 Peripheral/PORT/PORT.o
+ .debug_ranges  0x000000d8       0x18 Peripheral/startup_samc21.o
+ .debug_ranges  0x000000f0       0x18 main.o
+
+.debug_macro    0x00000000    0x169e3
+ .debug_macro   0x00000000      0x3d8 Com/Com.o
+ .debug_macro   0x000003d8      0x89e Com/Com.o
+ .debug_macro   0x00000c76       0x22 Com/Com.o
+ .debug_macro   0x00000c98       0x87 Com/Com.o
+ .debug_macro   0x00000d1f       0x51 Com/Com.o
+ .debug_macro   0x00000d70       0xef Com/Com.o
+ .debug_macro   0x00000e5f       0x6a Com/Com.o
+ .debug_macro   0x00000ec9      0x1df Com/Com.o
+ .debug_macro   0x000010a8       0x39 Com/Com.o
+ .debug_macro   0x000010e1       0x1c Com/Com.o
+ .debug_macro   0x000010fd       0x22 Com/Com.o
+ .debug_macro   0x0000111f       0xb5 Com/Com.o
+ .debug_macro   0x000011d4      0x4da Com/Com.o
+ .debug_macro   0x000016ae      0x11f Com/Com.o
+ .debug_macro   0x000017cd      0x897 Com/Com.o
+ .debug_macro   0x00002064      0x8c0 Com/Com.o
+ .debug_macro   0x00002924     0x2d61 Com/Com.o
+ .debug_macro   0x00005685      0x21e Com/Com.o
+ .debug_macro   0x000058a3      0x282 Com/Com.o
+ .debug_macro   0x00005b25      0x130 Com/Com.o
+ .debug_macro   0x00005c55      0xd32 Com/Com.o
+ .debug_macro   0x00006987      0x61f Com/Com.o
+ .debug_macro   0x00006fa6      0x5be Com/Com.o
+ .debug_macro   0x00007564      0x824 Com/Com.o
+ .debug_macro   0x00007d88      0x172 Com/Com.o
+ .debug_macro   0x00007efa      0x306 Com/Com.o
+ .debug_macro   0x00008200      0x55f Com/Com.o
+ .debug_macro   0x0000875f      0x421 Com/Com.o
+ .debug_macro   0x00008b80      0x21c Com/Com.o
+ .debug_macro   0x00008d9c      0x719 Com/Com.o
+ .debug_macro   0x000094b5      0x5ab Com/Com.o
+ .debug_macro   0x00009a60      0x335 Com/Com.o
+ .debug_macro   0x00009d95      0x68d Com/Com.o
+ .debug_macro   0x0000a422       0xc4 Com/Com.o
+ .debug_macro   0x0000a4e6      0x340 Com/Com.o
+ .debug_macro   0x0000a826       0x6a Com/Com.o
+ .debug_macro   0x0000a890     0x124b Com/Com.o
+ .debug_macro   0x0000badb      0x5a5 Com/Com.o
+ .debug_macro   0x0000c080      0xfc4 Com/Com.o
+ .debug_macro   0x0000d044      0x59e Com/Com.o
+ .debug_macro   0x0000d5e2      0x8ae Com/Com.o
+ .debug_macro   0x0000de90     0x19be Com/Com.o
+ .debug_macro   0x0000f84e      0x39c Com/Com.o
+ .debug_macro   0x0000fbea      0x36a Com/Com.o
+ .debug_macro   0x0000ff54       0x94 Com/Com.o
+ .debug_macro   0x0000ffe8       0xac Com/Com.o
+ .debug_macro   0x00010094       0xac Com/Com.o
+ .debug_macro   0x00010140      0x149 Com/Com.o
+ .debug_macro   0x00010289      0x149 Com/Com.o
+ .debug_macro   0x000103d2       0x4c Com/Com.o
+ .debug_macro   0x0001041e       0x58 Com/Com.o
+ .debug_macro   0x00010476       0x3a Com/Com.o
+ .debug_macro   0x000104b0       0xd6 Com/Com.o
+ .debug_macro   0x00010586       0xb8 Com/Com.o
+ .debug_macro   0x0001063e       0x64 Com/Com.o
+ .debug_macro   0x000106a2      0x5d7 Com/Com.o
+ .debug_macro   0x00010c79       0x4c Com/Com.o
+ .debug_macro   0x00010cc5      0x1be Com/Com.o
+ .debug_macro   0x00010e83      0x184 Com/Com.o
+ .debug_macro   0x00011007       0x52 Com/Com.o
+ .debug_macro   0x00011059       0xa0 Com/Com.o
+ .debug_macro   0x000110f9       0xd6 Com/Com.o
+ .debug_macro   0x000111cf       0x94 Com/Com.o
+ .debug_macro   0x00011263       0x4c Com/Com.o
+ .debug_macro   0x000112af       0x64 Com/Com.o
+ .debug_macro   0x00011313       0x22 Com/Com.o
+ .debug_macro   0x00011335      0x16c Com/Com.o
+ .debug_macro   0x000114a1       0x2e Com/Com.o
+ .debug_macro   0x000114cf       0x16 Com/Com.o
+ .debug_macro   0x000114e5       0xd6 Com/Com.o
+ .debug_macro   0x000115bb       0xa0 Com/Com.o
+ .debug_macro   0x0001165b      0x133 Com/Com.o
+ .debug_macro   0x0001178e      0x133 Com/Com.o
+ .debug_macro   0x000118c1      0x133 Com/Com.o
+ .debug_macro   0x000119f4      0x133 Com/Com.o
+ .debug_macro   0x00011b27      0x133 Com/Com.o
+ .debug_macro   0x00011c5a      0x133 Com/Com.o
+ .debug_macro   0x00011d8d       0x4c Com/Com.o
+ .debug_macro   0x00011dd9       0xfa Com/Com.o
+ .debug_macro   0x00011ed3       0xfa Com/Com.o
+ .debug_macro   0x00011fcd       0xfa Com/Com.o
+ .debug_macro   0x000120c7       0xfa Com/Com.o
+ .debug_macro   0x000121c1       0xfa Com/Com.o
+ .debug_macro   0x000122bb      0x124 Com/Com.o
+ .debug_macro   0x000123df       0xfa Com/Com.o
+ .debug_macro   0x000124d9       0xee Com/Com.o
+ .debug_macro   0x000125c7       0x76 Com/Com.o
+ .debug_macro   0x0001263d       0x3a Com/Com.o
+ .debug_macro   0x00012677      0x46b Com/Com.o
+ .debug_macro   0x00012ae2     0x1de3 Com/Com.o
+ .debug_macro   0x000148c5       0x82 Com/Com.o
+ .debug_macro   0x00014947      0x487 OS/os.o
+ .debug_macro   0x00014dce       0x10 OS/os.o
+ .debug_macro   0x00014dde       0x58 OS/os.o
+ .debug_macro   0x00014e36       0x35 OS/os.o
+ .debug_macro   0x00014e6b       0x9c OS/os.o
+ .debug_macro   0x00014f07      0x16d OS/os.o
+ .debug_macro   0x00015074       0x58 OS/os.o
+ .debug_macro   0x000150cc       0x1f OS/os.o
+ .debug_macro   0x000150eb       0x43 OS/os.o
+ .debug_macro   0x0001512e       0x20 OS/os.o
+ .debug_macro   0x0001514e      0x187 OS/os.o
+ .debug_macro   0x000152d5      0x34d OS/os.o
+ .debug_macro   0x00015622       0x10 OS/os.o
+ .debug_macro   0x00015632       0x35 OS/os.o
+ .debug_macro   0x00015667      0x403 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00015a6a       0x22 Peripheral/CAN/CANlib.o
+ .debug_macro   0x00015a8c      0x3c4 Peripheral/GCLK/GCLK.o
+ .debug_macro   0x00015e50      0x3c4 Peripheral/PORT/PORT.o
+ .debug_macro   0x00016214      0x3d8 Peripheral/startup_samc21.o
+ .debug_macro   0x000165ec      0x3e1 main.o
+ .debug_macro   0x000169cd       0x16 main.o
+
+.debug_line     0x00000000     0x39ec
+ .debug_line    0x00000000      0x7f0 Com/Com.o
+ .debug_line    0x000007f0      0x960 OS/os.o
+ .debug_line    0x00001150       0x61 OS/PendSv.o
+ .debug_line    0x000011b1      0x89e Peripheral/CAN/CANlib.o
+ .debug_line    0x00001a4f      0x7b1 Peripheral/GCLK/GCLK.o
+ .debug_line    0x00002200      0x7d2 Peripheral/PORT/PORT.o
+ .debug_line    0x000029d2      0x826 Peripheral/startup_samc21.o
+ .debug_line    0x000031f8      0x7f4 main.o
+
+.debug_str      0x00000000    0x85ecb
+ .debug_str     0x00000000    0x80f14 Com/Com.o
+                              0x81926 (size before relaxing)
+ .debug_str     0x00080f14     0x34b5 OS/os.o
+                              0x84e83 (size before relaxing)
+ .debug_str     0x000843c9     0x10af Peripheral/CAN/CANlib.o
+                              0x82ca2 (size before relaxing)
+ .debug_str     0x00085478      0x472 Peripheral/GCLK/GCLK.o
+                              0x81e5d (size before relaxing)
+ .debug_str     0x000858ea      0x212 Peripheral/PORT/PORT.o
+                              0x81ab0 (size before relaxing)
+ .debug_str     0x00085afc      0x3af Peripheral/startup_samc21.o
+                              0x81c92 (size before relaxing)
+ .debug_str     0x00085eab       0x20 main.o
+                              0x8197c (size before relaxing)
+
+.debug_frame    0x00000000      0x5a4
+ .debug_frame   0x00000000       0x4c Com/Com.o
+ .debug_frame   0x0000004c      0x12c OS/os.o
+ .debug_frame   0x00000178      0x104 Peripheral/CAN/CANlib.o
+ .debug_frame   0x0000027c       0x2c Peripheral/GCLK/GCLK.o
+ .debug_frame   0x000002a8       0x50 Peripheral/PORT/PORT.o
+ .debug_frame   0x000002f8       0x4c Peripheral/startup_samc21.o
+ .debug_frame   0x00000344       0x50 main.o
+ .debug_frame   0x00000394       0x20 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x000003b4       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-init.o)
+ .debug_frame   0x000003e0       0x30 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-memset.o)
+ .debug_frame   0x00000410       0x54 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00000464       0x28 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-atexit.o)
+ .debug_frame   0x0000048c       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-fini.o)
+ .debug_frame   0x000004b8       0xb0 c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-lock.o)
+ .debug_frame   0x00000568       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/arm/arm-gnu-toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v6-m\libc.a(lib_a-__atexit.o)
